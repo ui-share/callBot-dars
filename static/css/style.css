@@ -197,7 +197,7 @@
 	--bullet-to-section-mg : 0.5000em; /* 들여쓰기 */
 	--bulletList-between-pd : 0.1667em; /* 행간 */
 
-	--bulletList-font-color : #666;
+	--bulletList-font-color : #555;
 	--bulletList-font-weight : 400;
 	--bulletList-font-lineHeight : 1.4;
 	--bulletList-bullet-color : var(--bulletList-font-color);
@@ -222,7 +222,7 @@
 .dot-list > li {
 	display: block;
 	position: relative;
-	font-size: 1em;
+	font-size: 10px;
 	line-height: unset;
 	padding: var(--bulletList-between-pd) 0;
 }
@@ -310,27 +310,20 @@
 /* 카드 섹션 영역 */
 .card {
 	width: 100%;
-	padding: 20px 16px;
+	padding: 12px 10px 12px 14px;
 	overflow: unset;
-	border-radius: 7px;
-	border: 1px solid #eee;
+	border-radius: 8px;
+	border: 1px solid #C4C4C4;
 	position: relative;
 	background-color: #fff;
 }
-.card-t {
-	border-radius: 7px 7px 0 0;
+
+.loanExtension .info-btn .btn-arrow {
+	font-size: 12px;
+	color: #000;
 }
-.triangle::after {
-	content: "";
-	width: 25px;
-	height: 14px;
-	background-image: url(../images/common_icon.svg);
-	background-size: 500px;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: -2px;
-	left: calc(50% - 8px);
-	background-position: -230px -104px;
+.btn-arrow:after {
+	display: none;
 }
 .card-m {
 	border-radius: 0;
@@ -342,7 +335,7 @@
 	border-top: none;
 }
 .card p {
-	font-size: 14px;
+	font-size: 10px;
 	line-height: 1.5;
 }
 .card .numbering {
@@ -441,8 +434,8 @@
 /* flex 박스 : content-row */
 .content-row {
 	display: flex;
-	padding: 6px 0;
-	font-size: 13px;
+	/* padding: 6px 0; */
+	/* font-size: 13px; */
 	justify-content: space-between;
 	align-items: center;
 }
@@ -745,7 +738,6 @@ button.request-btn.disabled {
 /* 개인정보 수집 동의 버튼 */
 .info-btn {
 	position: relative;
-	margin-left: 0.25em;
 	font-weight: 500;
 }
 /* 블럭 btn-arrow */
@@ -2113,17 +2105,18 @@ textarea:read-only ~ .textarea-info{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 4px;
-	min-width: 37px;
-	height: 18px;
-	line-height: 18px;
-	border-radius: 4px;
-	border: 1px solid #444;
+	padding: 3px 8px;
+	/* min-width: 37px; */
+	/* height: 18px; */
+	line-height: auto;
+	border-radius: 6px;
 	background-color: #fff;
-	color: #444;
-	font-size: 11px;
-	margin-right: 3px;
+	color: #000;
+	font-size: 10px;
 	font-weight: 500;
+}
+.flag-box.store {
+	background-color: #FFEFD5;
 }
 .flag-box.able {
 	border-color: #e6007e;
@@ -2839,9 +2832,9 @@ textarea:read-only ~ .textarea-info{
 	background-repeat: no-repeat;
 	background-position: -435px -435px;
 }
-.card-info {
+/* .card-info {
 	padding: 12px 16px 20px;
-}
+} */
 /* 비디오 플레이 화면 */
 .videoPlay {
 	position: relative;
@@ -9127,6 +9120,105 @@ opacity: 0;
 	font-weight: 400;
 	line-height: 1;
 	color: #fff;
+}
+
+/* 농협 bmt card 작업 */
+.card~.card {
+    margin-top: 15px;
+}
+.loanExtension .card {
+	border-radius: 8px;
+	border: 1px solid #c4c4c4;
+	padding: 12px 10px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+.loanExtension .card.is-select {
+	border: 1px solid #015AAD;
+	box-shadow: 0 2px 4px rgba(1,90,173,0.46);
+}
+.loanExtension .card-info {
+	padding-left: 4px;
+	padding-bottom: 9px;
+}
+.loanExtension .card-info:last-child {
+	padding-bottom: 0;
+}
+.loanExtension .content-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.loanExtension .content-row .info-txt {
+	font-size: 12px;
+	line-height: 1.5;
+	color: #000;
+}
+.loanExtension .card.is-select .content-row .info-txt{
+	color: #015AAD;
+}
+.loanExtension .content-row .tit {
+	font-size: 10px;
+	line-height: 16px;
+	color: #555555;
+}
+.loanExtension .content-row .txt {
+	font-size: 11px;
+	line-height: 16px;
+	color: #000;
+}
+.loanExtension .flag-box {
+	padding: 3px 8px;
+	border-radius: 6px;
+	font-size: 10px;
+	line-height: 1.5;
+	color: #000;
+}
+.loanExtension .flag-box.store {
+	background-color: #FFEFD5;
+}
+.loanExtension .flag-box.nonFace {
+	background-color: #E4FCE9;
+}
+.loanExtension .flag-box.autoExt {
+	background-color: #FCE4E4;
+}
+.content-row ~ .content-row {
+    padding: 6px 0 0;
+}
+.bullet-tit {
+	font-size: 13px;
+	line-height: 1.5;
+	color: #000;
+	margin-bottom: 7px;
+}
+.pop-tit {
+	width: 100%;
+	font-size: 16px;
+    line-height: 1.5px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 0px;
+    overflow: hidden;
+}
+.bottom-popup .popup-header.c-btn-x .header-section .pop-tit {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.bottom-popup.loanExtension .popup-body .info-txt {
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 4;
+	color: #000;
+}
+.bottom-popup.loanExtension .img-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+.img-box .app-img {
+	width: 125px;
 }
 @keyframes progress-bar-stripes {
 	from {

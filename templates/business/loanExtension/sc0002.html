@@ -9,7 +9,7 @@
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no" />
 	<meta name="theme-color" content="#ffffff">
-	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+	<title>NH농협은행 보이는 ARS</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<div class="page-wrapper loanExtension btFlexible">
+<div class="page-wrapper loanExtension btFlexible loanExtension">
 	<!-- 헤더 영역 -->
 	<header class="header">
 		<h1 class="page-title">대출 변경</h1>
@@ -36,90 +36,103 @@
 			<p class="info-txt">대출 유형에 따라 기간 연장 방법이 달라요</p>
 		</div>
 
-		<!-- E-mail area -->
+		<!-- card area -->
+        <div class="content-section">
+			<!-- 중소기업 전세자금대출 -->
+			<!-- 해당 카드 선택 됐을 경우 is-selected 클래스 붙음 
+				선택 전 :<div class="card" role="button">	
+				선택 후:<div class="card is-select" role="button">
+			-->
+            <div class="card is-select" role="button">
+                <div class="card-info">
+                    <div class="content-row">
+                        <div class="info-txt">중소기업 전세자금대출</div>
+                        <p class="flag-box store">지점 방문 필요</p>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="content-row">
+                        <p class="tit">대출 잔액</p>
+                        <p class="bold txt">100,000,000</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">최초 대출액</p>
+                        <p class="bold txt">300,000,000</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">대출 금리</p>
+                        <p class="txt">3.5%</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">대출 기간</p>
+                        <p class="txt">2023.01.01~2025.06.01</p>
+                    </div>
+
+                </div>
+            </div>
+			<!-- 신용대출 -->
+            <div class="card" role="button">
+                <div class="card-info">
+                    <div class="content-row">
+                        <div class="info-txt">신용대출</div>
+                        <p class="flag-box autoExt">비대면 연장 가능</p>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="content-row">
+                        <p class="tit">대출 잔액</p>
+                        <p class="bold txt">50,000,000</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">최초 대출액</p>
+                        <p class="bold txt">100,000,000</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">대출 금리</p>
+                        <p class="txt">4.5%</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">대출 기간</p>
+                        <p class="txt">2024.01.01~2025.12.01</p>
+                    </div>
+
+                </div>
+            </div>
+			<!-- 주택담보대출 -->
+            <div class="card" role="button">
+                <div class="card-info">
+                    <div class="content-row">
+                        <div class="info-txt">주택담보대출</div>
+                        <p class="flag-box nonFace">자동 기한연장 대상</p>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="content-row">
+                        <p class="tit">대출 잔액</p>
+                        <p class="bold txt">50,000,000</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">최초 대출액</p>
+                        <p class="bold txt">100,000,000</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">대출 금리</p>
+                        <p class="txt">4.5%</p>
+                    </div>
+                    <div class="content-row">
+                        <p class="tit">대출 기간</p>
+                        <p class="txt">2024.01.01~2025.12.01</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 		<div class="content-section">
-			<div class="inputInfo">
-				<label for="secuEmail" class="info-label">
-					현재 중소기업에 재직 중이십니까?
-					<span class="required"><i class="hidden">필수항목</i></span>
-				</label>
-				<div class="r-radio-group">
-					<div class="r-radio-box">
-						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="use" checked>
-							<label for="use" class="radio-txt">
-								<i class="icon"></i>
-								<span class="customer-type">예</span>
-							</label>
-						</span>
-					</div>
-					<div class="r-radio-box">
-						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="notUse" >
-							<label for="notUse" class="radio-txt">
-								<i class="icon"></i>
-								<span class="customer-type">아니요</span>
-							</label>
-						</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="inputInfo">
-				<label for="secuEmail" class="info-label">
-					주택을 보유하거나 재직 중이십니까?
-					<span class="required"><i class="hidden">필수항목</i></span>
-				</label>
-				<div class="r-radio-group">
-					<div class="r-radio-box">
-						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="use" checked>
-							<label for="use" class="radio-txt">
-								<i class="icon"></i>
-								<span class="customer-type">예</span>
-							</label>
-						</span>
-					</div>
-					<div class="r-radio-box">
-						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="notUse" >
-							<label for="notUse" class="radio-txt">
-								<i class="icon"></i>
-								<span class="customer-type">아니요</span>
-							</label>
-						</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="inputInfo">
-				<label for="secuEmail" class="info-label">
-					현재 해당 주택에 직접 거주 중이십니까?
-					<span class="required"><i class="hidden">필수항목</i></span>
-				</label>
-				<div class="r-radio-group">
-					<div class="r-radio-box">
-						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="use" checked>
-							<label for="use" class="radio-txt">
-								<i class="icon"></i>
-								<span class="customer-type">예</span>
-							</label>
-						</span>
-					</div>
-					<div class="r-radio-box">
-						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="notUse" >
-							<label for="notUse" class="radio-txt">
-								<i class="icon"></i>
-								<span class="customer-type">아니요</span>
-							</label>
-						</span>
-					</div>
-				</div>
-			</div>
+			<p class="bullet-tit">유의사항</p>
+			<ul class="bullet">
+				<li>고객님의 신용등급과 연체 정보에 따라 변동될 수 있습니다.</li>
+			</ul>
 		</div>
-
 		<div class="bottom-button">
 			<div class="btn-group">
 				<button type="button" class="btn">콜봇으로 돌아가기</button>					
@@ -129,6 +142,66 @@
 	</div>
 	<!-- 콘텐츠 영역 END --> 
 </div>
-
+<!-- 비대면 대출 기간 연장 팝업 -->
+<div class="modal-wrap popup-wrapper loanExtension bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>비대면 대출 기간 연장</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section">
+				<p class="info-txt">
+					신용대출은 NH은행 앱에서 직접 대출 기간 연장이 가능합니다.<br/><br/>이동하실 앱을 선택해주세요. 
+				</p>
+				<div class="img-group">
+					<div class="imgBox">
+						<img src="../../../static/images/img-app-nh01.png" alt="all one 앱" class="app-img">
+					</div>
+					<div class="imgBox">
+						<img src="../../../static/images/img-app-nh02.png" alt="NH Bank 앱" class="app-img">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 자동 기한연장 대출 팝업 -->
+<div class="modal-wrap popup-wrapper loanExtension bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>자동 기한연장 대출</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section">
+				<p class="info-txt">
+					자동 기한 연장 대상자일 경우 고객 행복센터 기한연장팀(1600-5300)에서 전화를 드려 연장업무를 도와드릴 예정입니다. 
+					<br/><br/>혹시라도 연락이 없을 경우 고객님께서 직접 전화하셔서 대출 기한 연장 접수하시면 됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

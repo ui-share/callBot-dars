@@ -26,7 +26,7 @@
 .bg-gray-2 {background-color: #f8f8f8 !important;}
 .ft-gray {color: #66707a !important;}
 .ft-black, .ft-black > * {color: #000000 !important;}
-.t-special { color: #18973C !important;}
+.t-special { color: #015AAD !important;}
 .fc-gray {color: #929292 !important;}
 .t-bold p, .t-bold > * {font-weight: 700 !important;}
 .bold {font-weight: 700 !important;}
@@ -89,15 +89,6 @@
 }
 .no-header .content {
 	padding-top: 0;
-}
-/* page-wrapper bt-accopage : 아코디온이 하단에 있는 화면 */
-.bt-accopage .content > *:nth-last-child(2) {
-	padding-bottom: 2.5em;
-	margin-bottom: auto;
-}
-.bt-accopage .content > *:last-child {
-	padding: 0;
-	margin-top: auto;
 }
 /* header 영역 */
 .header {
@@ -408,24 +399,19 @@
 	padding: 38px 20px;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 16px;
 }
 .title-section .section-tit-lg {
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 20px;
+	line-height: 1.5;
 	letter-spacing: -.04em;
 	font-weight: 700;
 }
 .info-txt {
-	font-size: 14px;
-	color: #66707a;
+	font-size: 16px;
+	font-weight: 500;
+	color: #555555;
 	line-height: 1.5;
-}
-.info-txt-s {
-	font-size: 12px;
-	color: #66707a;
-	line-height: 1.5;
-	padding: 8px 0;
 }
 .content-section.button-section >* {
 	margin-top: 20px;
@@ -539,286 +525,6 @@
 }
 .content-section .caution-section .tit {
 	font-size: 1rem;
-}
-
-/* tooltip : 툴팁 */
-/* 툴팁 물음표 버튼 */
-.q-btn {
-	position: relative;
-	width: 16px;
-	height: 16px;
-	margin-left: 4px;
-	min-width: unset;
-	min-height: unset;
-	padding: 0;
-	background-color: inherit;
-	white-space: nowrap;
-	border: none;
-}
-.q-btn:after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	background-image: url(../images/common_icon.svg);
-	background-size: 500px;
-	background-repeat: no-repeat;
-	background-position: -160px -180px;
-}
-.openBlack .tooltip-txt {
-	display: block;
-}
-.openBlack.q-btn:after {
-	background-position:-160px -196px;
-}
-/* 툴팁 내용 */
-.tooltip {
-	display: inline-block;
-	position: relative;
-}
-.tooltip-txt {
-	display: none;
-	position: absolute;
-	top: -60px;
-	left: -20px;
-	border: 1px solid #eee;
-	border-radius: 5px;
-	padding: 8px;
-	color: #000;
-	background-color: #fff;
-	text-align: left;
-	font-size: 11px;
-	box-shadow: 1px 1px 4px #d7d7d7;
-}
-.tooltip-txt::after {
-	content: "";
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border-top: 8px solid #fff;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	position: absolute;
-	bottom: -8px;
-	left: 19px;
-}
-.tooltip-txt::before {
-	content: "";
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border-top: 8px solid #e7e7e7;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	position: absolute;
-	bottom: -9px;
-	left: 19px;
-}
-
-/* popper.js 툴팁 */
-.tooltip-wrap {
-	display: inline-block;
-	margin-left: 6px;
-	width: 16px;
-	height: 16px;
-	position: relative;
-}
-.p-tooltip {
-	display: none;
-	width: max-content;
-	max-width: 60vw;
-	background-color: #333;
-	border-radius: 4px;
-	font-size: 12px;
-	line-height: 1.25;
-	text-align: left;
-	letter-spacing: -.02em;
-	color: #fff;
-	padding: 8px;
-	z-index: 10;
-}
-.p-tooltip[data-show] {
-	display: block;
-}
-.p-tooltip.round {
-	font-size: 13px;
-	border-radius: 10px;
-	padding: 13px;
-}
-.p-tooltip.white {
-	font-size: 13px;
-	color: #000;
-	background-color: #fff;
-	border-radius: 5px;
-	box-shadow: 1px 1px 4px #d7d7d7;
-	padding: 13px;
-}
-#arrow,
-#arrow::before {
-	position: absolute;
-	width: 8px;
-	height: 8px;
-	background: inherit;
-}
-#arrow {
-	visibility: hidden;
-}
-#arrow::before {
-	visibility: visible;
-	content: '';
-	transform: rotate(45deg);
-}
-.p-tooltip.white #arrow,
-.p-tooltip.white #arrow::before {
-	box-shadow: 1px 1px 4px #d7d7d7;
-}
-.p-tooltip[data-popper-placement^='top'] > #arrow {
-	bottom: -4px;
-}
-.p-tooltip[data-popper-placement^='bottom'] > #arrow {
-	top: -4px;
-}
-.p-tooltip[data-popper-placement^='left'] > #arrow {
-	right: -4px;
-}
-.p-tooltip[data-popper-placement^='right'] > #arrow {
-	left: -4px;
-}
-/* popper.js 툴팁 : 물음표 버튼 */
-.tooltip-btn {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 16px;
-	height: 16px;
-	border: none;
-	background-color: inherit;
-	background-image: url(../images/m-tooltip-common.svg);
-	background-repeat: no-repeat;
-	background-size: contain;    
-	font: 0 / 0 a;
-	vertical-align: middle;
-	cursor: pointer;
-}
-.tooltip-btn:focus,
-.tooltip-btn.hover {
-	background-image: url(../images/m-tooltip-common-active.svg);
-}
-.tooltip-inner {
-	display: flex;
-	flex-direction: row;
-}
-.tooltip-close {
-	flex: 0;
-	position: relative;
-	min-width: 19px;
-	max-width: 19px;
-	height: 19px;
-	background-color: transparent;
-	margin-left: 8px;
-	cursor: pointer;
-}
-.tooltip-close::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(0);
-	background-repeat: no-repeat;
-	background-image: url(../images/tooltip-c-btn.png);
-	background-position: 0 0;
-	background-size: contain;
-}
-
-/* Swiper : swiper-type-step */
-/* .swiper {
-	z-index: unset;
-} */
-.swiper-container {
-	position: relative;	
-	border: 1px solid #e3e3e3;
-	border-radius: 8px;		
-	padding: 20px 20px 68px;
-	margin: 8px auto 20px;
-	overflow: visible;
-}
-.swiper-wrapper {
-	position: relative;
-	display: flex;
-	transition-property: transform;
-	box-sizing: content-box;
-	z-index: auto;
-	transform: translateZ(0);
-}
-.swiper-slide {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;		
-	align-items: center;
-}
-.swiper-slide {
-	flex-shrink: 0;
-	width: 100%;
-	position: relative;
-	vertical-align: top;
-	transform: translateZ(0);
-}
-.swiper-pagination {
-	width: auto;
-	height: 48px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	font-size: 13px;
-	text-align: center;
-	letter-spacing: 4px;
-	border-top: 1px solid #e3e3e3;
-	transform: translateX(0);
-	transition: opacity .3s;
-}
-.swiper-pagination-current {
-	color: #000;
-	letter-spacing: 0;
-	margin-left: 5px;
-}
-.swiper-button-prev,
-.swiper-button-next {
-	--swiper-navigation-size: 13px;
-	--swiper-theme-color: #333;
-	display: flex;
-	width: 24px;
-	height: 24px;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: auto;
-	bottom: 0;
-	background: none;
-	transform: translateY(-50%);
-}
-.swiper-button-prev {
-	left: 10px;
-	right: auto;
-}
-.swiper-button-next {
-	right: 10px;
-	left: auto;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-	font-weight: 700;
 }
 
 /* button btn */

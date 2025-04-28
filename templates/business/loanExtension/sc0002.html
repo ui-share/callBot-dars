@@ -23,8 +23,19 @@
 <body>
 
 <div class="page-wrapper loanExtension btFlexible loanExtension">
-	<!-- 헤더 영역 -->
-	<header class="header">
+	<!--
+		defalt : button-section open 상태
+		arrowBtn 클릭하여 닫기 : close 클래스를 header 에 추가
+		- <header class="header vertical close">
+	-->
+	<header class="header vertical">
+		<div class="button-section">
+			<div class="util-box">
+				<button class="btn callbot">콜봇으로 돌아가기</button>
+				<button class="btn callEnd">콜봇 통화 종료</button>
+			</div>
+			<button type="button" class="arrowBtn"></button>
+		</div>
 		<h1 class="page-title">대출 변경</h1>
 	</header>
 	<!-- 헤더 영역 END -->
@@ -132,6 +143,11 @@
 				<li class="list-tit">유의사항</li>
 				<li>고객님의 신용등급과 연체 정보에 따라 변동될 수 있습니다.</li>
 			</ul>
+		</div>
+		<div class="bottom-button">
+			<div class="btn-group btn-group-solid">				
+				<button type="button" class="btn">다음</button>
+			</div>
 		</div>
 	</div>
 	<!-- 콘텐츠 영역 END --> 

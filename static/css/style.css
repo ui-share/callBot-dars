@@ -3504,17 +3504,18 @@ textarea:read-only ~ .textarea-info{
 	padding: 7px 0;
 	text-align: center;
 }
-/* sc0004.html 임대차계약서 안내 팝업 */
-.leaseAgreement .popup-body .info-txt {
-	font-weight: 400;
-	color: #000;
-}
-.leaseAgreement .img-group {
+/* sc0002.html 비대면 대출 기간 연장 팝업 */
+.nonfaceLoan .img-group {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	column-gap: 50px;
 	margin-top: 20px;
+}
+/* sc0004.html 임대차계약서 안내 팝업 */
+.leaseAgreement .popup-body .info-txt {
+	font-weight: 400;
+	color: #000;
 }
 
 

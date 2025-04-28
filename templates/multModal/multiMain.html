@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"> 
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="">
+		<meta property="og:image" content="">
+		<!-- Css -->
+        <link rel="stylesheet" type="text/css" href="../../../static/css/multiModal/multi.reset.css">
+        <link rel="stylesheet" type="text/css" href="../../../static/css/multiModal/multi.common.css" />
+        <!-- Scripts -->
+        <script src="../../../static/js/jquery-3.6.0.min.js"></script>      
+        <script src="../../../static/js/common.js"></script>
+
+	</head>
+
+	<body class="noscroll">
+		<div class="multi_wrap">
+			<header id="header" class="multi_header">
+				<div class="multi_hd">
+					<button type="button" class="btn_close">
+						<span>종료</span>
+					</button>
+
+					<h1 class="tit">
+						LG U+ 고객센터 AI상담
+					</h1>
+				</div>
+			</header>
+
+			<div class="multi_container">
+				<div class="multi_content">
+					<div class="multi_talk_wrap">
+						<!-- 콜봇 텍스트 박스 -->
+						<div class="multi_lg_talk_wrap">
+							<p class="lg_talk_name">AI 상담사</p>
+							<div class="lg_talk_cont"> 
+								<div class="lg_text_box">
+									<p class="txt">
+										고객님 안녕하세요. LG유플러스 AI 상담사 입니다.
+										저와의 통화내용은 녹음됩니다. 눈으로 보는 콜봇으로
+										연결하면 화면으로 보면서 상담이 가능합니다.
+										눈으로 보는 콜봇을 연결하려면 “네”, 음성 콜봇으로
+										이어가시려면 “아니오”라고 해주세요.
+									</p>
+								</div>
+								<span class="timebox">11:24</span>
+							</div>
+						</div>
+						<!-- 콜봇 텍스트 박스 end -->
+
+						<!-- 유저 텍스트 박스 -->
+						<div class="multi_user_talk_wrap">
+							<div class="user_talk_cont">
+								<div class="user_talk_box">
+									<span class="blind">사용자</span>
+									<p class="txt">네.</p>
+								</div>
+								<span class="timebox">11:24</span>
+							</div>
+						</div>
+						<!-- 유저 텍스트 박스 end -->
+
+						 <!-- 콜봇 텍스트 박스 -->
+						 <div class="multi_lg_talk_wrap">
+							<p class="lg_talk_name">AI 상담사</p>
+							<div class="lg_talk_cont">
+								<div class="lg_text_box">
+									<p class="txt">
+										궁금하신 내용을 
+									</p>
+								</div>
+								<span class="timebox">11:24</span>
+							</div>
+						</div>
+						<!-- 콜봇 텍스트 박스 end -->
+
+						<!-- 유저 텍스트 박스 -->
+						<div class="multi_user_talk_wrap">
+							<div class="user_talk_cont">
+								<div class="user_talk_box">
+									<span class="blind">사용자</span>
+									<p class="txt">이번달 요금 납부해줘</p>
+								</div>
+								<span class="timebox">11:24</span>
+							</div>
+						</div>
+						<!-- 유저 텍스트 박스 end -->
+
+
+
+						<!-- 콜봇 텍스트 박스 -->
+						<div class="multi_lg_talk_wrap">
+							<p class="lg_talk_name">AI 상담사</p>
+							<div class="lg_talk_cont"> 
+								<div class="lg_text_box add">
+									<p class="txt">
+										네, 고객님. 현재 완납 상태로, 추가로 납부하실
+										금액이 없습니다. 다른 문의 사항이 있으시면
+										말씀해주세요.
+									</p>
+								</div>                                
+								<span class="timebox">11:24</span>
+							</div>
+							<ul class="round_list">
+								<li>
+									<button type="button" disabled>
+										<span>이전설치</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span>실시간요금</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span>일시정지</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span>해지</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span>청구량조회</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!-- 콜봇 텍스트 박스 end -->
+
+						<!-- 유저 텍스트 박스 -->
+						<div class="multi_user_talk_wrap">
+							<div class="user_talk_cont">
+								<div class="user_talk_box">
+									<span class="blind">사용자</span>
+									<p class="txt">네.</p>
+								</div>
+								<span class="timebox">11:24</span>
+							</div>
+						</div>
+						<!-- 유저 텍스트 박스 end -->
+
+						 <!-- 콜봇 텍스트 박스 로딩중 -->
+						 <div class="multi_lg_talk_wrap">
+							<p class="lg_talk_name">AI 상담사</p>
+							<div class="lg_talk_cont">
+								<div class="lg_text_box multi_progress"><!-- 처리중일시 loding class 추가 -->
+									 <div class="txt_loding"></div>
+								</div>
+								<span class="timebox">11:24</span>
+							</div>
+						</div>
+						<!-- 콜봇 텍스트 박스 end -->
+
+						<!-- floating btn -->
+						<!-- active 입력 시 display:block -->
+						<button type="button" class="floating_btn active">
+							<span class="blind">맨 아래로</span>
+					  </button>
+				  </div>
+				</div>
+			</div>
+
+			<footer id="footer" class="multi_footer multi_aui">
+				 <!-- 
+					multi_aui : mic open
+					keypad : 키패드 open 
+				-->
+				
+				<div class="multi_service_menu"> 
+					<div class="service_menu_cont">
+						<div class="service_menu_all">
+							<button type="button" class="arrow_ico">
+								<span class="blind">서비스 전체보기</span>
+							</button>
+						</div>
+
+						<div class="service_menu_preview defult"> <!-- defult 삭제 / open 입력 시 메뉴 펼쳐짐 -->
+							<ul>
+								<li>
+									<button type="button" disabled>일시정지</button>
+								</li>
+								<li>
+									<button type="button">청구요금납부</button>
+								</li>
+								<li>
+									<button type="button">결합할인</button> 
+								</li>
+								<li>
+									<button type="button">요금제 추천</button>
+								</li>
+								<li>
+									<button type="button">해지</button>
+								</li>
+								<li>
+									<button type="button">해지</button>
+								</li>
+								<li>
+									<button type="button">해지</button>
+								</li>
+								<li>
+									<button type="button">해지</button>
+								</li>
+								<li>
+									<button type="button">해지</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 전체메뉴 end -->
+
+				<div class="multi_ft_wrap">
+					<!-- <img src="../images/ixi.png" alt="ixi">  -->
+					<!-- AUI mic start -->
+					<!-- 
+						normal : 대기중
+						wait : 듣는중
+						progress : 처리중
+					 -->
+
+					<!-- 대기중 -->
+					<div class="aui_mic_cont "> <!-- blind 추가 시 display:none-->
+						<div class="aui_mic_all">
+							<div class="mic normal">
+								<span class="blind">대기 중</span>
+							</div>
+						</div>
+						<span class="txt">마이크 버튼을 누른 후 다시 말씀해주세요</span>
+					</div>
+
+					<!-- 듣는중 -->
+					<div class="aui_mic_cont blind"> <!-- blind 추가 시 display:none-->
+						<div class="aui_mic_all">
+							<div class="mic wait">
+								<div class="droplet_spinner">
+									<div class="droplet"></div>
+									<div class="droplet"></div>
+									<div class="droplet"></div>
+								  </div>
+								<span class="blind">듣는 중</span>
+							</div>
+							<div class="listening_ani">
+								<div class='listening -one'></div>
+								<div class='listening -two'></div>
+								<div class='listening -three'></div>
+							</div>
+						</div>
+						<span class="txt">듣고 있어요</span>
+					</div>
+
+					<!-- 처리중 -->
+					<div class="aui_mic_cont blind"> <!-- blind 추가 시 display:none-->
+						<div class="aui_mic_all">
+							<div class="mic progress">
+								<div class="dot-flashing"></div>
+								<span class="blind">처리 중</span>
+							</div>
+						</div>
+						<span class="txt">처리중 이에요</span>
+					</div>
+					<!-- AUI mic end -->
+					
+					<button type="button" class="keypad_btn blind" ><!-- keypad open 시 blind 추가-->
+						<span class="blind">키패드 보기</span>
+					</button>
+
+					<!-- keypad start -->
+					<div class="ft_left">
+						<div class="form_box">
+							<div class="input_box">
+								<input id="msg" class="elips" type="text" name="" placeholder="궁금하신 내용을 입력해주세요." title="궁금하신 내용을 입력해주세요." autocomplete="off" maxlength="50">
+
+								<button class="btn input_btn" type="button">
+									<span class="blind">삭제</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="ft_right">
+						<button class="btn_menu" type="button">
+							<span class="blind">close</span>
+						</button>
+					</div>
+					<!-- keypad end -->
+				</div>
+			</footer>
+		</div>
+
+		<!-- Alert popup start -->
+		
+		<div class="multiModalPopUpAlert "><!-- active class 추가 시 팝업오픈 -->
+			<div class="popupAlertHeader">
+				(sample)확인
+			</div>
+
+			<div class="popUpAlertContent">
+				<p class="tit">
+					입력시간이 초과되었습니다.
+				</p>
+				<p class="txt">
+					입력시간이 초과되었습니다. 다시 시도해주시기 바랍니다.
+				</p>
+
+				<div class="multiModalAlertBtn">
+					<button type="button" class="cancle">취소</button>
+					<button type="button" class="ok">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- alart popup end -->
+		
+		<div class="dimm" id="overlayContainer"></div><!-- active class 추가 시 딤 생성 -->
+
+		<!-- bottom popup start -->
+		<div class="bottomPopUpContainer" id="popUp"><!-- popUpActive class 추가 시 팝업오픈 -->
+			<div class="bottomPopHeader">
+				<p>서비스 바로가기</p>
+				<button class="closeBtn" onclick="closeDialog()">
+					<span class="blind">팝업 닫기</span>
+				</button>
+			</div>
+			<div class="bottomPopUpContent">
+				<div class="menu">
+					<ul>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+						<li>
+							<a>서비스 바로가기 메뉴</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- bottom popup end -->
+		
+		<!-- 시나리오 popup start -->		
+		<div class="multiModal "><!-- active class 추가 시 팝업오픈 -->
+		
+			<div class="multiModalPopupContent">
+				<div  style="width: 100%; height: 100%;">
+
+
+			
+					
+
+				</div>
+			</div>
+
+			<div class="menu_floating_btn">
+				<button type="button" class="btn" onclick="openDialog()">
+					<span>전체<br/>메뉴</span>
+				</button>
+			</div>
+		</div>
+		<!-- 시나리오 popup end -->
+		 <!-- 로딩 페이지 -->
+<div class="loadingPage hidde">
+    <div class="white-layer"></div>
+    <div class="loading"></div>
+</div>
+	</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper hk_roamingFarePage">
+	<!-- 헤더 영역 -->
+    <header class="header">
+		<h1 class="page-title">로밍 요금제</h1>
+		<button type="button" class="c-btn">닫기</button>
+    </header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<!-- 로밍기간 선택 -->
+	<div class="content">
+		<div class="hk_content-section hk_roamingfare_layout">
+			<div class="hk_selfcontents">
+				<div class="hk_content-section hk_rom">
+					<div class="hk_rom_title">
+						어디로 가세요
+					</div>
+					<div class="hk_as-self_sub pb20">
+					여행 하시는 국가와 방문 기간에 따라
+					딱 맞는 로밍요금제를 추천해 드릴께요.
+					</div>
+				</div>
+				<!-- 나라선택 list -->
+				<div class="hk_national-group">
+					<div class="">
+						<div class="hk_search-form">
+							<div class="hk_c-inpfield">
+								<div class="hk_c-inpform is-focus is-clear"><!-- on click underline pink로 is-focus -->
+									<div class="hk_c-inpitem sch-nat">
+										<input id="srch-input" name="_name" placeholder="나라 이름 검색" title="검색어를 입력해주세요." type="text" class="hk_c-inp_def">
+										<button title="입력한 문자 삭제" class="hk_c-btn-clear-2" ><span class="is-blind">입력한 문자 삭제</span></button>
+										<button id="" class="hk_c-btn-find2"><span class="is-blind">검색</span></button>
+										<span class="is-blind">검색</span>
+									</div>
+								</div>
+							</div>
+							<!-- 나라 like 검색 -->
+							<div class="hk_search-links hidden">
+								<ul>
+									<li>
+										<span class="hk_link-item">일본</span>
+									</li>
+									<li>
+										<span class="hk_link-item">캐나다</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- -->
+					<div class="hk_nationbtn-area">
+						<div class="hk_fare_radio_ty1">
+							<ul class="hk_c-card-list">
+								<li class="hk_list-pay">
+									<div class="hk_c-card-radio-1">
+										<div class="">
+											<input type="checkbox">
+											<label class="checked">
+												<i class="icon"></i>
+												<strong class="hk_txt select">일본</strong>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li class="hk_list-pay">
+									<div class="hk_c-card-radio-1">
+										<div class="">
+											<input type="checkbox">
+											<label class="">
+												<i class="icon"></i>
+												<strong class="hk_txt">미국</strong>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li class="hk_list-pay">
+									<div class="hk_c-card-radio-1">
+										<div class="">
+											<input type="checkbox">
+											<label class="">
+												<i class="icon"></i>
+												<strong class="hk_txt">프랑스</strong>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li class="hk_list-pay">
+									<div class="hk_c-card-radio-1">
+										<div class="">
+											<input type="checkbox">
+											<label class="">
+												<i class="icon"></i>
+												<strong class="hk_txt">태국</strong>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li class="hk_list-pay">
+									<div class="hk_c-card-radio-1">
+										<div class="">
+											<input type="checkbox">
+											<label class="">
+												<i class="icon"></i>
+												<strong class="hk_txt">베트남</strong>
+											</label>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 나라선택 End-->
+			</div>
+			<!-- roaming-fare list -->
+			<div class="hk_selfcontents hk_pt-0">
+				<!-- 기간선택 -->
+				<div class="hk_content-section hk_rom hk_mb-30">
+					<div class="hk_as-self_title">
+						얼마 동안 방문 예정이신가요?
+					</div>
+
+					<div class="hk_form-wrap">
+						<div class="hk_c-inpform hk_inp-hFix ">
+							<label class="hk_c-label ptl-on">해외로밍 사용 기간</label>
+							<div class="hk_datepicker-form">
+								<div class="hk_c-inpform">
+									<div class="hk_c-inpitem">
+										<input placeholder="" maxlength="100" title="해외로밍 사용 시작일 입력" type="text" class="hk_c-inp hk_c-inp--dropdown">
+									</div>
+								</div>
+								<div class="hk_c-inpitem--dropdown">
+									<div class="hk_c-inpite hk_c-inp hk_c-inp--dropdown">
+									</div>
+								</div> 
+								<div class="hk_c-inpform">
+									<div class="hk_c-inpitem">
+										<input placeholder="" maxlength="100" title="해외로밍 사용 종료일 입력" type="text" class="hk_c-inp hk_c-inp--dropdown">
+									</div>
+								</div>
+								<div class="hk_c-inpitem--dropdown">
+									<div class="hk_c-inp hk_c-inp--dropdown">
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="hk_c-bullet-type-cirlce hk_form-circle">
+							<li class="hk_cir-list">맞춤 로밍은 고객님의 로밍 시작일로부터 최대 30일까지의 맞춤 요금제가 추천됩니다.</li>
+						</ul>
+					</div>
+
+				</div>
+				<!-- 기간선택 End -->
+
+			</div>
+			<!-- roaming-fare list End-->
+
+			<!-- footer bottom-->
+			<footer class="hk_modal-footer sticky">
+				<div class="hk_c-btn-group">
+					<button class="hk_c-btn-solidbox-2" id="next01">
+						다음
+					</button>
+				</div>
+			</footer> 
+			<!-- footer BTN End-->
+
+		</div>		
+	</div>
+
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<!--모달 팝업 영역-->
+<!--달력선택 팝업 -->
+<div class="hk_modal-wrap hk_popup-wrapper hk_bottom-popup hidden">
+	<div class="hk_blacklayer hk_appear"></div>
+	<div class="hk_popup-content hk_bottom-popup  ">
+		<div class="hk_modal-content">
+			<header class="hk_modal-header">
+				<button type="button" class="hk_c-btn-close-nobar">닫기</button>
+			</header>
+			<div class="hk_modal-body">
+				<div class="c-body-content">
+					<div class="hk_calendar_wrap">
+						<div class="hk_scroll-contents hk_scroll-contents--40vh">
+							<div class="hk_calendar-layer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer bottom-->
+			<footer class="hk_modal-footer">
+				<div class="hk_c-btn-group">
+					<button class="hk_c-btn-solidbox-2">
+						확인
+					</button>
+				</div>
+			</footer>
+			<!-- footer BTN End-->
+		</div>
+	</div>
+</div>
+
+<!--모달 팝업 영역 END-->
+
+</body>
+</html>

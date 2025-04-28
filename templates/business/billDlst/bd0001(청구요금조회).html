@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body class="" id="body">
+
+<div class="page-wrapper payinfoPage bt-accopage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">청구요금조회</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="service-section">
+			<div class="service-box" role="button">
+				<div class="text-area">
+					<span class="svCategory">U+ 인터넷</span>
+					<span class="svInfo">부산광역시 강서구 녹산산단382로 ***</span>
+				</div>
+				<div class="btn-area">
+					<button type="button" class="btn chgBtn">선택 변경</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-section bg-gray">
+			<div class="card cardtype-2">
+				<ul class="line-list type-1">
+					<li class="item">
+						<span class="tit">납부방법</span>
+						<span class="cont finance"><img src="../../../../static/images/finance/ico-finance-03.png" class="finance-image" loading="lazy" alt="KB국민카드"><span>신용카드</span></span>
+					</li>
+					<li class="item">
+						<span class="tit">예금주/결제일</span>
+						<span class="cont"><span>예금주(최*진)</span>/<span>2차(1차결제일+평일4일)</span></span>
+					</li>
+					<li class="item">
+						<span class="tit">청구 받는 방법</span>
+						<span class="cont">E-MAIL(상세) 청구서</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-section payHistory">
+			<div class="tapnav-wrap">
+				<ul class="tabnav">
+					<li class="dx-tab"><a href="javascript:void(0)" role="button" class="active">청구내역</a></li>
+					<li class="dx-tab"><a href="javascript:void(0)" role="button" class="">납부내역</a></li>
+				</ul>
+			</div>
+
+			<div class="tabcontent">
+				<!-- Tab 청구내역 -->
+				<div class="tab tab-bill">
+					<!-- 결과가 없는 경우 -->
+					<div class="content-section hidden">
+						<div class="caution-wrap">
+							<div class="caution-box caution"> 
+								<p class="tit">생성된 청구서가 없습니다.</p>
+								<p class="txt">청구서는 보통 13일 전후로 확인되며, 당월에 신규 가입하신 경우 다음달부터 청구서 확인이 가능합니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 결과 조회 -->
+					<div class="content-section pd0 ">
+						<ul class="line-list">
+							<li class="item">
+								<span class="l-item">
+									<button title="04월 청구금액 보기" type="button" class="underline" id="bd01">청구 04월</button>
+									<span class="txt">2024-03-01 ~ 2024-03-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부예정</span>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="03월 청구금액 보기" type="button" class="underline">청구 03월</button>
+									<span class="txt">2024-02-01 ~ 2024-02-29</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="02월 청구금액 보기" type="button" class="underline">청구 02월</button>
+									<span class="txt">2024-01-01 ~ 2024-01-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="01월 청구금액 보기" type="button" class="underline">청구 01월</button>
+									<span class="txt">2023-12-01 ~ 2023-12-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="12월 청구금액 보기" type="button" class="underline">청구 12월</button>
+									<span class="txt">2023-11-01 ~ 2023-11-30</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>						
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="11월 청구금액 보기" type="button" class="underline">청구 11월</button>
+									<span class="txt">2023-10-01 ~ 2023-10-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="10월 청구금액 보기" type="button" class="underline">청구 10월</button>
+									<span class="txt">2023-09-01 ~ 2023-09-30</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="09월 청구금액 보기" type="button" class="underline">청구 09월</button>
+									<span class="txt">2023-08-01 ~ 2023-08-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="08월 청구금액 보기" type="button" class="underline">청구 08월</button>
+									<span class="txt">2023-07-01 ~ 2023-07-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="07월 청구금액 보기" type="button" class="underline">청구 07월</button>
+									<span class="txt">2023-06-01 ~ 2023-06-30</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="06월 청구금액 보기" type="button" class="underline">청구 06월</button>
+									<span class="txt">2023-05-01 ~ 2023-05-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="05월 청구금액 보기" type="button" class="underline">청구 05월</button>
+									<span class="txt">2023-04-01 ~ 2023-04-30</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="04월 청구금액 보기" type="button" class="underline">청구 04월</button>
+									<span class="txt">2023-03-01 ~ 2023-03-31</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+									<span class="txt">납부완료</span>
+								</span>
+							</li>
+						</ul>
+
+						<div class="mg20">
+							<ul class="bullet mt8">
+								<li>부가세 포함 금액</li>
+							</ul>
+						</div>
+		
+						<div class="btn-group">
+							<button class="moreBtn"><span class="more-arrow">더보기</span></button>
+						</div>
+					</div>
+
+					<!-- 연관 시나리오 -->
+					<div class="content-section">
+						<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code="">
+							<div class="card-header">
+								<h2 class="info-title">관련 메뉴 바로가기</h2>
+							</div>
+							<div class="card-body chips-group">
+								<button type="button" class="btn chip">시나리오1</button>
+								<button type="button" class="btn chip">시나리오2</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 관련 메뉴 바로가기 data-end-trace-code="트레이스코드" / data-title-use-yn="N" : 타이틀 필요없을 경우 -->
+					<!-- <div class="content-section hidden">
+						<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code=""></div>
+					</div> -->
+
+				</div>
+
+
+				<!-- Tab 납부내역 -->
+				<div class="tab tab-pay hidden">
+					<!-- 결과가 없는 경우 -->
+					<div class="content-section">
+						<div class="caution-wrap">
+							<div class="caution-box caution"> 
+								<p class="tit">납부내역이 없습니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 결과 조회 -->
+					<div class="content-section pd0">
+						<ul class="line-list">
+							<li class="item">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2024-04-29<br>
+										입금확인일 : 2024-05-02
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>145,950원</strong>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="TOSS포인트결제" type="button" class="">TOSS포인트결제</button>
+									<span class="txt">
+										납부일 : 2024-04-03<br>
+										입금확인일 : 2024-04-03
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>142,770원</strong>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="TOSS포인트결제(포인트)" type="button" class="">TOSS포인트결제(포인트)</button>
+									<span class="txt">
+										납부일 : 2024-04-03<br>
+										입금확인일 : 2024-04-03
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>450원</strong>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2024-02-19<br>
+										입금확인일 : 2024-02-21
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>143,220</strong>
+								</span>
+							</li>
+							<li class="item">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2024-01-15<br>
+										입금확인일 : 2024-01-17
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>140,000</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-12-18<br>
+										입금확인일 : 2023-12-18
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-12-18<br>
+										입금확인일 : 2023-12-18
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="TOSS포인트결제" type="button" class="">TOSS포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-12-18<br>
+										입금확인일 : 2023-12-18
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-12-18<br>
+										입금확인일 : 2023-12-18
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-12-15<br>
+										입금확인일 : 2023-12-19
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>154,690원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-11-15<br>
+										입금확인일 : 2023-11-17
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>151,970원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-11-14<br>
+										입금확인일 : 2023-11-14
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="KAKAO포인트결제" type="button" class="">KAKAO포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-11-14<br>
+										입금확인일 : 2023-11-14
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="TOSS포인트결제" type="button" class="">TOSS포인트결제</button>
+									<span class="txt">
+										납부일 : 2023-11-14<br>
+										입금확인일 : 2023-11-14
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="인터넷 수납" type="button" class="">인터넷 수납</button>
+									<span class="txt">
+										납부일 : 2023-11-10<br>
+										입금확인일 : 2023-11-10
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>1,000원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-10-17<br>
+										입금확인일 : 2023-10-19
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>156,130원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-09-15<br>
+										입금확인일 : 2023-09-19
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>156,130원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-08-14<br>
+										입금확인일 : 2023-08-17
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>156,020원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-07-10<br>
+										입금확인일 : 2023-07-12
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>155,910원</strong>
+								</span>
+							</li>
+							<li class="item hidden">
+								<span class="l-item">
+									<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+									<span class="txt">
+										납부일 : 2023-06-12<br>
+										입금확인일 : 2023-06-14
+									</span>
+								</span>
+								<span class="r-item">
+									<strong>155,910원</strong>
+								</span>
+							</li>
+						</ul>
+
+						<div class="mg20">
+							<ul class="bullet mt8">
+								<li>부가세 포함 금액</li>
+							</ul>
+						</div>
+		
+						<div class="btn-group">
+							<button class="moreBtn"><span class="more-arrow">더보기</span></button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- Accordion -->
+		<div class="accordion-group">
+			<div class="accordion-box notice d-accoBox">
+				<div class="accordion-header d-accoBtn" role="button">
+					<div class="text">
+						<p>꼭 확인하세요.</p>
+					</div>
+					<div class="accordion-btn">
+						<i class="toggleIcon"></i>
+					</div>
+				</div>
+				<div class="accordion-body">
+					<ul class="acco-list">
+						<li>'더 보기'를 누르면 최근 1년 동안 발행된 청구내역 및 납부내역을 확인할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<!--모달 팝업 영역-->
+<!-- 청구금액 계산중 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup calcBillpop hidde">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>확인</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p class="tit">고객님, 현재는 당월 청구금액을 계산하고 있는 중입니다.</p>
+				<p class="txt">(저번달에 이용한 서비스에 대한 요금은 매달 13일 지나서 확인 가능합니다.)</p>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="standard">확인</button>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+		</div>
+	</div>
+</div>
+
+<!-- 청구서조회 full-popup-->
+<div class="modal-wrap popup-wrapper billPop hidden" id="bd01_p">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<button type="button" class="prev-btn">이전</button>
+				<h1 class="pop-tit">청구서 조회</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<!-- <div class="tapnav-wrap hidden"> 탭 요건 삭제
+				<ul class="tabnav">
+					<li class=""><a href="javascript:void(0)" role="button" class="active">청구내역</a></li>
+					<li class=""><a href="javascript:void(0)" role="button" class="">청구내역상세</a></li>
+				</ul>
+			</div>-->
+			<div class="tabcontent">
+				<!-- Tab 청구내역 -->
+				<div class="tab">
+					<div class="content-section bill-box" style="background-color: rgb(246, 229, 222);">
+						<div class="inputInfo">
+							<div class="select-box">
+								<select class="select-form" title="조회할 청구서 년도/월 선택">
+									<option value="">2024년 04월</option>
+									<option value="">2024년 03월</option>
+									<option value="">2024년 02월</option>
+									<option value="">2024년 01월</option>
+									<option value="">2023년 12월</option>
+									<option value="">2023년 11월</option>
+								</select>
+							</div>
+						</div>
+
+						<ul class="bill-user">
+							<li class="user">
+								<p>최*진 고객님</p>
+								<strong>145,950원</strong>
+							</li>
+							<li class="txt">4월 요금은 2024년 3월 1일부터 3월 31일까지<br>사용한 요금입니다.</li>
+							<li class="date">※ 청구서 작성일 : 2024년 4월 4일</li>
+						</ul>
+					</div>
+
+					<div class="content-section bill-box-msg">
+						<p class="tit">2024년 4월 요금 <em>145,950원</em>이 <em>국민카드</em>에서 결제될 예정입니다.</p>
+						<p class="txt">2024년 4월 30일 이후 납부하는 경우 다음달 요금에 연체가산금 <em>2,730원</em>이 추가됩니다.</p>
+					</div>
+
+					<div class="content-section">
+						<!-- Accordion -->
+						<div class="accordion-group">
+							<div class="accordion-box acco-fix type-2">
+								<div class="accordion-header center" role="button">
+									<div class="text">
+										<p>이번 달 요금은 143,220원으로</p>
+										<p>지난달에 비해 -1,100원 감소했습니다.</p>
+									</div>
+									<div class="accordion-btn">
+										<i class="toggleIcon"></i>
+									</div>
+								</div>
+								<div class="accordion-body no_pt">
+									<div class="acco-box">
+										<p class="tit">지난 달과 요금차이가 있는 항목</p>
+										<ul class="item-list type-1">
+											<li class="item title">
+												<span class="l-item">구분</span>
+												<span class="r-item">전월대비</span>
+											</li>
+											<li class="item sub">
+												<span class="l-item">연체가산금</span>
+												<span class="r-item">2,730원</span>
+											</li>
+											<li class="item sum">
+												<span class="l-item">합계</span>
+												<span class="r-item">2,730원</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-section">
+						<!-- Accordion -->
+						<div class="accordion-group">
+							<div class="accordion-box type-2">
+								<div class="accordion-header center" role="button">
+									<div class="text">
+										<p>맞춤 메시지 확인하기</p>
+									</div>
+									<div class="accordion-btn">
+										<i class="toggleIcon"></i>
+									</div>
+								</div>
+								<div class="accordion-body">
+									<div class="acco-box">
+										<p class="tit">맞춤 메시지 안내</p>
+										<ul class="dot-list">
+											<li class="bold">매장방문상담 안내</li>
+											<li class="subdot-list">가까운 매장으로 방문하시면 빠르고 친절하게 상담 받으실 수 있습니다.</li>
+											<li class="subdot-list">- 개통점 : (주)성연텔레콤(☎02-6956-9443)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-section pd0">
+						<h2 class="section-tit underline mg20">
+							<span>청구 상세 내역</span>
+							<span class="required-info ft-gray">(부가가치세 미포함)</span>
+						</h2>
+						
+						<ul class="item-list type-2">
+							<li class="item title">
+								<span class="l-item text-flex">
+									<span class="t-special">A</span>
+									휴대폰 이용 요금
+									<span class="essential">*</span>
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													연체가산금은 전월 청구요금 중 납기일까지 납부되지 않은 요금의 2%(일부항목제외)를 1회에 한하여 부과합니다. 단 휴대폰/인터넷전화 소액결제 요금에 대해서는 연체 개월수에 따라 3%~5%의 연체가산금이 부과됩니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">85,000원</span>
+							</li>
+							<li class="item accordion">
+								<div class="accordion-box">
+									<div class="accordion-header">
+										<div class="text">
+											<span class="text-flex">
+												월정액
+												<div class="tooltip-wrap">
+													<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+													<div class="p-tooltip round" role="tooltip">
+														<div class="tooltip-inner">
+															<span>
+																기본료는 사용일자에 따라 계산되었습니다.(일시정지시 기본료 월 4,000원_VAT별도)
+															</span>
+															<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+														</div>
+														<div id="arrow" data-popper-arrow></div>
+													</div>
+												</div>
+											</span>
+											<span>85,000원</span>
+										</div>
+										<div class="accordion-btn" role="button">
+											<i class="toggleIcon"></i>
+										</div>
+									</div>
+									<div class="accordion-body">
+										<p class="item-group-tit">요금제 안내</p>
+										<ul class="item-list">
+											<li class="item">
+												<span class="l-item">서비스</span>
+												<span class="r-item">모바일</span>
+											</li>
+											<li class="item">
+												<span class="l-item">요금제</span>
+												<span class="r-item">5G 프리미어 에센셜</span>
+											</li>
+											<li class="item">
+												<span class="l-item">월정액</span>
+												<span class="r-item">85,000원</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<span class="l-item">통화료</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item text-flex">
+									방송/행사문자전송료
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													방송 및 행사 참여문자를 이용하신 요금 입니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">55원</span>
+							</li>
+							<li class="item accordion">
+								<div class="accordion-box">
+									<div class="accordion-header" role="button">
+										<div class="text">
+											<span>
+												할인요금
+											</span>
+											<span>-26,505원</span>
+										</div>
+										<div class="accordion-btn">
+											<i class="toggleIcon"></i>
+										</div>
+									</div>
+									<div class="accordion-body">
+										<p class="item-group-tit">요금할인 상세 내역</p>
+										<ul class="item-list">
+											<li class="item">
+												<span class="l-item">프리미엄 요금제 약정할인</span>
+												<span class="r-item">-5,251원</span>
+											</li>
+										</ul>
+										<ul class="item-list">
+											<li class="item">
+												<span class="l-item">선택약정 25% 할인</span>
+												<span class="r-item">-21,250원</span>
+											</li>
+										</ul>
+										<ul class="item-list">
+											<li class="item">
+												<span class="l-item">10원미만 할인</span>
+												<span class="r-item">-4원</span>
+											</li>
+										</ul>
+										<ul class="item-list">
+											<li class="item sum">
+												<span class="l-item">합계</span>
+												<span class="r-item t-special">-26,505원</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<span class="l-item">기타 요금</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item text-flex">
+									연체가산금
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													연체가산금은 전월 청구요금 중 납기일까지 납부되지 않은 요금의 2%(일부항목제외)를 1회에 한하여 부과합니다. 단 휴대폰/인터넷전화 소액결제 요금에 대해서는 연체 개월수에 따라 3%~5%의 연체가산금이 부과됩니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">2,730원</span>
+							</li>
+						</ul>
+						
+						<ul class="item-list type-2">
+							<li class="item title">
+								<span class="l-item text-flex">
+									<span class="t-special">B</span>
+									부가서비스 이용 요금
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													연체가산금은 전월 청구요금 중 납기일까지 납부되지 않은 요금의 2%(일부항목제외)를 1회에 한하여 부과합니다. 단 휴대폰/인터넷전화 소액결제 요금에 대해서는 연체 개월수에 따라 3%~5%의 연체가산금이 부과됩니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">22,290원</span>
+							</li>
+							<li class="item">
+								<span class="l-item">부가서비스 이용료</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item text-flex">
+									2개 번호 이용(듀얼넘버) 서비스
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													1대의 휴대폰으로 2개의 번호를 이용하는 서비스. 현재 이용중인 듀얼넘버는 010-12**56**입니다.(월 3,000원_VAT별도)
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">3,300원</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item text-flex">
+									통화연결음+매달1곡
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													통화연결음 1곡을 월1회 무료로 변경할 수 있는 서비스 이용 요금입니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">1,540원</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item text-flex">
+									유튜브 프리미엄+CGV 구독팩
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													유튜브 프리미엉 서비스와 CGV 영화 예매 쿠폰을 제공하는 월정액(선불) 서비스 입니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">10,450원</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item text-flex">
+									I폰 분실/파손 보험 250
+									<div class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<div class="p-tooltip round" role="tooltip">
+											<div class="tooltip-inner">
+												<span>
+													아이폰 분실/파손 시 교체 및 수리비용을 보상받는 서비스입니다.
+												</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</div>
+											<div id="arrow" data-popper-arrow></div>
+										</div>
+									</div>
+								</span>
+								<span class="r-item">7,000원</span>
+							</li>
+						</ul>
+
+						<ul class="item-list type-2">
+							<li class="item title">
+								<span class="l-item text-flex"><span class="t-special">C</span> 기기 이용 요금</span>
+								<span class="r-item">62,380원</span>
+							</li>
+							<li class="item">
+								<span class="l-item">할부요금</span>
+							</li>
+							<li class="item sub accordion">
+								<div class="accordion-box acco-active">
+									<div class="accordion-header">
+										<div class="text">
+											<span class="text-flex">
+												단말기 할부금
+												<div class="tooltip-wrap">
+													<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+													<div class="p-tooltip round" role="tooltip">
+														<div class="tooltip-inner">
+															<span>
+																단말기할부금은 전체 1,497,216원(24개월) 중 이번달을 포함하여 18개월차를 청구하였으며, 이번달 요금 납부 이후 374,376원(6개월) 남았습니다. 단말기할부금 마지막 청구월은 24년 10월 입니다. (010-12**56**)
+															</span>
+															<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+														</div>
+														<div id="arrow" data-popper-arrow></div>
+													</div>
+												</div>
+											</span>
+											<span>62,380원</span>
+										</div>
+										<div class="accordion-btn" role="button">
+											<i class="toggleIcon"></i>
+										</div>
+									</div>
+									<div class="accordion-body hidden">
+										<p class="item-group-tit">할부금 상세내역</p>
+										<ul class="item-list">
+											<li class="item">
+												<span class="l-item">서비스 번호</span>
+												<span class="r-item">010-12**56**</span>
+											</li>
+											<li class="item">
+												<span class="l-item">이번달 납부금액</span>
+												<span class="r-item"><span class="t-special">62,380원</span> (18회차)</span>
+											</li>
+											<li class="item">
+												<span class="l-item">남은 할부금액</span>
+												<span class="r-item"><span class="t-special">374,376원</span> 6회/24회</span>
+											</li>
+											<li class="item">
+												<span class="l-item">기기명</span>
+												<span class="r-item">iPhone14 Pro_256(자사)</span>
+											</li>
+											<li class="item">
+												<span class="l-item">총 할부금액</span>
+												<span class="r-item"><span class="t-special">1,497,216원</span>
+											</li>
+											<li class="item">
+												<span class="l-item">할부기간</span>
+												<span class="r-item">2022.11~2024.10</span>
+											</li>
+										</ul>
+										<ul class="item-list infoType">
+											<li class="item">
+												<span class="l-item">※총 할부금액=기기 할부금액+할부이자 5.9%</span>
+											</li>
+											<li class="item">
+												<span class="l-item">※총 할부이자:88,216원, 이번 달 할부이자:2,100원, 남은 할부이자:6,436원</span>
+											</li>
+											<li class="item">
+												<span class="l-item">※단말기 할부금은 균등분할상환형(단말대금+분할상환수수료)으로 매월 동일한 금액으로 청구됩니다.</span>
+											</li>
+										</ul>
+									</div>
+
+									<!-- 테이블 형식 -->
+									<div class="accordion-body">
+										<p class="item-group-tit">국내 수신자 부담 서비스 이용 내역</p>
+										<ul class="item-list">
+											<li class="item">
+												<span class="l-item"></span>
+												<span class="r-item">(부가가치세 미포함)</span>
+											</li>
+											<li class="item">
+												<span class="l-item">서비스 번호</span>
+												<span class="r-item">010-12**56**</span>
+											</li>
+											<li class="item">
+												<div class="table-wrap col-type">
+													<table class="table">
+														<thead class="thead">
+															<tr>
+																<th>이동통신사</th>
+																<th>이용요금</th>
+																<th>문의</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>A</td>
+																<td>1,400원</td>
+																<td>02-123-4567</td>
+															</tr>
+															<tr>
+																<td>B</td>
+																<td>770원</td>
+																<td>02-123-4567</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</li>
+											<li class="item sum">
+												<span class="l-item">합계</span>
+												<span class="r-item t-special">2,170원</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<ul class="item-list type-2">
+							<li class="item total">
+								<span class="l-item"><span>총 청구 금액</span><span class="desc">A+B+C</span></span>
+								<span class="r-item">145,950원</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="content-section">
+						<!-- Accordion -->
+						<div class="accordion-group">
+							<div class="accordion-box type-3">
+								<div class="accordion-header center" role="button">
+									<div class="text">
+										<p>서비스별 약정 정보</p>
+									</div>
+									<div class="accordion-btn">
+										<i class="toggleIcon"></i>
+									</div>
+								</div>
+								<div class="accordion-body">
+									<ul class="item-list type-3">
+										<li class="item title">
+											<span class="l-item">구분</span>
+											<span class="r-item t-special">이동통신</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">서비스번호</span>
+											<span class="r-item">010-12**56**</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">신청개수</span>
+											<span class="r-item">3</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">요금제</span>
+											<span class="r-item">(Google 패키지) 5G 시그니처</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">월정액(기본료)</span>
+											<span class="r-item">130,000원</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">약정기간</span>
+											<span class="r-item">LTE플러스 약정기간:2년(2023.01.20~2025.01.19)</span>
+										</li>
+									</ul>
+
+									<ul class="item-list type-3">
+										<li class="item sub">
+											<span class="l-item">요금제</span>
+											<span class="r-item">(Google 패키지) 5G 시그니처</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">월정액(기본료)</span>
+											<span class="r-item">130,000원</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">약정기간</span>
+											<span class="r-item">선택약정기간:1년(2024.01.16 ~ 2025.01.15)</span>
+										</li>
+									</ul>
+
+									<ul class="item-list type-3">
+										<li class="item sub">
+											<span class="l-item">요금제</span>
+											<span class="r-item">LTE 태블릿/스마트기기 500MB+데이터 나눠쓰기</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">월정액(기본료)</span>
+											<span class="r-item">11,000원</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">약정기간</span>
+											<span class="r-item"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- <div class="accordion-box type-3">
+								<div class="accordion-header center" role="button">
+									<div class="text">
+										<p>맞춤 메시지 확인하기</p>
+									</div>
+									<div class="accordion-btn">
+										<i class="toggleIcon"></i>
+									</div>
+								</div>
+								<div class="accordion-body no_pt">
+									<div class="acco-box">
+										<p class="tit">지난 달과 요금차이가 있는 항목</p>
+										<ul class="item-list type-1">
+											<li class="item title">
+												<span class="l-item">구분</span>
+												<span class="r-item">전월대비</span>
+											</li>
+											<li class="item sub">
+												<span class="l-item">연체가산금</span>
+												<span class="r-item">2,730원</span>
+											</li>
+											<li class="item sum">
+												<span class="l-item">합계</span>
+												<span class="r-item">2,730원</span>
+											</li>
+										</ul>
+									</div>
+									<div class="acco-box">
+										<p class="tit">맞춤 메시지 안내</p>
+										<ul class="dot-list">
+											<li class="bold">매장방문상담 안내</li>
+											<li class="subdot-list">가까운 매장으로 방문하시면 빠르고 친절하게 상담 받으실 수 있습니다.</li>
+											<li class="subdot-list">- 개통점 : (주)성연텔레콤(☎02-6956-9443)</li>
+										</ul>
+									</div>
+								</div>
+							</div> -->
+							<div class="accordion-box type-3">
+								<div class="accordion-header center" role="button">
+									<div class="text">
+										<p>최근 3개월간 사용 내역 비교</p>
+									</div>
+									<div class="accordion-btn">
+										<i class="toggleIcon"></i>
+									</div>
+								</div>
+								<div class="accordion-body">
+									<ul class="item-list type-3">
+										<li class="item">
+											<span class="l-item">서비스 번호</span>
+											<span class="r-item t-special">010-12**56**</span>
+										</li>
+										<li class="item g-title">
+											<span class="l-item">평균 이용량</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">국내통화</span>
+											<span class="r-item">9시 0분 26초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">부가통화</span>
+											<span class="r-item">0시 5분 20초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">문자메시지(MMS포함)</span>
+											<span class="r-item">6건</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">데이터</span>
+											<span class="r-item">17.4GB</span>
+										</li>
+										<li class="item g-title">
+											<span class="l-item">2024.04</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">국내통화</span>
+											<span class="r-item">9시 0분 26초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">부가통화</span>
+											<span class="r-item">0시 5분 20초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">문자메시지(MMS포함)</span>
+											<span class="r-item">6건</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">데이터</span>
+											<span class="r-item">17.4GB</span>
+										</li>
+										<li class="item g-title">
+											<span class="l-item">2024.03</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">국내통화</span>
+											<span class="r-item">9시 0분 26초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">부가통화</span>
+											<span class="r-item">0시 5분 20초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">문자메시지(MMS포함)</span>
+											<span class="r-item">6건</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">데이터</span>
+											<span class="r-item">17.4GB</span>
+										</li>
+										<li class="item g-title">
+											<span class="l-item">2024.02</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">국내통화</span>
+											<span class="r-item">9시 0분 26초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">부가통화</span>
+											<span class="r-item">0시 5분 20초</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">문자메시지(MMS포함)</span>
+											<span class="r-item">6건</span>
+										</li>
+										<li class="item sub">
+											<span class="l-item">데이터</span>
+											<span class="r-item">17.4GB</span>
+										</li>
+									</ul>
+									<ul class="bullet mt8">
+										<li>※ 고객 실제 이용량을 표기합니다. (요금제 기본 제공량 내 이용량, 초과이용량, 데이터 주고 받기, 2배로 쿠폰 이용량 등 포함)</li>
+										<li>※ 부가통화 이용시간은 7월 이전은 국내통화에 합산되어 있으며, 7월부터 국내통화와 부가통화로 분리됩니다.</li>
+										
+									</ul>
+								</div>
+							</div>
+							<!-- 
+							<style>
+								/* 요금업무 바로가기 */
+								.bill-btn-group {
+									width: 100%;
+									display: flex;
+									flex-wrap: wrap;
+									gap: 3px;
+								}
+								.bill-btn-group .bill-btn {
+									flex: 1 1 40%;
+									min-height: 56px;
+								}
+								.bill-btn-group .bill-btn .b-btn {
+									display: flex;
+									width: 100%;
+									height: 100%;
+									padding: 10px 2px;
+									background-color: #fff;
+									font-size: 16px;
+									text-align: center;
+									align-items: center;
+									justify-content: center;
+								}
+							</style>
+							
+							<div class="accordion-box type-3">
+								<div class="accordion-header center" role="button">
+									<div class="text">
+										<p>요금 업무 바로가기</p>
+									</div>
+									<div class="accordion-btn">
+										<i class="toggleIcon"></i>
+									</div>
+								</div>
+								<div class="accordion-body bg-gray">
+									<ul class="bill-btn-group">
+										<li class="bill-btn">
+											<a href="javascript:void(0)" class="b-btn"><span>요금납부</span></a>
+										</li>
+										<li class="bill-btn">
+											<a href="javascript:void(0)" class="b-btn"><span>납부방법 관리</span></a>
+										</li>
+										<li class="bill-btn">
+											<a href="javascript:void(0)" class="b-btn"><span>청구서 재발행</span></a>
+										</li>
+										<li class="bill-btn">
+											<a href="javascript:void(0)" class="b-btn"><span>청구서 받는 방법 변경</span></a>
+										</li>
+									</ul>
+								</div>
+							</div> 2024.09.27 요금 업무 바로가기를 연관 시나리오로 대체 -->
+						</div>
+					</div>
+
+					<!-- 연관 시나리오 -->
+					<div class="content-section">
+						<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code="">
+							<div class="card-header">
+								<h2 class="info-title">관련 메뉴 바로가기</h2>
+							</div>
+							<div class="card-body chips-group">
+								<button type="button" class="btn chip">시나리오1</button>
+								<button type="button" class="btn chip">시나리오2</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 관련 메뉴 바로가기 data-end-trace-code="트레이스코드" / data-title-use-yn="N" : 타이틀 필요없을 경우 -->
+					<!-- <div class="content-section hidden">
+						<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code=""></div>
+					</div> -->
+
+					<div class="content-section pd0">
+						<div class="info-img">
+							<img alt="" src="../../../../static/images/bg-bill-bottom.jpg" class="">
+						</div>
+					</div>
+				</div>
+	
+				<!-- Tab 청구내역 상세 사용 안함 -->
+				<div class="tab detailTab hidden">
+					<div class="content-section pd0">
+						<h2 class="section-tit underline mg20">
+							<span>예상해지비용</span>
+							<!-- <span class="required-info ft-gray"></span> -->
+						</h2>
+						
+						<ul class="item-list type-2">
+							<li class="item">
+								<span class="l-item">서비스</span>
+								<span class="r-item">휴대폰</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item">(*)잔여단말기할부금</span>
+								<span class="r-item">374,376원</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item">선택약정할인 반환금</span>
+								<span class="r-item">139,207원</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item">LTE/5G 요금약정할인 반환금</span>
+								<span class="r-item">22,227원</span>
+							</li>
+						</ul>
+
+						<ul class="item-list type-2">
+							<li class="item sum">
+								<span class="l-item">합계</span>
+								<span class="r-item t-special">535,810원</span>
+							</li>
+						</ul>
+
+						<ul class="item-list infoType">
+							<li class="item">
+								<span class="l-item">※ 전월 말일 기준으로 서비스 해지 시 예상되는 위약금, 할인반환금 등의 비용입니다.<br>상기 비용은 산정시점 차이로 인해 실제와 상이할 수 있습니다.</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="content-section pd0">
+						<h2 class="section-tit underline mg20">
+							<span>정보이용료 상세 내역(부가가치세 미포함)</span>
+							<!-- <span class="required-info ft-gray"></span> -->
+						</h2>
+						
+						<ul class="item-list type-2">
+							<li class="item">
+								<span class="l-item">서비스번호</span>
+								<span class="r-item">금액</span>
+							</li>
+						</ul>
+
+						<ul class="item-list type-2">
+							<li class="item">
+								<span class="l-item">010-12**56**</span>
+								<span class="r-item">50원</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item">이용일</span>
+								<span class="r-item">2024.03.12</span>
+							</li>
+							<li class="item sub">
+								<span class="l-item">내역</span>
+								<span class="r-item">SMS MO 정보이용료</span>
+							</li>
+						</ul>
+
+						<ul class="item-list infoType">
+							<li class="item">
+								<span class="l-item">※ 통신사별 정보이용료 문의</span>
+							</li>
+							<li class="item">
+								<span class="l-item">- LG U+:1544-0001(유료),<br>SK텔링크:080-89-00700(무료)/1599-00700(유료),<br>드림라인:1877-1817(유료)/1566-1212(유료),<br>KT:국번없이 106(무료)/080-8282-106(무료),<br>세종텔리콤:080-889-1000(무료)/1688-1000(유료).</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 연관 시나리오 -->
+					<div class="content-section">
+						<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code="">
+							<div class="card-header">
+								<h2 class="info-title">관련 메뉴 바로가기</h2>
+							</div>
+							<div class="card-body chips-group">
+								<button type="button" class="btn chip">시나리오1</button>
+								<button type="button" class="btn chip">시나리오2</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 관련 메뉴 바로가기 data-end-trace-code="트레이스코드" / data-title-use-yn="N" : 타이틀 필요없을 경우 -->
+					<!-- <div class="content-section hidden">
+						<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code=""></div>
+					</div> -->
+
+					<div class="content-section pd0">
+						<div class="info-img">
+							<img alt="" src="../../../../static/images/bg-bill-bottom.jpg" class="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 일시정지 중 불가 alert (일시정지 해제하기) -->
+<div class="modal-wrap popup-wrapper center-popup paymentPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">일시정지된 상품이<br>포함돼 있습니다.<br>정지 해제 후 재시도 해주세요.</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">일시정지 해제하기</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--모달 팝업 영역 END-->
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".accordion-box > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper bt-accopage">
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <h1 class="page-title">홈서비스 설치장소 변경 신청내역 변경</h1>
+        <button type="button" class="c-btn">닫기</button>
+    </header>
+    <!-- 헤더 영역 END -->
+    
+    <!-- 콘텐츠 영역 -->
+    <div class="content">
+        <div class="content-section">
+            <h2 class="section-tit"><span>가입서비스 상세</span></h2>
+            <div class="table-box">
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th>가입서비스</th>
+                            <th class="service">요금제</th>
+                            <th>설치비</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>U+ 인터넷</th>
+                            <td>와이파이기본_기가안심_1G_FTTH</td>
+                            <td class="amount">10,000원</td>
+                        </tr>
+                        <tr>
+                            <th>U+ TV</th>
+                            <td>일반형</td>
+                            <td class="amount">20,000원</td>
+                        </tr>
+                        <tr>
+                            <th>U+ 홈IoT</th>
+                            <td>(모바일)구글패키지</td>
+                            <td class="amount">15,000원</td>
+                        </tr>
+                        <tr class="bg-gray">
+                            <th>합계</th>
+                            <td colspan="2" class="amount bold">45,000원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="content-row">
+                <ul class="list dot-list">
+                    <li>부가세가 포함된 금액입니다.</li>
+                    <li>집안 내 이동을 신청하면, 신청한 서비스에 대해서만 설치비를 냅니다. 설치 관련 정책에 따라 실제 청구하는 금액은 달라질 수 있으니 양해해 주세요.</li>
+                    <li>설치 희망일은 신청일 기준 1일 이후부터 30일 이내에서만 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 미완료 / 댁외 -->
+        <div class="content-section devider">
+            <h2 class="section-tit">
+                <span>변경 신청 정보 입력</span>
+                <span class="required-info"><span class="required"></span>표시는 필수 입력항목입니다.</span>
+            </h2>
+            
+            <div class="content-box">
+                <div class="inputInfo">
+                    <label class="info-label">
+                        이사 후 설치장소 주소
+                    </label>
+                    <div class="content-row ft-gray">
+                        <p>부산시 부산직구 신암로 ***</p>
+                    </div>
+                    <ul class="list dot-list">
+                        <li>설치장소의 주소를 변경하려면 신청을 취소 한 후 다시 신청하거나 고객센터 1833-4591로 문의 주시기 바랍니다.</li>
+                    </ul>
+                </div>
+
+                <div class="inputInfo">
+                    <label  class="info-label">
+                        연락 받을 분
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="이름 입력" type="text" class="custom-inp">
+                    </div>
+                    <p class="error-txt hidden">연락 받을 분을 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label class="info-label">
+                        연락처
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="휴대폰번호 입력" type="tel" class="custom-inp">
+                    </div>
+                    <p class="error-txt hidden">연락처를 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="request" class="info-label">
+                        요청사항
+                        <!--<span class="required"><i class="hidden">필수항목</i></span>-->
+                    </label>
+                        <div class="textarea-box">
+                        <textarea placeholder="요청사항 입력"></textarea>
+                        <p class="textarea-info">0/200자</p>
+                    </div>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="installDate" class="info-label">
+                        설치 희망일
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                    <div class="custom-info calendar">
+                        <input type="tel" class="custom-inp datepicker" id="datepicker" disabled>
+                        <i class="calendar-icon"></i>
+                    </div>
+                    <p class="error-txt hidden">설치 희망일을 선택해 주세요.</p>
+                </div>
+                
+                <!-- 설치비 필수 안내 -->
+                <div class="inputInfo">
+                    <div class="check-box">
+                        <input type="checkbox" id="installCost">
+                        <label for="installCost" class="t-checkbox">
+                            <i class="icon"></i>
+                            <div class="text">
+                                <p>설치비 필수 안내를 확인하였습니다.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="content-row">
+                        <ul class="list dot-list bg-gray">
+                            <li>서비스센터와 정확한 방문일자는 협의해야 하며 실제 방문 시점(주말/공휴일/평일야간)에 따라 25% 할증된 추가 설치비가 청구될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 미완료 / 댁내 -->
+        <!--<div class="content-section devider">
+            <h2 class="section-tit">
+                <span>변경 신청 정보 입력</span>
+                <span class="required-info"><span class="t-special">*</span>표시는 필수 입력항목입니다.</span>
+            </h2>
+            
+            <div class="content-box">
+                <div class="inputInfo">
+                    <label  class="info-label">
+                        연락 받을 분
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="이름 입력" type="text" class="custom-inp">
+                    </div>
+                    <p class="error-txt hidden">연락 받을 분을 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label class="info-label">
+                        연락처
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="휴대폰번호 입력" type="tel" class="custom-inp">
+                    </div>
+                    <p class="error-txt hidden">연락처를 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="request" class="info-label">
+                        요청사항
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                        <div class="textarea-box">
+                        <textarea placeholder="요청사항 입력"></textarea>
+                        <p class="textarea-info">0/200자</p>
+                    </div>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="installDate" class="info-label">
+                        설치 희망일
+                        <span class="required"><i class="hidden">필수항목</i></span>
+                    </label>
+                    <div class="custom-info calendar">
+                        <input type="tel" class="custom-inp datepicker" value="2023-12-11" id="datepicker" disabled>
+                        <i class="calendar-icon"></i>
+                    </div>
+                    <p class="error-txt hidden">설치 희망일을 선택해 주세요.</p>
+                    <ul class="list dot-list">
+                        <li>희망일자의 방문 시간이 정해지면 홈매니저가 별로로 연락을 드립니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        
+        <!-- 완료 / 댁외 -->
+        <!--<div class="content-section devider">
+            <h2 class="section-tit">
+                <span>변경 신청 정보 입력</span>
+            </h2>
+            
+            <div class="content-box">
+                <div class="inputInfo">
+                    <label class="info-label">
+                        이사 후 설치장소 주소
+                    </label>
+                    <div class="content-row ft-gray">
+                        <p>부산시 부산직구 신암로 ***</p>
+                    </div>
+                </div>
+
+                <div class="inputInfo">
+                    <label  class="info-label">
+                        연락 받을 분
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="이름 입력" type="text" class="custom-inp" disabled>
+                    </div>
+                    <p class="error-txt hidden">연락 받을 분을 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label class="info-label">
+                        연락처
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="휴대폰번호 입력" type="tel" class="custom-inp" disabled>
+                    </div>
+                    <p class="error-txt hidden">연락처를 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="request" class="info-label">
+                        요청사항
+                    </label>
+                        <div class="textarea-box">
+                        <textarea placeholder="요청사항 입력" disabled>콜봇 자가 취소</textarea>
+                        <p class="textarea-info">0/200자</p>
+                    </div>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="installDate" class="info-label">
+                        설치 희망일
+                    </label>
+                    <div class="custom-info calendar">
+                        <input type="tel" class="custom-inp datepicker" value="2023-12-11" id="datepicker" disabled>
+                        <i class="calendar-icon"></i>
+                    </div>
+                    <p class="error-txt hidden">설치 희망일을 선택해 주세요.</p>
+                    <ul class="list dot-list">
+                        <li>희망일자의 방문 시간이 정해지면 홈매니저가 별로로 연락을 드립니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        
+        <!-- case4 완료 / 댁내 -->
+        <!--<div class="content-section devider">
+            <h2 class="section-tit">
+                <span>변경 신청 정보 입력</span>
+            </h2>
+            
+            <div class="content-box">
+                <div class="inputInfo">
+                    <label  class="info-label">
+                        연락 받을 분
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="이름 입력" type="text" class="custom-inp" disabled>
+                    </div>
+                    <p class="error-txt hidden">연락 받을 분을 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label class="info-label">
+                        연락처
+                    </label>
+                    <div class="custom-info">
+                        <input placeholder="휴대폰번호 입력" type="tel" class="custom-inp" disabled>
+                    </div>
+                    <p class="error-txt hidden">연락처를 입력해 주세요.</p>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="request" class="info-label">
+                        요청사항
+                    </label>
+                        <div class="textarea-box">
+                        <textarea placeholder="요청사항 입력" disabled>콜봇 자가 취소</textarea>
+                        <p class="textarea-info">0/200자</p>
+                    </div>
+                </div>
+
+                <div class="inputInfo">
+                    <label for="installDate" class="info-label">
+                        설치 희망일
+                    </label>
+                    <div class="custom-info calendar">
+                        <input type="tel" class="custom-inp datepicker" value="2023-12-11" id="datepicker" disabled>
+                        <i class="calendar-icon"></i>
+                    </div>
+                    <p class="error-txt hidden">설치 희망일을 선택해 주세요.</p>
+                    <ul class="list dot-list">
+                        <li>희망일자의 방문 시간이 정해지면 홈매니저가 별로로 연락을 드립니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        
+        <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-line-secondary">이전</button>
+            <button type="button" class="btn btn-line-secondary">신청 취소</button>
+            <button type="button" class="btn btn-line-secondary">변경</button>
+        </div>
+        
+    
+        <div class="accordion-group">
+            <div class="accordion-box notice d-accoBox">
+                <div class="accordion-header d-accoBtn">
+                    <div class="text">
+                        <p>꼭 확인하세요.</p>
+                    </div>
+                    <button type="button" class="accordion-btn" tabindex="-1">
+                        <i class="toggleIcon"></i>
+                    </button>
+                </div>
+                <div class="accordion-body">
+                    <ul class="list dot-list">
+                        <li>홈매니저 방문 전 알림톡을 보내드립니다. 요청하신 날짜에 홈매니저 방문이 어려운 경우, 일정 조율을 위해 서비스센터 상담사가 고객님께 전화를 드릴 예정입니다.</li>
+                        <li>서비스와 관련된 모뎀, 와이파이 공유기, 셋톱박스(인터넷-TV연결기기)등 이전 설치할 상품 구성 기기를 빠짐없이 모두 챙겨 주시기 바랍니다.</li>
+                        <li>기기가 있어야 설치가 가능합니다.</li>
+                        <li>정확한 방문 일자 및 시간은 서비스센터에서 순차적으로 연락 드리니 전화 꼭 받아주십시오.</li>
+                        <li>설치 희망일 14일 동안 3회 이상 통화가 어려울 경우 이사 접수는 취소되며 요금은 정상 부과 됩니다.</li>
+                        <li>방문시 설치 주변 환경에 따라 설치가 지연되거나, 구조상의 문제로 설치가 어려울 수 있으며, 설치가 어려울 경우 고객센터에서 연락을 드립니다. 14일 동안 3회 이상 통화 불가시 한달 일시정지 후에 처리되지 않을 경우 최종일반해지로 할인반환금 청구됩니다.</li>
+                        <li>모뎀 및 장비, 부속품은 꼭 챙기신 후에 이사하시는 곳으로 가주시기 바랍니다.광랜F(FM모뎀), VM모뎀, GW, CPG(전화모뎀)등 유선 장비를 이용 중이신 경우 단자함 또는 신발장에서 확인 가능합니다.</li>
+                        <li>장비를 분실하게 될 경우 장비변상금 청구될 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 콘텐츠 영역 END -->
+</div>
+
+<!--모달 팝업 영역-->
+<div class="modal-wrap">
+    <!--대리점 안내 팝업-->
+    <div class="popup popup-1 endPopup hidden">
+        <div class="pop-wrap">
+            <div class="pop-content">
+                <div class="pop-header">
+                    <h1 class="pop-tit">확인</h1>
+                    <button class="c-btn">닫기</button>
+                </div>
+                <div class="pop-body">
+                    <p class="pop-txt">희망일 변경은 해당 대리점 연락을 통해 가능합니다.</p>
+                    <ul class="list dot-list mt26">
+                        <li class="fz16">대리점명 : 송파이앤디</li>
+                        <li class="fz16">전화번호 : 02-1234-5678</li>
+                    </ul>
+                </div>
+                <div class="pop-footer">
+                    <div class="btn-group">
+                        <button class="standard">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--기본 팝업 END-->
+</div>   
+<!--모달 팝업 영역 END-->
+
+<!-- 캘린더 모달용 레이어-->
+<div class="blacklayer hidden"></div> <!-- 캘린더 클릭 시  hidden 제거 -->
+
+<script>
+	$(document).ready(function(){
+		$( function() {
+            $( "#datepicker" ).datepicker({
+                dateFormat: "yy-mm-dd",
+                showMonthAfterYear: true,
+                monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+                monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+                dayNamesMin: [ "일", "월", "화", "수", "목", "금", "토" ],
+            });
+		});
+	});
+</script>
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+</body>
+</html>

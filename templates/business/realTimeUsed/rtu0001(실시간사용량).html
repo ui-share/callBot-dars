@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper realTimeUsed bt-accopage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">실시간 사용량</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content c-devider">	
+		
+		<!-- 남은 기간 -->
+		<div class="content-section used-date">
+			<div class="section-wrap">
+				<div class="section-body">
+					<div class="card-box card-line">
+						<div class="info-box">
+							<h2 class="info-title">오늘 기준으로 <span class="t-special">19 일</span> 남았습니다.</h2>
+							<p class="info-text">(2024-04-04 ~ 2024-04-30)</p>
+						</div>
+						<div class="info-box gage-box">
+							<div class="gage-info">
+								<span>사용기간<i class="data-value">11일</i></span>
+								<span>제공기간<i class="data-value">30일</i></span>
+							</div>
+							<div class="info-box">
+								<p class="gage">
+									<span class="gage-bar"style="width: calc(100% - 50%);" ><i class="blind">30일</i></span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<!-- 데이터 -->
+		<div class="content-section used-data">
+			<div class="section-wrap">
+				<div class="section-title">
+					<p class="h2 js_update">데이터</p>
+				</div>
+				<div class="section-body">
+					<div class="card-box card-line total-data">
+						<ul class="list-box">
+							<li>
+								<label class="list-label">총 데이터 제공량</label>
+								<p class="list-data t2">
+									<span>기본제공</span>
+								</p>
+							</li>
+						</ul>
+						<ul class="list-box">
+							<li>
+								<label class="list-label t-special">남은 데이터 양</label>
+								<p class="list-data t-special">
+									<span>기본제공</span>
+								</p>
+							</li>
+							<li>
+								<label class="list-label">사용한 데이터 양</label>
+								<p class="list-data t-special">
+									<span>6.98GB</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="card-box card-line total-data hidden">
+						<ul class="list-box">
+							<li>
+								<label class="list-label">초과 사용 데이터</label>
+								<p class="list-data t2 t-special">
+									<span>6.98GB</span>
+								</p>
+							</li>
+						</ul>
+						<ul class="list-box">
+							<li>
+								<label class="list-label">초과 데이터 이용 요금</label>
+								<p class="list-data">
+									<span>3,000</span>원
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="list-box chart-box">
+						<div class="chart-item pie">
+							<div class="chart-area chart1" data-percent="100">
+								<span class="chart-txt t1">기본제공</span>							
+							</div>
+							<div class=" chart-info ">
+								<label class="list-label">5G 데이터 무제한</label>
+								
+								<p class="list-data">
+									<span class="t1"><strong>기본제공</strong></span> <span class="t2">6.92GB 사용</span>
+								</p>
+							</div>
+						</div>				
+						<div class="chart-item pie">
+							<div class="chart-area chart2" data-percent="86">
+								<span class="chart-txt t1">15.00GB</span>							
+							</div>
+							<div class="chart-info ">
+								<label class="list-label">쉐어링 데이터</label>
+								<p class="list-data">
+									<span class="t1"><strong>15.00GB</strong> 남음</span><span class="t2">0.0GB 사용</span>
+								</p>							
+							</div>
+						</div>				
+						<div class="chart-item pie">
+							<div class="chart-area chart3" data-percent="90">
+								<span class="chart-txt t1">15.00GB</span>							
+							</div>
+							<div class="chart-info ">
+								<label class="list-label">5G 프리미어 에센셜 테더링 15G</label>
+								<p class="list-data">
+									<span class="t1"><strong>14.94GB</strong> 남음</span> <span class="t2">56.8GB 사용</span>
+								</p>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<!-- 통화 -->
+		<div class="content-section used-call">
+			<div class="section-wrap">
+				<div class="section-title underline">
+					<p class="h2">통화</p>
+				</div>
+				<div class="section-body">
+					<div class="list-box chart-box">
+						<div class="chart-item pie">
+							<div class="chart-area chart4" data-percent="98">
+								<span class="chart-txt t2">300분</span>							
+							</div>
+							<div class="chart-info ">
+								<label class="list-label">영상&부가</label>
+								<p class="list-data">
+									<span class="t1"><strong>295분 51초</strong> 남음</span> <span class="t2">4분 9초 사용</span>
+								</p>							
+							</div>
+						</div>
+						<div class="chart-item pie">
+							<div class="chart-area chart5" data-percent="98">
+								<span class="chart-txt t2">기본제공</span>							
+							</div>
+							<div class="chart-info ">
+								<label class="list-label">이통3사&유무선</label>
+								<p class="list-data">
+									<span class="t1"><strong>기본제공</strong></span><span class="t2">102분 25초 사용</span>
+								</p>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 문자 -->
+		<div class="content-section used-message">
+			<div class="section-wrap">
+				<div class="section-title underline">
+					<p class="h2">문자</p>
+				</div>
+				<div class="section-body">
+					<div class="list-box chart-box">
+						<div class="chart-item pie">
+							<div class="chart-area chart6" data-percent="100">
+								<span class="chart-txt t2">300 분</span>
+							</div>
+							<div class="chart-info ">
+								<label class="list-label">영상&부가</label>
+								<p class="list-data">
+									<span class="t1"><strong>295분 51초</strong> 남음</span><span class="t2">4분 9초 사용</span>
+								</p>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 연관 시나리오 -->
+		<div class="content-section">
+			<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code="">
+				<div class="card-header">
+					<h2 class="info-title">관련 메뉴 바로가기</h2>
+				</div>
+				<div class="card-body chips-group">
+					<button type="button" class="btn chip">시나리오1</button>
+					<button type="button" class="btn chip">시나리오2</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 관련 메뉴 바로가기 data-end-trace-code="트레이스코드" / data-title-use-yn="N" : 타이틀 필요없을 경우 -->
+		<!-- <div class="content-section hidden">
+			<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code=""></div>
+		</div> -->
+
+		<!-- 유의 사항 -->
+		<div class="accordion-group">
+			<div class="accordion-box notice d-accoBox"><!-- 펼침 : .addClass('acco-active') -->
+				<div class="accordion-header d-accoBtn">
+					<div class="text">
+						<p>유의사항</p>
+					</div>
+					<div class="accordion-btn">
+                        <i class="toggleIcon"></i>
+                    </div>
+				</div>
+				<div class="accordion-body">
+					<ul class="list text-list">
+						<li>
+							<ul class="list dot-list">
+								<li>타통신사 및 유선전화 통화도 기본제공으로 사용 가능합니다.</li>
+								<li>유선전화는 지역번호(02, 031 등)를 누르고 통화하는 전화의 인터넷전화(070)를 말합니다.</li>
+								<li>영상통화는 영상/부가 기본제공량이 1.66배 빨리 줄어듭니다.</li>
+								<li>부가전화란 전국대표번호(15XX, 16XX), 평생개인번호(0505), 주파수공용통신(013) 등을 말합니다.</li>
+								<li>사용량 표시는 시스템 전산 반영으로 인해 지연될 수 있습니다.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+
+
+<!-- chart js -->
+<script>
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart1'), {
+			easing: 'easeOutElastic',
+			percent: false,
+			delay: 3000,
+			size: 65,
+			barColor: '#8b62d3',
+			trackColor: '#e8dff6',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart2'), {
+			easing: 'easeOutElastic',
+			percent: false,
+			delay: 3000,
+			size: 65,
+			barColor: '#8b62d3',
+			trackColor: '#e8dff6',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart3'), {
+			easing: 'easeOutElastic',
+			percent: false,
+			delay: 3000,
+			size: 65,
+			barColor: '#8b62d3',
+			trackColor: '#e8dff6',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart4'), {
+			easing: 'easeOutElastic',
+			percent: false,
+			delay: 3000,
+			size: 65,
+			barColor: '#0066cc',
+			trackColor: '#d9e4ff',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart5'), {
+			easing: 'easeOutElastic',
+			percent: false,	
+			delay: 3000,
+			size: 65,
+			barColor: '#0066cc',
+			trackColor: '#d9e4ff',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart6'), {
+			easing: 'easeOutElastic',
+			percent: false,
+			delay: 3000,
+			size: 65,
+			barColor: '#ff8400',
+			trackColor: '#ffe8c9',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+		var chart = window.chart = new EasyPieChart(document.querySelector('.chart7'), {
+			easing: 'easeOutElastic',
+			percent: false,
+			delay: 3000,
+			size: 65,
+			barColor: '#ff8400',
+			trackColor: '#ffe8c9',
+			scaleColor: false,
+			lineWidth: 6,
+			trackWidth: 6,
+			lineCap: 'butt',
+			onStep: function(from, to, percent) {
+				this.el.children[0].innerHTML = Math.round(percent);
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

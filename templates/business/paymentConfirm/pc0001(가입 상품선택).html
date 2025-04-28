@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper bt-accopage paymentConfirmPage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">납부확인서 발급</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section">
+			<h2 class="section-tit">
+				<span>가입 상품 선택</span>
+			</h2>
+			<!-- Accordion -->
+			<div class="accordion-group">
+				<!-- accordion-box 1set -->
+				<div class="accordion-box linetype-1 accoList d-accoBox">
+					<div class="accordion-header d-accoBtn" role="button">
+						<div class="header-wrap">
+							<div class="tit-wrap">
+								<span class="r-radio">
+									<input name="internet" type="radio" id="internet" value="" checked>
+									<label for="internet" class="radio-txt">
+										<i class="icon"></i>
+									</label>
+								</span>
+								<span class="tit-box">
+									<span>U+ 인터넷</span>
+									<span>외 9건</span>
+								</span>
+							</div>
+							<div class="txt-box">
+								<p>경기도 안산시 단원구 선부광장북로 ***</p>
+								<p>납부방법 : 신용카드자동이체</p>
+							</div>
+						</div>
+						<div class="accordion-btn" tabindex="-1">
+							<i class="toggleIcon"></i>
+						</div>
+					</div>
+					<div class="accordion-body">
+						<p class="body-tit">가입서비스 더보기</p>
+						<div class="line-info">총 <span class="num-index t-special">10개</span>의 가입서비스</div>
+						<div class="list-row">
+							<span class="item-line">인터넷</span>
+							<span class="item-info item-addr">경기도 안산시 단원구 선부광***</span>
+							<span class="item-info item-prdct">스마트 기기슬림안심_500M</span>
+						</div>
+						<div class="list-row">
+							<span class="item-line">모바일</span>
+							<span class="item-info item-mo">010-46**-76**</span>
+							<span class="item-info item-prdct">스마트 기기슬림안심_500M</span>
+						</div>
+						<div class="list-row">
+							<span class="item-line">IPTV</span>
+							<span class="item-info item-addr">서울시 성북구 ***</span>
+							<span class="item-info item-prdct">베이직</span>
+						</div>
+					</div>				
+				</div>
+				<!-- accordion-box 1set -->
+				<div class="accordion-box linetype-1 accoList d-accoBox">
+					<div class="accordion-header d-accoBtn" role="button">
+						<div class="header-wrap">
+							<div class="tit-wrap">
+								<span class="r-radio">
+									<input name="mobile" id="mobile" type="radio" value="">
+									<label for="mobile" class="radio-txt">
+										<i class="icon"></i>
+									</label>
+								</span>
+								<span class="tit-box">
+									<span>모바일</span>
+									<span>010-55**-94**</span>
+									<span>외 3건</span>
+								</span>
+							</div>
+							<div class="txt-box">
+								<p>납부방법 : 신용카드자동이체</p>
+							</div>
+						</div>
+						<div class="accordion-btn" tabindex="-1">
+							<i class="toggleIcon"></i>
+						</div>
+					</div>
+					<div class="accordion-body">
+						<p class="body-tit">가입서비스 더보기</p>
+						<div class="line-info">총 <span class="num-index t-special">10개</span>의 가입서비스</div>
+						<div class="list-row">
+							<span class="item-line">모바일</span>
+							<span class="item-info item-mo">010-55**-94**</span>
+							<span class="item-info item-prdct">스마트 기기슬림안심_500M</span>
+						</div>
+						<div class="list-row">
+							<span class="item-line">인터넷</span>
+							<span class="item-info item-addr">경기도 안산시 단원구 선부광***</span>
+							<span class="item-info item-prdct">스마트 기기슬림안심_500M</span>
+						</div>
+						<div class="list-row">
+							<span class="item-line">IPTV</span>
+							<span class="item-info item-addr">서울시 성북구 ***</span>
+							<span class="item-info item-prdct">베이직</span>
+						</div>
+					</div>				
+				</div>
+				<!-- accordion-box 1set -->
+				<div class="accordion-box linetype-1 accoList d-accoBox">
+					<div class="accordion-header d-accoBtn" role="button">
+						<div class="header-wrap">
+							<div class="tit-wrap">
+								<span class="r-radio">
+									<input name="address" id="mochck1" type="radio" value="">
+									<label for="mochck1" class="radio-txt">
+										<i class="icon"></i>
+									</label>
+								</span>
+								<span class="tit-box">
+									<span>U+인터넷전화</span>
+									<span>070-82**-96**</span>
+									<span>외 1건</span>
+								</span>
+							</div>
+							<div class="txt-box">
+								<p>부산광역시 중구 중앙대로 ***</p>
+								<p>납부방법 : 신용카드자동이체</p>
+							</div>
+						</div>
+						<div class="accordion-btn" tabindex="-1">
+							<i class="toggleIcon"></i>
+						</div>
+					</div>
+					<div class="accordion-body">
+						<div class="body-tit">가입서비스 더보기</div>
+						<div class="line-info">총 <span class="num-index t-special">2개</span>의 가입서비스</div>
+						<div class="list-row">
+							<span class="item-line">U+인터넷전화</span>
+							<span class="item-info item-addr">부산광역시 중구 중앙대로 ***</span>
+							<span class="item-info item-prdct">스마트 기기슬림안심_500M</span>
+						</div>
+						<div class="list-row">
+							<span class="item-line">모바일</span>
+							<span class="item-info item-mo">010-46**-76**</span>
+							<span class="item-info item-prdct">스마트 기기슬림안심_500M</span>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+		<div class="btn-group">
+			<button class="standard g-line">취소</button>
+			<button class="standard">다음</button>
+		</div>
+		<!-- 가입 상품 선택 아코디언 -->
+        <div class="accordion-group">
+            <div class="accordion-box notice d-accoBox">
+                <div class="accordion-header d-accoBtn">
+                    <div class="text">
+                        <p>꼭 확인하세요.</p>
+                    </div>
+                    <div class="accordion-btn">
+                        <i class="toggleIcon"></i>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <ul class="list dot-list">
+                        <li>최근 25개월 동안의 납부내역 확인서만 신청할 수 있습니다.</li>
+                        <li>확인서 발급 기간은 최대 12개월로 선택 가능합니다.</li>
+                        <li>입력한 이메일 또는 팩스번호로 납부확인서가 전송됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<!--모달 팝업 영역-->
+<div class="modal-wrap popup-wrapper center-popup">
+	<div class="blacklayer appear"></div>
+	<!--취소 안내 팝업-->
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>확인</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p>
+					휴대폰 번호를 정확히 입력해주세요.
+				</p>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<!-- <div class="btn-group btn-group-sm">
+				<button type="button" class="btn">확인</button>
+			</div> -->
+			<div class="btn-group">
+				<button type="button" class="standard g-line">이전</button>
+				<button type="button" class="standard">다음</button>
+			</div>
+		</div>
+	</div>
+	<!--기본 팝업 END-->
+</div>   
+<!--모달 팝업 영역 END-->
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+</body>
+</html>

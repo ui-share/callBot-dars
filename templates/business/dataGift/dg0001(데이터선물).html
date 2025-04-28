@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper datagiftPage">
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <h1 class="page-title">데이터 선물</h1>
+        <button type="button" class="c-btn">닫기</button>
+    </header>
+    <!-- 헤더 영역 END -->
+    
+    <!-- 콘텐츠 영역 -->
+    <div class="content">
+        <div class="tapnav-wrap">
+            <ul class="tabnav">
+                <li class=""><a href="javascript:void(0)" role="button" class="active">데이터 내역</a></li>
+                <li class=""><a href="javascript:void(0)" role="button" class="">데이터 선물</a></li>
+                <li class=""><a href="javascript:void(0)" role="button" class="">데이터 자동주기 설정</a></li>
+            </ul>
+        </div>
+
+        <div class="tabcontent">
+            <!-- Tab 데이터 내역 -->
+            <div class="tab bg-gray hidden">
+                <div class="content-section title-section">
+                    <h2 class="section-tit-lg">
+                        내 데이터 내역을<br>
+                        한곳에 모았어요
+                    </h2>
+                </div>
+                <div class="content-section">
+                    <div class="period-search">
+                        <ul class="date-wrap">
+                            <li>
+                                <div class="custom-info calendar">
+                                    <input type="text" class="custom-inp datepicker start-date" id="datepicker3" value="2024.04.07" readonly>
+                                    <i class="calendar-icon"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-info calendar">
+                                    <input type="text" class="custom-inp datepicker end-date" id="datepicker3" value="2024.05.07" readonly>
+                                    <i class="calendar-icon"></i>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button" class="search-btn"></button>
+                    </div>
+        
+                    <!-- no-list -->
+                    <div class="history-list hidden">
+                        <div class="list-none">
+                            <div class="img">
+                                <img src="../../../../static/images/img_no_list.png" alt="이용 내역이 없어요">
+                            </div>
+                            <p>이용 내역이 없어요</p>
+                        </div>
+                    </div>
+        
+                    <div class="history-list">
+                        <div class="item">
+                            <p class="date">24.04.29</p>
+                            <div class="cont">
+                                <span class="category">선물</span>
+                                <div class="his-detail">
+                                    <div class="top">
+                                        <strong class="tit">데이터 주고받기</strong>
+                                        <span class="data">100MB</span>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="name">홍*동</span>
+                                        <span class="phone">010-12**56**</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <span class="category charge">충전</span>
+                                <div class="his-detail">
+                                    <div class="top">
+                                        <strong class="tit">데이터 주고받기</strong>
+                                        <span class="data">100MB</span>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="name">홍*동</span>
+                                        <span class="phone">010-12**56**</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <button type="button" class="moreBtn">더보기</button> <!-- 버튼 hidden 처리 가능 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 데이터 선물 -->
+            <div class="tab hidde">    
+                <div class="content-section title-section">
+                    <h2 class="section-tit-lg">
+                        내 데이터를 가족, 친구에게<br>
+                        선물해 보세요
+                    </h2>
+                    <p class="info-txt bold">데이터를 선물하기만 할 수 있어요.<br>데이터 쿠폰이나 가족사랑데이터 등의 선물은 홈페이지나<br>당신의 유플러스 앱을 이용해 주세요.</p>
+                </div>
+
+                <div class="content-section button-section">
+                    <button type="button" class="resend-btn" role="button">
+                        <div class="img">
+                            <img src="../../../../static/images/ico_data_resend.png" alt="데이터 다시 보내기">
+                        </div>
+                        <div class="content-row flex-start vertical">
+                            <strong class="fz16">홍*동님에게 500MB 다시 보내기</strong>
+                            <span class="desc">데이터 주고 받기</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="tabmenu-section">
+                    <div class="tapnav-wrap tab-black">
+                        <ul class="tabnav">
+                            <li class=""><a href="javascript:void(0);" role="button" class="active">최근 목록</a></li>
+                            <li class=""><a href="javascript:void(0);" role="button" class="">직접 입력</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tabcontent">
+                        <!-- Tab 최근 목록 -->
+                        <div class="tab hidden">
+                            <!-- no-list -->
+                            <div class="content-section hidden">
+                                <div class="contact-box list-none">
+                                    <p>
+                                        번호를 직접 입력하여<br>데이터를 선물해 보세요!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 최근 목록 -->
+                            <div class="content-section dev-section hidden">
+                                <div class="contact-box">
+                                    <h2 class="section-tit ft-gray">
+                                        <span>최근 목록</span>
+                                    </h2>
+                                    <ul class="list contact-list">
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="content-section dev-section hidden">
+                                <div class="contact-box">
+                                    <h2 class="section-tit ft-gray">
+                                        <span>결합 가족/지인</span>
+                                    </h2>
+                                    <ul class="list contact-list">
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56***</span>
+                                            </button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="contact-btn flex-start">
+                                                <strong class="name">홍*동</strong>
+                                                <span class="mobile">010-12**56**</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-group">
+                                        <button type="button" class="moreBtn">
+                                            <span class="more-arrow">결합가족/지인 더보기</span>
+                                        </button>
+                                        <!-- 접기 화살표 rotate : fold -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- 탭02 직접입력 -->
+                        <div class="tab">
+                            <div class="content-section">
+                                <div class="contact-box">
+                                    <div class="inputInfo inputInfo-lg">
+                                        <div class="custom-info inBtn">
+                                            <input placeholder="" type="tel" class="custom-inp">
+                                            <button type="button" class="clear-btn" title="입력한 문자 삭제"><span class="hidden">입력한 문자 삭제</span></button>
+                                        </div>
+                                        <label class="info-label flt-on"> <!-- flt-on / fit-off : 라벨이동 애니메이션 -->
+                                            휴대폰 번호
+                                            <!-- <span class="required"><i class="hidden">필수항목</i></span> -->
+                                        </label>
+                                        <p class="error-txt hidden">휴대폰 번호 확인 후 다시 시도해 주세요.</p>
+                                        <p class="error-txt hidden">U+모바일 고객에게만 데이터를 선물할 수 있습니다.</p>
+                                    </div>
+
+                                    <div class="bottom-button">
+                                        <div class="btn-group">
+                                            <button type="button" class="standard" disabled>확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 데이터 자동주기 설정 -->
+            <div class="tab hidde">
+                <div class="content-section title-section">
+                    <h2 class="section-tit-lg">
+                        매월 1일, 데이터를 자동으로<br>
+                        보내도록 설정해 보세요
+                    </h2>
+                    <p class="info-txt bold">데이터 자동주기는 결합되어 있는 가족에게 하실 수 있어요.</p>
+                </div>
+                <div class="content-section">
+                    <div class="autoSend-wrap">
+                        <strong class="title">
+                            데이터 자동주기
+                            <span>최대 2회</span>
+                        </strong>
+                        <div class="auto-list">
+                            <!-- 추가 -->
+                            <div class="add-txt"><span>'+'를 눌러 자동으로 받을 사람을 추가해 주세요</span></div>
+                            <button type="button" class="add-btn"><span class="hidden">추가</span></button>
+                            <!-- 추가된 목록 -->
+                            <div class="item">
+                                <strong class="name">홍*동</strong>
+                                <span class="phone">010-12**56**</span>
+                                <span class="data">700MB</span>
+                                <button type="button" class="delete-btn"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 콘텐츠 영역 END -->
+</div>
+
+<!-- 시작일 선택 팝업-->
+<div class="modal-wrap popup-wrapper bottom-popup dataPop hidde">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>시작 날짜를 선택해 주세요</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<!-- datepicker 영역 -->
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 종료일 선택 팝업 -->
+<div class="modal-wrap popup-wrapper bottom-popup dataPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>끝나는 날짜를 선택해 주세요</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<!-- datepicker 영역 -->
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 데이터 선물하기 full-popup-->
+<div class="modal-wrap popup-wrapper datagift-1 hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>데이터 주고받기</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section title-section">
+                <h2 class="section-tit-lg">
+                    홍*동님에게 보낼<br>
+                    데이터양을 선택해 주세요.
+                </h2>
+                <p class="info-txt">데이터를 선물하기만 할 수 있어요.<br>데이터 쿠폰이나 가족사랑데이터 등의 선물은 홈페이지나<br>당신의 유플러스 앱을 이용해 주세요.</p>
+            </div>
+			
+            <div class="content-section">
+                <h2 class="content-title">
+                    <strong>데이터 주고받기</strong>
+                    <div class="tooltip-wrap">
+                        <button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+                        <div class="p-tooltip round" role="tooltip">
+                            <div class="tooltip-inner">
+                                <span>
+                                    LG유플러스를 이용하는 가족/친구와 내 데이터를 주고받을 수 있는 혜택이에요.
+                                </span>
+                                <button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+                            </div>
+                            <div id="arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                </h2>
+                <div class="data-box">
+                    <strong class="data">200MB</strong>
+                    <div class="data-slide">
+                        <div class="content-row">
+                            <p>100MB</p>
+                            <p>1GB</p>
+                        </div>
+                        <input type="range" min="100" max="1000" step="100" class="range-custom" style="background-image: linear-gradient(to right, rgb(242, 58, 160) 55%, rgb(241, 243, 246) 55%);">
+                        <div class="scale-line">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-data-box">
+                    <div class="content-row">
+                        <p>현재 남은 데이터</p>
+                        <strong>50,176MB</strong>
+                    </div>
+                    <div class="content-row">
+                        <p>보내면 남는 데이터</p>
+                        <strong class="t-special">49.576MB</strong>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="content-section">
+                <!-- Accordion -->
+                <div class="accordion-group">
+                    <div class="accordion-box g-line-type round-type d-accoBox">
+                        <div class="accordion-header d-accoBtn">
+                            <div class="text">
+                                <p>꼭 확인하세요</p>
+                            </div>
+                            <div class="accordion-btn" tabindex="-1">
+                                <i class="toggleIcon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-body no_bt">
+                            <div class="">
+                                <ul class="list dot-list">
+                                    <li class="bold">기본 제공 데이터의 50% 이상 남았을 때만 줄 수 있습니다.</li>
+                                    <li class="bold">데이터를 주고 난 후 남은 데이터가 500MB 이상이어야 합니다.</li>
+                                    <li>데이터를 주고 나 후에는 취소할 수 없습니다.</li>
+                                    <li>휴대폰 번호 1개당 데이터 주기, 받기 각각 월 2회까지 가능합니다.(일부 요금제 제외)</li>
+                                    <li>결합한 가족 구성원의 경우 이용 요금제에 따라 월 최대 4회 데이터를 줄 수 있습니다.</li>
+                                    <li>만 19세 미만 고객은 데이터 받기만 가능합니다.</li>
+                                    <li>데이터 주고받기 대상 요금제로 변경 후에는 바로 데이터 주기 기능을 이용할 수 있습니다.</li>
+                                    <li>연속으로 데이터를 주는 경우, 데이터 정보 처리 시간이 소요되어 일시적으로 이용이 제한될 수 있습니다.</li>
+                                    <li>받은 데이터로 쉐어링(데이터 나눠쓰기), 테더링(데이터 함께 쓰기), 데이터 이용 음성통화를 이용할 수 없습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">보내기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 데이터 선물하기 하단 팝업 -->
+<div class="modal-wrap popup-wrapper datagift-2 bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>민*기 님에게 1GB 데이터를<br/>보내시겠습니까?</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section">
+				<div class="round-box bg-gray">
+                    <div class="info-group pd0 no_bb">
+                        <div class="content-row">
+                            <span>받는 사람</span>
+                            <span class="bold">민*기</span>
+                        </div>
+                        <div class="content-row">
+                            <span>연락처</span>
+                            <span class="bold">010-12**56**</span>
+                        </div>
+                        <div class="content-row">
+                            <span>데이터</span>
+                            <span class="t-special bold">1GB</span>
+                        </div>
+                        <div class="content-row">
+                            <span>남은 선물 횟수</span>
+                            <span class="t-special bold">2회</span>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+            <div class="content-section">
+                <p class="info-txt fz16">
+                    <span>본인인증 후 데이터를 선물할 수 있으며, </span><br>
+                    <span class="bold">선물한 데이터는 취소할 수 없으니 꼭 확인해 주세요.</span>
+                </p>
+            </div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">인증 하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 데이터 자동주기 설정 1 full-popup-->
+<div class="modal-wrap popup-wrapper dataAuto-1 hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">데이터 자동주기 설정</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section title-section">
+                <h2 class="section-tit-lg">
+                    매월 1일, 데이터를 받을 사람을<br>
+                    선택해 주세요.
+                </h2>
+            </div>
+			
+            <div class="content-section">
+                <h2 class="section-tit ft-gray">
+                    <span>결합 가족</span>
+                </h2>
+                <ul class="list contact-list">
+                    <li class="">
+                        <button type="button" class="contact-btn flex-start">
+                            <strong class="name">김*동</strong>
+                            <span class="mobile">010-12**56***</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="contact-btn flex-start">
+                            <strong class="name">홍*동</strong>
+                            <span class="mobile">010-12**56**</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="contact-btn flex-start">
+                            <strong class="name">이*동</strong>
+                            <span class="mobile">010-12**56**</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="contact-btn flex-start">
+                            <strong class="name">문*동</strong>
+                            <span class="mobile">010-12**56**</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="contact-btn flex-start">
+                            <strong class="name">김*동</strong>
+                            <span class="mobile">010-12**56**</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="btn-group">
+                    <button type="button" class="moreBtn"><span class="more-arrow">결합가족/지인 더보기</span></button> <!-- fold 클래스 추가시 화살표 회전 -->
+                </div>
+            </div>
+		</div>
+
+		<!-- popup-footer -->
+		<!-- <div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">보내기</button>
+			</div>
+		</div> -->
+	</div>
+</div>
+
+<!-- 데이터 자동주기 설정2 full-popup-->
+<div class="modal-wrap popup-wrapper dataAuto-2 hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">데이터 자동주기 설정</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body scrollAuto">
+            <div class="content-section title-section">
+                <h2 class="section-tit-lg">
+                    홍*동님에게 보낼<br>
+                    데이터양을 선택해 주세요.
+                </h2>
+            </div>
+			
+            <div class="content-section">
+                <h2 class="content-title">
+                    <strong>데이터 주고받기</strong>
+                    <div class="tooltip-wrap">
+                        <button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+                        <div class="p-tooltip round" role="tooltip">
+                            <div class="tooltip-inner">
+                                <span>
+                                    LG유플러스를 이용하는 가족/친구와 내 데이터를 주고받을 수 있는 혜택이에요.
+                                </span>
+                                <button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+                            </div>
+                            <div id="arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                </h2>
+                <div class="data-box">
+                    <strong class="data">200MB</strong>
+                    <div class="data-slide">
+                        <div class="content-row">
+                            <p>100MB</p>
+                            <p>1GB</p>
+                        </div>
+                        <input type="range" min="100" max="1000" step="100" class="range-custom" style="background-image: linear-gradient(to right, rgb(242, 58, 160) 55%, rgb(241, 243, 246) 55%);">
+                        <div class="scale-line">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <ul class="list dot-list">
+                    <li>데이터 자동주기는 매월 1일에 전송됩니다.</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <!-- Accordion -->
+                <div class="accordion-group">
+                    <div class="accordion-box g-line-type round-type d-accoBox">
+                        <div class="accordion-header d-accoBtn">
+                            <div class="text">
+                                <p>꼭 확인하세요</p>
+                            </div>
+                            <div class="accordion-btn">
+                                <i class="toggleIcon"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-body no_bt">
+                            <div class="">
+                                <ul class="list dot-list">
+                                    <li>데이터를 주고 나 후에는 취소할 수 없습니다.</li>
+                                    <li>휴대폰 번호 1개당 데이터 주기, 받기 각각 월 2회까지 가능합니다.(일부 요금제 제외)</li>
+                                    <li>결합한 가족 구성원의 경우 이용 요금제에 따라 월 최대 4회 데이터를 줄 수 있습니다.</li>
+                                    <li>만 19세 미만 고객은 데이터 받기만 가능합니다.</li>
+                                    <li>데이터 주고받기 대상 요금제로 변경 후에는 바로 데이터 주기 기능을 이용할 수 있습니다.</li>
+                                    <li>연속으로 데이터를 주는 경우, 데이터 정보 처리 시간이 소요되어 일시적으로 이용이 제한될 수 있습니다.</li>
+                                    <li>받은 데이터로 쉐어링(데이터 나눠쓰기), 테더링(데이터 함께 쓰기), 데이터 이용 음성통화를 이용할 수 없습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">다음</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 데이터 자동주기 등록 하단 팝업 -->
+<div class="modal-wrap popup-wrapper dataAuto-3 bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>데이터 자동주기를 등록할까요?</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section">
+				<div class="round-box bg-gray">
+                    <div class="info-group pd0 no_bb">
+                        <div class="content-row">
+                            <span>받는 사람</span>
+                            <strong>민*기</strong>
+                        </div>
+                        <div class="content-row">
+                            <span>연락처</span>
+                            <strong>010-12**56**</strong>
+                        </div>
+                        <div class="content-row">
+                            <span>데이터</span>
+                            <strong class="t-special">1GB</strong>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+            <div class="content-section">
+                <p class="info-txt fz16">
+                    <span>본인인증 후 설정이 완료됩니다.</span>
+                </p>
+            </div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">등록하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 데이터 자동주기 해제 하단 팝업 -->
+<div class="modal-wrap popup-wrapper dataAuto-4 bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header --> 
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>데이터 자동주기를 해제할까요?</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section">
+				<div class="round-box bg-gray">
+                    <div class="info-group pd0 no_bb">
+                        <div class="content-row">
+                            <span>받는 사람</span>
+                            <strong>민*기</strong>
+                        </div>
+                        <div class="content-row">
+                            <span>데이터</span>
+                            <strong class="t-special">1GB</strong>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+            <div class="content-section">
+                <p class="info-txt fz16">
+                    <span>본인인증 후 설정이 완료됩니다.</span>
+                </p>
+            </div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+                <button type="button" class="standard">해제하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--SMS 본인인증 확인 팝업-->
+<div class="modal-wrap hidden">
+    <div class="popup popup-1 d-popup" id="smsAuthSuccess">
+        <div class="pop-wrap">
+            <div class="pop-content">
+                <div class="pop-header">
+                    <h1 class="pop-tit">확인</h1>
+                </div>
+                <div class="pop-body">
+                    <p class="pop-txt">
+                        본인인증에 성공했습니다.<br>
+                        계속 진행하시려면 확인을 눌러주세요.
+                    </p>
+                </div>
+                <div class="pop-footer">
+                    <div class="btn-group">
+                        <button class="standard" id="smsAuthOk">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SMS 본인확인 팝업 END-->
+</div>
+
+<!-- 로딩 페이지 -->
+<div class="loadingPage hidden">
+    <div class="white-layer"></div>
+    <div class="loading"></div>
+</div>
+
+<!-- 커튼레이어 -->
+<div class="loadingPage curtain-layer hidden">
+    <div class="white-layer"></div>
+    <div class="loading"></div>
+</div>
+
+<!-- tooltip js -->
+
+<script>
+    // datepicker
+    $(document).ready(function(){
+        $( function() {
+            $( "#datepicker3" ).datepicker({
+                dateFormat: "yy.mm.dd",
+                showMonthAfterYear: true,
+                monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+                monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+                dayNamesMin: [ "일", "월", "화", "수", "목", "금", "토" ],
+            });
+        });
+    });
+
+    // tooltip
+    const tooltipBtn = document.querySelector('.tooltip-btn');
+    const tooltip = document.querySelector('.p-tooltip');
+
+    const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+        placement: 'bottom',
+        modifiers: [
+            {
+                name: 'offset',
+                options: {
+                    offset: [0, 8],
+                },
+            },
+            {
+                name: 'flip',
+                options: {
+                    fallbackPlacements: ['top', 'bottom'],
+                },
+            },
+        ],
+    });
+
+    function show() {
+        // Make the tooltip visible
+        tooltip.setAttribute('data-show', '');
+
+        // Enable the event listeners
+        popperInstance.setOptions((options) => ({
+            ...options,
+            modifiers: [
+                ...options.modifiers,
+                { name: 'eventListeners', enabled: true },
+            ],
+        }));
+
+        // Update its position
+        popperInstance.update();
+    }
+
+    function hide() {
+        // Hide the tooltip
+        tooltip.removeAttribute('data-show');
+
+        // Disable the event listeners
+        popperInstance.setOptions((options) => ({
+            ...options,
+            modifiers: [
+                ...options.modifiers,
+                { name: 'eventListeners', enabled: false },
+            ],
+        }));
+    }
+
+    const showEvents = ['click', 'focus'];
+    const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+    showEvents.forEach((event) => {
+        tooltipBtn.addEventListener(event, show);
+    });
+
+    hideEvents.forEach((event) => {
+        tooltipBtn.addEventListener(event, hide);
+    });
+</script>
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+
+</body>
+
+</html>

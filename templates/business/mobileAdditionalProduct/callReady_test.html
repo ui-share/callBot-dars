@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+
+<style>
+	.swiper {
+		z-index: unset;
+	}
+</style>
+
+<body>
+<div class="page-wrapper subservicePage detailService sbsvDetail callready bt-accopage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<button type="button" class="c-btn prev">이전</button>
+		<h1 class="page-title">부가서비스 상세</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section serviceTitle">
+			<div class="flag-group type-2">
+				<!-- <span class="flag-box new">최신</span> -->
+				<!-- <span class="flag-box">추천</span> -->
+				<!-- <span class="flag-box popular">인기</span> -->
+			</div>
+			<h2 class="section-tit">통화중 대기</h2>
+			<p class="info-txt">먼저 걸려 온 전화를 잠시 대기시키고 새로 걸려 온 전화를 받을 수 있는 서비스</p>
+			<p class="price-summary">
+				<span class="price">무료</span>
+			</p>
+		</div>
+
+		<div class="content-section serviceInfo">
+			<h2 class="section-tit">서비스 내용</h2>
+			<div class="content-box">
+				<p class="content-tit">요금제</p>
+				<div class="table-wrap l-table col-type">
+					<table class="table">
+						<thead class="thead">
+							<tr>
+								<th>서비스명</th>
+								<th>사용금액<br>(부가세 포함)</th>
+								<th>내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="center">통화중 대기</td>
+								<td class="center">무료</td>
+								<td>
+									<ul class="bullet">
+										<li>통화 중 새로 걸려 온 전화를 받고, 끊으면 다시 이어서 통화 가능</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+			
+		<!-- Accordion -->
+		<div class="accordion-group allopenAcco">
+			<button class="allopenBtn"> <!-- 전체펼치기 기본 / 전체닫기 collapsed 추가-->
+				<span class="allOpen">전체 펼치기</span>
+				<span class="allClose">전체 닫기</span>
+			</button>
+			<div class="accordion-box d-accoBox type-4">
+				<div class="accordion-header d-accoBtn" role="button">
+					<div class="text">
+						<p>이용방법</p>
+					</div>
+					<div class="accordion-btn">
+						<i class="toggleIcon"></i>
+					</div>
+				</div>
+				<div class="accordion-body">
+					<div class="acco-box">
+						<p class="acco-title">통화 중 새로 걸려온 전화 받기</p>
+						<ul class="acco-list">
+							<li class="list-tit">안드로이드 휴대폰</li>
+						</ul>
+						<!-- 슬라이드 Slider main container -->
+						<div class="swiper swiper-type-step callReady-android">
+							<div class="swiper-container">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/20240527-045058-324-MEUaRZSR.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">1단계</p>
+											<p class="info-title">A와 통화 중 B에게 전화가 걸려오면 나에게만 ‘뚜뚜’ 소리가 들려요. [통화] 버튼을 누르세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/20240527-045102-230-fxcqBFBz.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">2단계</p>
+											<p class="info-title">A와의 통화를 끊지않고 B와 통화하려면 [통화 대기]를 누르세요. A는 대기 상태가 되고 B와 통화할 수 있어요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/20240527-045106-049-KGJn1V3h.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">3단계</p>
+											<p class="info-title">다시 A와 통화하려면 [전환]을 누르세요. B는 대기 상태가 되고 A와 통화할 수 있어요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/20240527-045111-153-KVL0MDxW.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">4단계</p>
+											<p class="info-title">A와의 통화를 종료하려면 [통화 종료] 버튼을 누르세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/20240527-045115-212-WslUEKFl.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">5단계</p>
+											<p class="info-title">대기 중이었던 B와 다시 통화할 수 있어요.</p>
+										</div>
+									</div>
+								</div>
+								<!-- pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>								
+						</div>
+
+						<ul class="acco-list">
+							<li class="list-tit">아이폰</li>
+						</ul>
+						<!-- 슬라이드 Slider main container -->
+						<div class="swiper swiper-type-step callReady-allowSpam">
+							<div class="swiper-container">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/allowSpam/20240527-045119-470-yQcgf5bp.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">1단계</p>
+											<p class="info-title">A와 통화 중 B에게 전화가 걸려오면 나에게만 ‘뚜뚜’ 소리가 들려요.<br>A와의 통화를 끊지 않고 B와 통화하려면 [대기 및 응답]을 누르세요.<br>A는 대기 상태가 되고 B와 통화할 수 있어요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/allowSpam/20240527-045124-785-Cop5eknA.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">2단계</p>
+											<p class="info-title">다시 A와 통화하려면 [바꾸기]를 누르세요. B는 대기 상태가 되고, A와 통화할 수 있어요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/allowSpam/20240527-045128-998-4eIxTLoX.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">3단계</p>
+											<p class="info-title">A와의 통화를 종료하려면 [통화 종료] 버튼을 누르세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/allowSpam/20240527-045133-889-J6d4Uf5t.png" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">4단계</p>
+											<p class="info-title">대기 중이었던 B와 다시 통화할 수 있어요.</p>
+										</div>
+									</div>
+								</div>
+								<!-- pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>								
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-box d-accoBox type-4">
+				<div class="accordion-header d-accoBtn" role="button">
+					<div class="text">
+						<p>가입 및 해지</p>
+					</div>
+					<div class="accordion-btn">
+						<i class="toggleIcon"></i>
+					</div>
+				</div>
+				<div class="accordion-body">
+					<div class="acco-box">
+						<p class="acco-title">가입하기</p>
+						<ul class="acco-list">
+							<li class="list-tit">안드로이드 설정</li>
+						</ul>
+						<!-- 슬라이드 Slider main container -->
+						<div class="swiper swiper-type-step callReady-manageApp">
+							<div class="swiper-container ">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/manageApp/20240528-114907-559-hO9PgVaT.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">1단계</p>
+											<p class="info-title">구글 플레이 스토어 앱에서 U<sup>+</sup> 모바일매니저를 설치하세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/manageApp/20240528-114911-845-f4sdw5J7.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">2단계</p>
+											<p class="info-title"> U<sup>+</sup>모바일 매니저 앱을 실행하고 홈 화면에서 [이용 중인 부가서비스]를 누르세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/manageApp/20240528-114915-484-YKi05bn1.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">3단계</p>
+											<p class="info-title">‘통화중 대기 이용’ 옆에 있는 <img src="../../../../static/images/20240528-011318-657-beGnfwr8.png" class="toggleImg" alt=""> 버튼을 눌러 켜주세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/manageApp/20240528-114923-286-rMkxmmlp.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">4단계</p>
+											<p class="info-title">통화중 대기 서비스를 이용할 수 있어요.</p>
+										</div>
+									</div>
+								</div>
+								<!-- pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>								
+						</div>
+
+						<ul class="acco-list">
+							<li class="list-tit">아이폰 설정</li>
+						</ul>
+						<!-- 슬라이드 Slider main container -->
+						<div class="swiper swiper-type-step callReady-iosSetting">
+							<div class="swiper-container ">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/iosSetting/20240528-010908-924-6UO4GD8w.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">1단계</p>
+											<p class="info-title">아이폰 홈 화면에서 [설정] → [전화]를 누르세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/iosSetting/20240528-010916-817-ld27RTfe.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">2단계</p>
+											<p class="info-title">[통화 대기]를 누르세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/iosSetting/20240528-010920-458-bklzGd1D.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">3단계</p>
+											<p class="info-title">통화대기 옆에 있는 <img src="../../../../static/images/20240528-011314-820-F4e4LDtd.png" class="toggleImg" alt=""> 버튼을 눌러 켜주세요.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="info-img">
+											<img src="../../../../static/images/mbsubService/callReady/iosSetting/20240528-010924-164-v1vWhA63.jpg" alt="">
+										</div>
+										<div class="info-body">
+											<p class="info-step">4단계</p>
+											<p class="info-title">통화중 대기 서비스를 이용할 수 있어요.</p>
+										</div>
+									</div>
+								</div>
+								<!-- pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group btn-group-solid">
+				<button type="button" class="btn btn-solid-primary">서비스 가입</button>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+<script>
+	const swiper = new Swiper('.swiper .swiper-container', {
+		spaceBetween: 22,
+		
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+</script>
+
+</body>
+</html>

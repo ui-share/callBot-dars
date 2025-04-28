@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper bt-accopage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<button type="button" class="c-btn prev">이전</button>
+		<h1 class="page-title">요금 바로 납부하기</h1>
+		<button class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section">
+			<h2 class="section-tit"><span>결제 정보 입력</span></h2>
+			<!-- 결제 수단 선택 -->
+			<div class="inputInfo">
+				<div for="choicePayment" class="info-label">
+					결제 수단 선택
+					<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+				</div>
+				<div class="radio-group twoby">
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input id="payCard" name="pay" type="radio" value="payCard" checked>
+							<label for="payCard" class="text-radio"><span class="txt">신용카드</span></label>
+						</span>
+					</div>
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input id="payco" name="pay" type="radio" value="payco" class="d-billPay">
+							<label for="payco" class="text-radio"><span class="txt">PAYCO포인트</span></label>
+						</span>
+					</div>
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input id="toss" name="pay" type="radio" value="toss" class="d-billPay">
+							<label for="toss" class="text-radio"><span class="txt">토스</span></label>
+						</span>
+					</div>
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input id="kakaopay" name="pay" type="radio" value="kakao" class="d-billPay">
+							<label for="kakaopay" class="text-radio"><span class="txt">카카오페이</span></label>
+						</span>
+					</div>
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input id="naverpay" name="pay" type="radio" value="naver" class="d-billPay">
+							<label for="naverpay" class="text-radio"><span class="txt">네이버페이</span></label>
+						</span>
+					</div>
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input id="withdraw" name="pay" type="radio" value="withdraw">
+							<label for="withdraw" class="text-radio"><span class="txt">실시간 출금</span></label>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- 결제 수단 선택 END -->
+			
+			<!-- 신용카드 선택 콘텐츠 영역 -->
+			<div class="creditCard mt26" id="creditCard">
+				<!-- 카드 소유자 선택 -->
+				<div class="inputInfo" id="cardOwner">
+					<div class="radio-group vertical">
+						<div class="radio-box">
+							<span class="radio-btn">
+								<input id="ownCard" name="Card" type="radio" value="ownCard" checked>
+								<label for="ownCard" class="text-radio">
+									<span class="txt">신용카드 (본인)</span>
+									<span class="s-txt">카드 명의자, 현재 납부자, 홈페이지 회윈의 카드로만 납부할 수 있습니다.</span>
+								</label>
+							</span>
+						</div>
+						<div class="radio-box">
+							<span class="radio-btn">
+								<input id="othersCard" name="Card" type="radio" value="othersCard">
+								<label for="othersCard" class="text-radio">
+									<span class="txt">신용카드 (타인)</span>
+									<span class="s-txt">다른 사람의 카드를 이용할 경우, 카드의 정확한 정보 확인을 위해 추가 인증이 진행됩니다.</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+			
+				<!-- 고객 유형 / 공통 -->
+				<div class="inputInfo">
+					<label for="customer" class="info-label">
+						고객 유형
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="r-radio-group">
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="personal" name="custType" type="radio" value="10" checked>
+								<label for="personal" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">개인</span>
+								</label>
+							</span>
+						</div>
+						<!-- <div class="r-radio-box">
+							<span class="r-radio">
+								<input id="p-business" name="custType" type="radio" value="20">
+								<label for="p-business" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">사업자(개인사업자)</span>
+								</label>
+							</span>
+						</div> -->
+					</div>
+				</div>
+
+				<!-- 카드번호 / 공통 -->
+				<div class="inputInfo">
+					<label for="cardNo" class="info-label">
+						카드번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="cardNo" name="" placeholder="'-'없이 숫자만 입력" maxlength="19" type="tel" class="custom-inp d-ownInputCk d-otherInputCk" onkeyup="validate.inputCardNoCheck(this)" autocomplete="off">
+					</div>
+					<p class="error-txt hidden">카드번호를 정확하게 입력해 주세요.</p>
+				</div>
+			
+				<!-- 카드사 / 공통 -->
+				<div class="inputInfo">
+					<label for="cardComp" class="info-label">
+						카드사
+						<button class="q-btn tooltip">
+							<span class="hidden">카드사 설명보기</span>
+							<p class="tooltip-txt">
+								은행계열 카드 <span class="t-special">하나SK카드, 하나카드 중 일부</span>는<br>
+								카드사명이 BC카드로 표기됩니다.
+							</p>
+						</button>
+					</label>
+					<div class="custom-info">
+						<input id="cardCompCd" class="hidden">
+						<input id="cardComp" name="" placeholder="카드번호 입력 시 자동으로 표시됩니다." type="text" class="custom-inp d-ownInputCk d-otherInputCk" disabled>
+					</div>
+				</div>
+				
+				<!-- 카드 유효기간 / 공통 -->
+				<div class="inputInfo">
+					<label for="expPeriod" class="info-label">
+						카드 유효기간
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="expPeriod" name="" placeholder="OO년/OO월" maxlength="5" type="tel" class="custom-inp d-ownInputCk d-otherInputCk" onkeyup="validate.inputNumCheck(this)" autocomplete="off">
+					</div>
+					<p class="error-txt hidden">카드 유효기간을 확인해 주세요.</p>
+				</div>
+
+				<!-- 할부기간 / 공통 -->
+				<div class="inputInfo">
+					<label for="installment" class="info-label">
+						할부기간
+						<button class="q-btn tooltip">
+							<span class="hidden">할부기간 설명보기</span>
+							<p class="tooltip-txt">
+								결제 금액 5만원 이상 할부 가능합니다.<br>
+								(신한카드의 경우에만 3만원이상 할부 가능)
+							</p>
+						</button>
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="select-box">
+						<select id="instPeroid" class="select-form">
+							<option value="0">일시불</option>
+							<option th:each="month : ${#numbers.sequence(2, 12)}" th:value="${month}" th:text="|${month}개월|"></option>
+						</select>
+						<p class="error-txt hidden">할부기간을 선택해주세요.</p>
+					</div>
+					<p class="error-txt ">무이자 할부와 제휴카드 할인은 이용중인 카드회사로 문의해 주세요.</p>
+				</div>
+
+				<!-- 고객명 / 카드본인 -->
+				<div class="inputInfo d-cardSelf">
+					<label for="custNm" class="info-label">
+						고객명
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="custNm" name="customerName" placeholder="고객명" type="text" maxlength="20" class="custom-inp d-ownInputCk" onkeyup="validate.inputTextCheck(this)">
+					</div>
+					<p class="error-txt hidden">고객명을 입력해주세요.</p>
+				</div>
+
+				<!-- 생년월일 / 카드본인 -->
+				<div class="inputInfo d-cardSelf" id="myBirth">
+					<label for="birth" class="info-label">
+						생년월일
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="birth" name="birth" placeholder="카드명의자 생년월일 8자리 '202401001'" maxlength="8" type="tel" class="custom-inp d-ownInputCk" onkeyup="validate.inputNumCheck(this)">
+					</div>
+					<p class="error-txt hidden">생년월일을 입력해주세요.</p>
+				</div>
+
+				<!-- 카드명의자 고객명 / 카드타인 -->
+				<div class="inputInfo d-cardOther hidden">
+					<label for="cardOwnNm" class="info-label">
+						카드 명의자 고객명
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="cardOwnNm" name="cardholderName" placeholder="카드 명의자 고객명" maxlength="20" type="text" class="custom-inp d-otherInputCk" onkeyup="validate.inputTextCheck(this)">
+					</div>
+					<p class="error-txt hidden">카드 명의자를 입력해 주세요.</p>
+				</div>
+
+				<!-- 카드명의자 생년월일 / 카드타인 -->
+				<div class="inputInfo d-cardOther hidden" id="otherBirth">
+					<label for="ownBirth" class="info-label">
+						카드 명의자 생년월일
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="ownBirth" name="cardholderBirth" placeholder="카드 명의자 생년월일 8자리 '20240101'" maxlength="8" type="tel" class="custom-inp d-otherInputCk" onkeyup="validate.inputNumCheck(this)">
+					</div>
+					<p class="error-txt hidden">생년월일을 입력해 주세요.</p>
+				</div>
+			
+				<!-- 사업자등록번호 / 공통 -->
+				<div class="inputInfo hidden" id="business">
+					<label for="businessNo" class="info-label">
+						사업자등록번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="businessNo" name="" placeholder='"-"없이 10자리 숫자만 입력' maxlength="10" type="tel" class="custom-inp d-ownInputCk">
+					</div>
+					<p class="error-txt hidden">사업자등록번호를 입력해 주세요.</p>
+				</div>
+
+				<!-- 카드명의자구분 / 공통 -->
+				<div class="inputInfo">
+					<label for="cardholder" class="info-label">
+						카드 명의자 구분
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="r-radio-group">
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="local" name="cardholder" type="radio" value="local" checked>
+								<label for="local" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">내국인</span>
+								</label>
+							</span>
+						</div>
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="foreigner" name="cardholder" type="radio" value="foreigner">
+								<label for="foreigner" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">외국인</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 성별 / 공통 -->
+				<div class="inputInfo">
+					<label for="gender" class="info-label">
+						성별
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="r-radio-group">
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="male" name="gender" type="radio" value="male" checked>
+								<label for="male" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">남</span>
+								</label>
+							</span>
+						</div>
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="female" name="gender" type="radio" value="female">
+								<label for="female" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">여</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 카드 타인 인증 -->
+				<div class="inputInfo d-cardOther">
+					<label for="phoneNum" class="info-label">
+						휴대폰번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="select-box">
+						<select id="carrier" class="select-form">
+							<option value="LG">LG U+ / LG U+(알뜰폰)</option>
+							<option value="SKT">SKT</option>
+							<option value="KT">KT</option>
+							<option value="SKT">SKT(알뜰폰)</option>
+							<option value="KT">KT(알뜰폰)</option>
+						</select>
+					</div>
+					<div class="custom-info inBtn">
+						<input id="phoneNo" name="phoneNum" placeholder="'-'없이 숫자만 입력" minlength="10" maxlength="11" type="tel" class="custom-inp d-otherInputCk" onkeyup="validate.inputNumCheck(this)" autocomplete="off">
+						<div class="btn-group exTime">
+							<button title="인증번호 발송" class="request-btn" id="reqAuthNo" disabled><span class="">인증번호 발송</span></button>
+						</div>
+					</div>
+					<p class="error-txt hidden">유효한 휴대폰 번호를 입력해 주세요.</p>
+				</div>
+
+				<!-- 카드 타인 인증 -->
+				<div class="inputInfo " id="confAuthNoArea">
+					<label for="certNum" class="info-label">
+						SMS 인증번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info inBtn">
+						<input id="authNo" name="certNum" placeholder="인증번호 6자리 입력" maxlength="6" type="tel" class="custom-inp" autocomplete="off">
+						<div class="btn-group exTime">
+							<p class="time-txt" id="authTimer"><span class="t-special" id="remainTime">03:00</span></p>
+							<button title="인증하기" class="request-btn standard" id="confAuthNo" disabled><span class="">인증하기</span></button>
+							<button title="시간연장하기" class="request-btn" id="extendTime"><span class="">시간연장하기</span></button>
+						</div>
+					</div>
+					<p class="error-txt ">인증번호를 입력해 주세요.</p>
+					<p class="error-txt time-error hidden">인증번호가 만료되었습니다. 다시 요청해주시기 바랍니다.</p>
+				</div>
+
+				<!-- 카드 타인 인증 -->
+				<div class="inputInfo d-cardOther">
+					<div class="check-box">
+						<input type="checkbox" name="certification" id="agreeChk">
+						<label for="agreeChk" class="t-checkbox">
+							<i class="icon"></i>
+							<span class="text">휴대폰 인증시 수집된 개인정보(성명, 생년월일, 성별, 휴대폰번호)는 개인정보 수집 이용정책과 같이 활용됨을 동의함</span>
+						</label>
+						<div class="content-row">
+							<div class="info-btn agree-open"><a href="#" class="btn-arrow">개인정보 수집 이용 안내</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 신용카드 선택 콘텐츠 영역 -->
+			
+			<!-- 실시간출금 선택 콘텐츠 영역 -->
+			<div class="withdraw mt26" id="withdraw">
+				<!-- 고객유형 -->
+				<div class="inputInfo">
+					<label for="customer" class="info-label">
+						고객 유형
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="r-radio-group">
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="personal" name="custType2" type="radio" value="10" checked>
+								<label for="personal" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">개인</span>
+								</label>
+							</span>
+						</div>
+						<!-- <div class="r-radio-box">
+							<span class="r-radio">
+								<input id="p-business" name="custType2" type="radio" value="20">
+								<label for="p-business" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">사업자(개인사업자)</span>
+								</label>
+							</span>
+						</div> -->
+					</div>
+				</div>
+			
+				<!-- 예금주명 -->
+				<div class="inputInfo">
+					<label for="bankOwner" class="info-label">
+						예금주명
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input name="bankOwner" placeholder="예금주명 입력" maxlength="20" type="text" class="custom-inp">
+					</div>
+					<p class="error-txt hidden">예금주명을 입력해 주세요.</p>
+				</div>
+				
+				<!-- 은행명 -->
+				<div class="inputInfo">
+					<label for="bank" class="info-label">
+						은행명
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="select-box">
+						<select id="bankList" class="select-form d-bankInfoCk">
+							<option value="">은행명 선택</option>
+							<th:block th:each="bank : ${bankList}">
+							<option th:value="${bank.paymMthdNm}" th:text="${bank.paymMthdNm}" th:data-bankCd="${bank.paymBankCd}"></option>
+							</th:block>
+						</select>
+					</div>
+					<p class="error-txt hidden">은행을 선택해 주세요.</p>
+				</div>
+
+				<!-- 계좌번호 -->
+				<div class="inputInfo">
+					<label for="accountNum" class="info-label">
+						계좌번호
+						<button class="q-btn tooltip openBlack">
+						<span class="hidden">환불 설명보기</span>
+						<p class="tooltip-txt">환불요청 시 납부계좌와 동일한<br>계좌정보로 환불됩니다.
+						</p>
+					</button>
+					</label>
+					<div class="custom-info">
+						<input id="" name="accountNum" placeholder='"-"없이 숫자만 입력' type="tel" class="custom-inp">
+					</div>
+					<p class="error-txt hidden">계좌번호를 입력해 주세요.</p>
+				</div>
+				
+				<!-- 사업자등록번호 -->
+				<div class="inputInfo hidden" id="business">
+					<label for="businessNo" class="info-label">
+						사업자등록번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="businessNo" name="" placeholder="사업자등록번호 10자리 " maxlength="10" type="tel" class="custom-inp d-ownInputCk">
+					</div>
+					<p class="error-txt hidden">사업자등록번호를 입력해주세요.</p>
+				</div>
+			
+				<div class="btn-group">
+					<button class="standard g-line verifBtn" id="verifyBtn">실명확인 계좌 인증</button>
+					<!-- 실명인증 되면 실명 확인 완료 텍스트 변경 -->
+				</div>
+			</div>
+			<!-- 실시간출금 선택 콘텐츠 영역 END -->
+		</div>
+		
+		<div class="btn-group">
+			<button class="standard g-line" id="backBtn">이전</button>
+			<button class="standard" id="nextBtn" disabled>다음</button>
+		</div>
+		
+		<div class="accordion-group">
+			<div class="accordion-box notice d-accoBox">
+				<div class="accordion-header d-accoBtn">
+					<div class="text">
+						<p>요금 납부 시 중복 결제 주의안내</p>
+					</div>
+					<div class="accordion-btn">
+                        <i class="toggleIcon"></i>
+                    </div>
+				</div>
+				<div class="accordion-body">
+					<ul class="list dot-list">
+						<li>은행이나 카드 <span class="t-special">자동이체 결제 기간 중 신용카드/입금 전용계좌 납부를 하시면 두 번 결제될 수 있으니,</span> 납부 전에 거래내역을 꼭 확인해 주시기 바랍니다</li>
+						<li>중복 결제가 발생할 경우, 납부 방법 및 금액에 따라 자동으로 환불되거나 다음 달 요금에서 미리 결제됩니다</li>
+						<li>요금이 두 번 납부가 될 경우 아래와 같이 환불처리 됩니다.</li>
+						<li class="subdot-list">- 카드자동이체 – 카드즉납 → 카드자동이체 납부취소(단, 동일금액 두 번 납부 시)</li>
+						<li class="subdot-list">- 카드자동이체 – 카드즉납 납부취소</li>
+						<li>법인명의의 사업자카드는 결제가 불가능합니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<!-- 모달 팝업 영역 -->
+<div class="modal_wrap">    
+	<!-- 간편결제 안내 팝업 -->
+	<div class="popup popup-1 hidden d-popup" id="smsAuthSuccess">
+		<div class="pop-wrap">
+			<div class="pop-content">
+				<div class="pop-header">
+					<h1 class="pop-tit">확인</h1>
+				</div>
+				<div class="pop-body">
+					<p class="pop-txt">
+						간편결제를 위한 화면으로 이동합니다.<br>
+						간편결제 앱에서 결제를 완료해야 정상적으로 납부됩니다.
+					</p>
+				</div>
+				<div class="pop-footer">
+					<div class="btn-group">
+						<button class="standard" id="smsAuthOk">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 간편결제 안내 팝업 -->
+	<!-- <div class="popup popup-1 hidden d-popup" id="smsAuthSuccess"></div>
+		<div class="pop-wrap">
+			<div class="pop-content">
+				<div class="pop-header">
+					<h1 class="pop-tit">확인</h1>
+				</div>
+				<div class="pop-body">
+					<p class="pop-txt">
+						본인인증에 성공했습니다.<br>
+						계속 진행하시려면 확인을 눌러주세요.
+					</p>
+				</div>
+				<div class="pop-footer">
+					<div class="btn-group">
+						<button class="standard" id="smsAuthOk">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div> 
+
+<!-- 12개월 필수고지 full-popup-->
+<div class="modal-wrap popup-wrapper discount12 hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">선택약정할인 안내</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+				<div class="content-box">
+					<ul class="dot-list ft-black">
+						<li class="list-tit bold">선택약정할인이란?</li>
+						<li>월정액의 25%를 약정기간 동안 할인받을 수 있어요.</li>
+					</ul>
+				</div>
+				<div class="content-box">
+					<ul class="dot-list ft-black">
+						<li class="list-tit bold">이럴 때 할인 반환금(위약금)이 나와요.</li>
+						<li class="list-tit">① 해지(통신사 이동, 계약 해지)</li>
+						<li class="list-tit">② 기기변경</li>
+						<li>선택약정할인을 받을 수 없는 휴대폰으로 기기변경</li>
+						<li>이용 중인 약정이 2개 등록된 상태에서 기기변경</li>
+						<li class="list-tit">③ 명의를 받는 사람이 약정을 이어받지 않고 명의변경</li>
+						<li class="subdot-list">※ 자세한 내용은 홈페이지에서 확인할 수 있어요.</li>
+					</ul>
+				</div>
+				<div class="content-box">
+					<ul class="dot-list ft-black">
+						<li class="list-tit bold">할인 방식</li>
+						<li class="list-tit">요금제 월정액 X 25%</li>
+						<li>LTE 플러스 약정할인 대상자는 (요금제 월정액-2년 기준 LTE 플러스 약정할인) X 25%로 적용</li>
+					</ul>
+				</div>
+				<div class="content-box">
+					<ul class="dot-list ft-black">
+						<li class="list-tit bold">할인 반환금 산정방식</li>
+						<li class="list-tit">[12개월 약정]</li>
+						<li>1~3개월: 누적할인액*100%</li>
+						<li>4~12개월: 누적할인액*[잔여약정일수/(약정기간-90일)]</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button class="standard g-line" type="button">취소</button>
+				<button class="standard" type="button">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--모달 팝업 영역-END -->
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+
+</body>
+</html>

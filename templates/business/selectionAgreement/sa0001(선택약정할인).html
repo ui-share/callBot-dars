@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+    <!-- Disable automatic phone number detection. -->
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <meta name="theme-color" content="#ffffff">
+    <title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+    <!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="page-wrapper discountPage bt-accopage">
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <h1 class="page-title">선택약정할인 가입/예약</h1>
+        <button type="button" class="c-btn">닫기</button>
+    </header>
+    <!-- 헤더 영역 END -->
+
+    <!-- 콘텐츠 영역 -->
+    <div class="content">
+        <div class="content-section">
+            <h2 class="section-tit underline">
+                <span>약정 할인 정보</span>
+                <!-- <a href="javascript:void(0);" class="btn-arrow" role="button" type="button">선택 약정 할인 신청하기</a> -->
+            </h2>
+
+            <div class="caution-wrap hidden">
+                <div class="caution-box"> 
+                    <p class="tit">할인정보가 없습니다.</p>
+                </div>
+            </div>
+
+            <div> <!-- 개발자 추가 div -->
+                <ul class="line-list">
+                    <li>
+                        <span class="tit">유형</span>
+                        <span class="cont">선택약정할인(통신요금 25%할인) 적용중</span>
+                    </li>
+                    <li>
+                        <span class="tit">현재 할인<br>받고 있는 금액</span>
+                        <span class="cont">32,501원</span>
+                    </li>
+                    <li>
+                        <span class="tit">신청일</span>
+                        <span class="cont">2022-10-08</span>
+                    </li>
+                    <li>
+                        <span class="tit">종료일</span>
+                        <span class="cont">2024-10-07</span>
+                    </li>
+                    <li>
+                        <span class="tit">약정기간</span>
+                        <span class="cont">24개월</span>
+                    </li>
+                    <li>
+                        <span class="tit">남은 개월 수</span>
+                        <span class="cont">4개월</span>
+                    </li>
+                    <li>
+                        <span class="tit">예상<br>할인반환금(위약금)</span>
+                        <span class="cont">121,000원</span>
+                    </li>
+                </ul>
+                <ul class="bullet mt8">
+                    <li>부가세 포함 금액</li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="standard line" type="button">선택약정할인 신청하기</button>
+            </div>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion-group">
+            <div class="accordion-box notice d-accoBox">
+                <div class="accordion-header d-accoBtn">
+                    <div class="text">
+                        <p>꼭 확인하세요.</p>
+                    </div>
+                    <div class="accordion-btn" tabindex="-1">
+                        <i class="toggleIcon"></i>
+                    </div>
+                </div>
+                <div class="accordion-body">
+                    <ul class="dot-list">
+                        <li class="list-tit bold">할인 반환금 산정방식</li>
+                        <li class="list-tit bold">[12개월 약정]</li>
+                        <li>1~3개월: 누적할인액*100%</li>
+                        <li>4~12개월: 누적할인액*[잔여약정일수/(약정기간-90일)]</li>
+                        <li class="list-tit bold">[24개월 약정]</li>
+                        <li>1~6개월: 누적할인액*100%</li>
+                        <li>7~24개월: 누적할인액*[잔여약정일수/(약정기간-180일)]</li>
+                        <li class="mt8">약정 기간은 개통일부터 시작하며, 이용 정지 시 해당 기간만큼 약정 기간이 늘어납니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 콘텐츠 영역 END -->
+</div>
+
+<!--모달 팝업 영역-->
+
+<!-- 신청가능 : 신규 full-popup-->
+<div class="modal-wrap popup-wrapper discountNew hidde">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+                <button type="button" class="prev-btn">이전</button>
+				<h1 class="pop-tit">선택약정할인 가입/예약</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+                <div class="content-box pt20 pb20">
+                    <div class="caution-box non-icon">
+                        <!-- <p class="tit"></p> -->
+                        <p class="txt-m">
+                            <span class="bold">선택약정할인을 신청하시면<br><span class="t-special">32,501원</span> 할인 받을 수 있어요.</span><br>
+                            <span>*할인 금액은 약정기간에 상관없이 동일합니다.</span>
+                        </p>
+                        <!-- <p class="txt"></p> -->
+                    </div>
+                </div>
+
+                <div class="card discountCard no_pt">
+                    <div class="inputInfo">
+                        <div class="caution-wrap">
+                            <div class="caution-box non-icon"> 
+                                <p class="tit">
+                                    선택약정할인을<br>
+                                    받을 기간을 선택해 주세요.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <label for="" class="info-label">
+                            약정할인 개월 수 선택
+                        </label> -->
+                        <div class="radio-group twoby">
+                            <div class="radio-box">
+                                <span class="radio-btn">
+                                    <input id="12month" name="month" type="radio" value="12month" checked>
+                                    <label for="12month" class="text-radio">
+                                        <!-- <span class="radio-icon phone"></span> -->
+                                        <span class="txt">12개월</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="radio-box">
+                                <span class="radio-btn">
+                                    <input id="24month" name="month" type="radio" value="24month">
+                                    <label for="24month" class="text-radio">
+                                        <!-- <span class="radio-icon pass"></span> -->
+                                        <span class="txt">24개월</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputInfo mt16">
+                    <div class="check-box">
+                        <input type="checkbox" name="certification" id="agreeChk">
+                        <label for="agreeChk" class="t-checkbox">
+                            <i class="icon"></i>
+                            <span class="text">본인은 선택약정할인에 관한 내용을(약정기간, 선택약정할인 반환금 발생 사유 및 산정방식 등) 충분히 안내 받고 이해하였으며 선택약정할인을 신청합니다.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button class="standard g-line" type="button">취소</button>
+				<button class="standard" type="button" disabled>가입하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 신청가능 : 재가입 예약 가능 full-popup-->
+<div class="modal-wrap popup-wrapper Re-discount hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+                <button type="button" class="prev-btn">이전</button>
+				<h1 class="pop-tit">선택약정할인 가입/예약</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+                <div class="content-box pt20 pb20">
+                    <div class="caution-box non-icon"> 
+                        <p class="tit">
+                            현재 선택약정 할인을 받고 있고,<br>
+                            재가입 예약이 가능해요.
+                        </p>
+                        <p class="txt">
+                            약정이 끝나면 이어서 할인 받을 수 있도록<br>
+                            기간을 선택해 주세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="card discountCard">
+                    <div class="discountInfo">
+                        <p class="tit">현재 약정기간</p>
+                        <p class="date">2022년 06월 02일~2024년 06월 01일(12개월)</p>
+                    </div>
+
+                    <div class="caution-box non-icon"> 
+                        <p class="txt-m">
+                            <span class="bold">선택약정할인을 신청하시면<br><span class="t-special">32,501원</span> 할인 받을 수 있어요.</span><br>
+                            <span class=" txt">*할인 금액은 약정기간에 상관없이 동일합니다.</span>
+                        </p>
+                    </div>
+
+                    <div class="inputInfo">
+                        <!-- <label for="" class="info-label">
+                            약정할인 개월 수 선택
+                        </label> -->
+                        <div class="radio-group">
+                            <div class="radio-box">
+                                <span class="radio-btn">
+                                    <input id="12month2" name="month2" type="radio" checked>
+                                    <label for="12month2" class="text-radio">
+                                        <span class="txt">12개월</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="radio-box">
+                                <span class="radio-btn">
+                                    <input id="24month2" name="month2" type="radio">
+                                    <label for="24month2" class="text-radio">
+                                        <span class="txt">24개월</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputInfo mt16">
+                    <div class="check-box">
+                        <input type="checkbox" name="certification" id="agreeChk2">
+                        <label for="agreeChk2" class="t-checkbox">
+                            <i class="icon"></i>
+                            <span class="text">본인은 선택약정할인에 관한 내용을(약정기간, 선택약정할인 반환금 발생 사유 및 산정방식 등) 충분히 안내 받고 이해하였으며 선택약정할인을 신청합니다.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+		<!-- popup-footer -->
+		<!-- <div class="popup-footer">
+			<div class="btn-group">
+				<button class="standard g-line" type="button">취소</button>
+				<button class="standard" type="button" disabled>예약하기</button>
+			</div>
+		</div> -->
+
+        <!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button class="setAgreeStandard fz16" type="button">취소</button>
+				<button class="standard" type="button" disabled>예약하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 신청가능 : 공시지원금 펜딩 가능 full-popup-->
+<div class="modal-wrap popup-wrapper discountPending hidde">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+                <button type="button" class="prev-btn">이전</button>
+				<h1 class="pop-tit">선택약정할인 가입/예약</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+                <div class="content-box pt20 pb20">
+                    <div class="caution-box non-icon"> 
+                        <p class="tit">
+                            현재 공시지원금(휴대폰 가격 할인)을<br>
+                            받고 있고, 선택약정할인 가입<br>
+                            예약이 가능해요.
+                        </p>
+                        <p class="txt">
+                            약정이 끝나면 이어서 할인 받을 수 있도록<br>
+                            기간을 선택해 주세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="card discountCard">
+                    <div class="discountInfo">
+                        <p class="tit">현재 약정기간</p>
+                        <p class="date">2022년 06월 02일~2024년 06월 01일(12개월)</p>
+                    </div>
+                    
+                    <div class="caution-box non-icon">
+                        <p class="txt-m">
+                            <span class="bold">선택약정할인을 신청하시면<br><span class="t-special">32,501원</span> 할인 받을 수 있어요.</span><br>
+                            <span class="txt">*할인 금액은 약정기간에 상관없이 동일합니다.</span>
+                        </p>
+                    </div>
+
+                    <div class="inputInfo">
+                        <!-- <label for="" class="info-label">
+                            약정할인 개월 수 선택
+                        </label> -->
+                        <div class="radio-group">
+                            <div class="radio-box">
+                                <span class="radio-btn">
+                                    <input id="12month3" name="month3" type="radio" checked>
+                                    <label for="12month3" class="text-radio">
+                                        <span class="txt">12개월</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="radio-box">
+                                <span class="radio-btn">
+                                    <input id="24month3" name="month3" type="radio">
+                                    <label for="24month3" class="text-radio">
+                                        <span class="txt">24개월</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputInfo mt16">
+                    <div class="check-box">
+                        <input type="checkbox" name="certification" id="agreeChk3">
+                        <label for="agreeChk3" class="t-checkbox">
+                            <i class="icon"></i>
+                            <span class="text">본인은 선택약정할인에 관한 내용을(약정기간, 선택약정할인 반환금 발생 사유 및 산정방식 등) 충분히 안내 받고 이해하였으며 선택약정할인을 신청합니다.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button class="standard g-line" type="button">취소</button>
+				<button class="standard" type="button" disabled>예약하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 12개월 필수고지 full-popup-->
+<div class="modal-wrap popup-wrapper discount12 hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">선택약정할인 안내</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">선택약정할인이란?</li>
+                        <li>월정액의 25%를 약정기간 동안 할인받을 수 있어요.</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">이럴 때 할인 반환금(위약금)이 나와요.</li>
+                        <li class="list-tit">① 해지(통신사 이동, 계약 해지)</li>
+                        <li class="list-tit">② 기기변경</li>
+                        <li>선택약정할인을 받을 수 없는 휴대폰으로 기기변경</li>
+                        <li>이용 중인 약정이 2개 등록된 상태에서 기기변경</li>
+                        <li class="list-tit">③ 명의를 받는 사람이 약정을 이어받지 않고 명의변경</li>
+                        <li class="subdot-list">※ 자세한 내용은 홈페이지에서 확인할 수 있어요.</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">할인 방식</li>
+                        <li class="list-tit">요금제 월정액 X 25%</li>
+                        <li>LTE 플러스 약정할인 대상자는 (요금제 월정액-2년 기준 LTE 플러스 약정할인) X 25%로 적용</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">할인 반환금 산정방식</li>
+                        <li class="list-tit">[12개월 약정]</li>
+                        <li>1~3개월: 누적할인액*100%</li>
+                        <li>4~12개월: 누적할인액*[잔여약정일수/(약정기간-90일)]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button class="standard g-line" type="button">취소</button>
+				<button class="standard" type="button">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 24개월 필수고지 full-popup-->
+<div class="modal-wrap popup-wrapper discount24 hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">선택약정할인 안내</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">선택약정할인이란?</li>
+                        <li>월정액의 25%를 약정기간 동안 할인받을 수 있어요.</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">이럴 때 할인 반환금(위약금)이 나와요.</li>
+                        <li class="list-tit">① 해지(통신사 이동, 계약 해지)</li>
+                        <li class="list-tit">② 기기변경</li>
+                        <li>선택약정할인을 받을 수 없는 휴대폰으로 기기변경</li>
+                        <li>이용 중인 약정이 2개 등록된 상태에서 기기변경</li>
+                        <li class="list-tit">③ 명의를 받는 사람이 약정을 이어받지 않고 명의변경</li>
+                        <li class="subdot-list">※ 자세한 내용은 홈페이지에서 확인할 수 있어요.</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">할인 방식</li>
+                        <li class="list-tit">요금제 월정액 X 25%</li>
+                        <li>LTE 플러스 약정할인 대상자는 (요금제 월정액-2년 기준 LTE 플러스 약정할인) X 25%로 적용</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <ul class="dot-list ft-black">
+                        <li class="list-tit bold">할인 반환금 산정방식</li>
+                        <li class="list-tit">[24개월 약정]</li>
+                        <li>1~6개월: 누적할인액*100%</li>
+                        <li>7~24개월: 누적할인액*[잔여약정일수/(약정기간-180일)]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button class="standard g-line" type="button">취소</button>
+				<button class="standard" type="button">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--모달 팝업 영역 END-->
+
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+</body>
+
+</html>

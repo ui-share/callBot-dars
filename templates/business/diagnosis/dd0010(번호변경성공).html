@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+
+<body>
+<div class="page-wrapper endPage no-header btFlexible complete endSuccess homeAsPage contactChangeEnd"> <!-- endPage no-header btFlexible complete endFail/endSuccess -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">		
+		<div class="content-section">
+			<div class="caution-box confirm-wrap"> 
+				<div class="img-box comp">
+					<img src="../../../../static/images/img_data_release.png" alt="연락받을 번호를 변경했습니다">
+				</div>
+				<strong class="tit">
+					연락받을 번호를<br/>변경했습니다
+				</strong>
+			</div>
+			<div class="card-box menu-shortcuts">
+				<div class="card-header">
+					<h2>관련 메뉴 바로가기</h2>
+				</div>
+				<div class="card-body chips-group">
+					<button type="button" class="btn chip">연관 시나리오 1</button>
+					<button type="button" class="btn chip">연관 시나리오 2</button>
+					<button type="button" class="btn chip">연관 시나리오 3</button>
+					<button type="button" class="btn chip">연관 시나리오 4</button>
+					<button type="button" class="btn chip">연관 시나리오 5</button>
+				</div>
+			</div>
+			
+			<div class="btn-group btn-group-sm ">
+				<button type="button" class="btn btn-round ">종료</button>
+			</div> 
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+		});
+	});
+</script>
+</body>
+</html>

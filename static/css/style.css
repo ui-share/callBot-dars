@@ -2982,7 +2982,7 @@ textarea:read-only ~ .textarea-info{
 	padding: 0;
 }
 .header.vertical .page-title {
-	padding: 0 8px;
+	padding: 0 8px 0 20px;
 }
 .button-section {
 	position: relative;

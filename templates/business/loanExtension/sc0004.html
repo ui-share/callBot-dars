@@ -50,46 +50,49 @@
 							<p class="contents-title">신분증</p>
 						</div>
 						<div class="img-wrap">
-							<img src="../../../static/images/icon_auth_phone.svg" alt="휴대폰이미지">
+							<img src="../../../static/images/img-docu01.png" alt="신분증">
 						</div>
 					</div>
 				</li>
 				<li>
 					<div role="button" class="card-choice">
-						<div class="text-wrap">
+						<div class="text-wrap tooltip">
 							<p class="contents-title">주민등록등본</p>
 						</div>
 						<div class="img-wrap">
-							<img src="../../../static/images/icon_auth_phone.svg" alt="휴대폰이미지">
+							<img src="../../../static/images/img-docu02.png" alt="주민등록등본">
 						</div>
 					</div>
 				</li>
 				<li>
 					<div role="button" class="card-choice">
-						<div class="text-wrap">
+						<div class="text-wrap tooltip">
 							<p class="contents-title">소득서류</p>
 						</div>
 						<div class="img-wrap">
-							<img src="../../../static/images/icon_auth_phone.svg" alt="휴대폰이미지">
+							<img src="../../../static/images/img-docu03.png" alt="소득서류">
 						</div>
 					</div>
 				</li>
 				<li>
 					<div role="button" class="card-choice">
-						<div class="text-wrap">
+						<!-- tooltip 아이콘이 있을 경우 tooltip 클래스 추가 
+						<div class="text-wrap tooltip">
+						-->
+						<div class="text-wrap tooltip">
 							<p class="contents-title">임대차계약서</p>
 						</div>
 						<div class="img-wrap">
-							<img src="../../../static/images/icon_auth_phone.svg" alt="휴대폰이미지">
+							<img src="../../../static/images/img-docu04.png" alt="임대차계약서">
 						</div>
 					</div>
 				</li>
 			</ul>
-
 			<div class="btn-group">
-				<button type="button" class="btn btn-sm btn-gray">문자로 받기</button>
+				<button type="button" class="btn btn-gray">문자로 받기</button>
 			</div>
-
+		</div>
+		<div class="content-section">
 			<ul class="list dot-list">
 				<li class="list-tit">유의사항</li>
 				<li>현재 임차보증금액 기준으로 금리는 재산정될 예정입니다.</li>
@@ -105,6 +108,31 @@
 	</div>
 	<!-- 콘텐츠 영역 END --> 
 </div>
-
+<!-- 임대차계약서 안내 팝업 -->
+<div class="modal-wrap popup-wrapper loanExtension bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+                <h1 class="pop-tit"><span>임대차계약서</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+            <div class="content-section">
+				<p class="info-txt">
+					임대차 계약을 연장하며 계약서를 새로 작성한다면 확정일자를 다시 받아 제출해야 합니다.<br/><br/>묵시적 임대차 연장이라면 최초작성한 임대차 계약서를 들고오면 됩니다.
+				</p>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

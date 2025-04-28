@@ -156,12 +156,83 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-
+/* header : vertical (button-section 정렬) */
+.header.vertical {
+	height: auto;
+	padding: 0;
+}
+.header.vertical .page-title {
+	padding: 0 8px;
+}
+.button-section {
+	position: relative;
+	width: 100%;
+	padding: 12px 30px;
+	border-radius: 0 0 16px 16px;
+	box-shadow: 0 4px 9px rgba(0, 0, 0, 0.09);
+}
+.button-section .util-box {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+}
+.button-section .util-box .btn {
+	flex: 1 1 auto;
+	font-size: 13px;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	border-radius: 30px;
+	padding: 4px 12px;
+	gap: 4px;
+}
+.button-section .util-box .btn.callbot {
+	background-color: #2EBA6A;
+}
+.button-section .util-box .btn.callEnd {
+	background-color: #FF5252;
+}
+.button-section .util-box .btn.callEnd::before {
+	content: "";
+	display: inline-block;
+	width: 22px;
+	min-width: 22px;
+	height: 22px;
+	background: url(../images/callEnd.svg) no-repeat center;
+	background-size: cover;
+}
+.button-section .arrowBtn {
+	position: absolute;
+	width: 28px;
+	min-width: 28px;
+	height: 28px;
+	border-radius: 28px;
+	left: 50%;
+	transform: translateX(-50%) rotate(0deg);
+	box-shadow: 0 4px 9px rgba(0, 0, 0, 0.09);
+}
+.button-section .arrowBtn::after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/openBtn.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.header.vertical.close .util-box {
+	display: none;
+}
+.header.vertical.close .arrowBtn::after {
+	transition: all .3s ease;
+	transform: rotate(180deg);
+}
 /* content 영역 */
 .content {
 	width: 100%;
 	height: 100%;
-	/* min-width: 270px; */
 	padding-top: 48px; /*헤더 높이 입력*/
 	display: flex;
 	flex-direction: column;
@@ -180,7 +251,13 @@
 	padding-bottom: 90px;
 	overflow: scroll;
 }
-
+/* header : vertical 일 경우 content padding-top 수정 */
+.header.vertical ~ .content {
+	padding-top: 114px;
+}
+.header.vertical.close ~ .content {
+	padding-top: 74px;
+}
 
 
 

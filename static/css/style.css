@@ -364,37 +364,6 @@
 	padding: 20px;
 	text-align: left;
 }
-.content-section.devider {
-	padding: 28px 20px;
-}
-.content-section.devider::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 8px;
-	background-color: #eee;
-}
-.content-section.dev-section {
-	position: relative;
-	padding: 20px;
-	padding-top: 8px !important;
-}
-[class*=dev-section]:not(.hidden) + [class*=dev-section]::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 8px;
-	background-color: #eee;
-}
-.content-section.dev-section:first-child {
-	padding-top: 20px !important;
-}
 .title-section {
 	padding: 38px 20px;
 	display: flex;
@@ -406,6 +375,9 @@
 	line-height: 1.5;
 	letter-spacing: -.04em;
 	font-weight: 700;
+}
+.title-section ~ .content-section {
+	padding-top: 0;
 }
 .info-txt {
 	font-size: 16px;
@@ -637,9 +609,9 @@ button.disabled,
 .btn.disabled,
 .button:disabled,
 .button.disabled {
-	background-color: #ccc !important;
-	border: 1px solid #ccc !important;
-	color: #666 !important;
+	background-color: #929292 !important;
+	border: 1px solid #929292 !important;
+	color: #505050 !important;
 	outline: none !important;
 	-webkit-tap-highlight-color: transparent !important;
 }
@@ -858,8 +830,8 @@ button.request-btn.disabled {
 }
 .bottom-button .btn-group > .btn,
 .popup-footer .btn-group > .btn {
-	min-height: 3.2500rem;
-	font-size: 16px;
+	min-height: 52px;
+	font-size: 14px;
 	font-weight: 500;
 	border-radius: 13px;
 }
@@ -913,6 +885,7 @@ button.request-btn.disabled {
 }
 /* fit button : 서비스 상세 화면 - 서비스 가입, 해지 등 */
 .btn-group-solid {
+	margin-top: 0;
 	padding: 0;
 	gap: 0;
 }
@@ -969,7 +942,7 @@ select {
 	font-weight: 400;
 	color: #000;
 	border-bottom: 1px solid #bbb;	
-	caret-color: #e6007e;
+	caret-color: #015AAD;
 	outline: none !important;
 }
 /* input : 입력 disabled, readonly, focus*/
@@ -1036,15 +1009,14 @@ textarea:read-only:focus {
 .info-label {
 	display: flex;
 	align-items: center;
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 13px;
+	font-weight: 500;
 	color: #000;
 	text-align: left;
 	margin-right: auto;
-	margin-bottom: 0.475em;
 }
 .inputInfo ~ .inputInfo {
-	margin-top: 1.625em;
+	margin-top: 43px;
 }
 .custom-info ~ .custom-info {
 	margin-top: 12px;
@@ -1251,15 +1223,19 @@ textarea:read-only ~ .textarea-info{
 	text-align: left;
 	font-size: 12px;
 	font-weight: 400;
-	color: #e34140;
+	color: #FF5252;
+	display: none;
 }
 .error input, 
 .error textarea, 
 .error select {
-	border-color: #e34140;
+	border-color: #FF5252;
+}
+.error .error-txt {
+	display: block;
 }
 .inputInfo-lg .custom-info.error {
-	border-bottom: 2px solid #e34140;
+	border-bottom: 2px solid #FF5252;
 }
 /* check : 체크박스*/
 .check-box {
@@ -1404,9 +1380,9 @@ textarea:read-only ~ .textarea-info{
 .r-radio {
 	display: inline-flex;
 	position: relative;
-	min-width: 22px;
-	min-height: 22px;
-	padding-left: 22px;
+	min-width: 16px;
+	min-height: 16px;
+	padding-right: 16px;
 	color: #000;
 	text-align: left;
 	cursor: pointer;
@@ -1415,43 +1391,42 @@ textarea:read-only ~ .textarea-info{
 .r-radio input[type=radio] {
 	position: absolute;
 	top: 2px;
-	left: 2px;
-	width: 22px;
-	height: 22px;
+	right: 2px;
+	width: 16px;
+	height: 16px;
 	background: transparent;
 	border: 0;
 	outline: 0;
 	opacity: 0;
 }
 .r-radio-box .r-radio label {
-	margin-left: 8px;
+	margin-right: 8px;
 }
 .r-radio .radio-txt {
 	display: inline-block;
 	vertical-align: baseline;
-	font-size: 14px;
+	font-size: 12px;
 }
 .r-radio .icon {
 	overflow: hidden;
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	border-radius: 50%;
-	width: 22px;
-	height: 22px;
-	background-image: url(../images/common_icon.svg);
-	background-size: 500px;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/radio_default.svg);
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: -120px 0;
 }
 .r-radio input[type=radio]:checked~.radio-txt>.icon {
-	background-position-y: -22px;
+	background-image: url(../images/radio_checked.svg);
 }
 .r-radio input[type=radio]:disabled~.radio-txt>.icon {
-	background-position-y: -44px;
+	background-image: url(../images/radio_disabled.svg);
 }
 .r-radio input[type=radio]:checked:disabled~.radio-txt>.icon {
-	background-position-y: -66px;
+	background-image: url(../images/radio_checked_disabled.svg);
 }
 /* radio : 박스 타입 */
 .radio-group {
@@ -3237,8 +3212,8 @@ textarea:read-only ~ .textarea-info{
 }
 .btFlexible .btn-group-sm .btn:last-child,
 .popup-wrapper .btn-group-sm .btn:last-child {	
-	background-color: #18973C;
-	border: 1px solid #18973C;
+	background-color: #015AAD;
+	border: 1px solid #015AAD;
 	color: #fff;
 }
 /* Full : bottom-button > btn-group */
@@ -3262,8 +3237,8 @@ textarea:read-only ~ .textarea-info{
 .btFlexible .bottom-button .btn-group:not(.vertical) .btn:last-child:not(.btn-withghost):not(.btn-line-secondary),
 .popup-wrapper .popup-footer .btn-group:not(.vertical) .btn:last-child:not(.btn-withghost):not(.btn-line-secondary),
 .popup-wrapper .btn-group:not(.vertical) .btn:last-child:not(.btn-withghost):not(.btn-line-secondary) {
-	background-color: #18973C;
-	border: 1px solid #18973C;
+	background-color: #015AAD;
+	border: 1px solid #015AAD;
 	color: #fff;
 }
 .page-wrapper .content .btn-group.btn-group-sm .btn,
@@ -3393,74 +3368,6 @@ textarea:read-only ~ .textarea-info{
 .pop-list>li span{
 	font-weight: 600;
 	color: #000;
-}
-/* 간편 인증 : 간편인증 수단 선택 */
-.card-list.auth {
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 12px 10px;
-}
-.card-list.auth li {
-	margin-top: 0;
-	flex: 0 1 auto;
-	width: calc(33.33333% - 6.66667px);
-}
-.auth .text-radio {
-	padding: 16px;
-}
-.auth .radio-contents {
-	flex-direction: column;
-	text-align: center;
-}
-.auth .radio-contents .img-wrap {
-	margin-bottom: 2px;
-	width: 40px;
-	margin-right: 0;
-}
-.auth .radio-contents .img-wrap img {
-	display: inline-block;
-	border: 0;
-	vertical-align: top;
-	width: 100%;
-}
-.auth .text-wrap .contents-title {
-	font-size: 14px;
-	font-weight: 500;
-	margin: 4px 0;
-}
-.auth-status {
-	width: 100%;
-	text-align: center;
-	margin-top: 36px;
-}
-.auth-status .txt {
-	font-weight: 600;
-	font-size: 14px;
-	color: #563aff;
-}
-.auth-status .txt::before {
-	content: "";
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	vertical-align: middle;
-	margin: -2px 8px 0 0;
-	background-image: url(../images/auth.svg);
-	background-size: 20px 20px;
-	background-position: 50% 50%;
-}
-.bottom-txt {
-	padding: 16px 20px;
-	text-align: center;
-	line-height: 1.3;
-	font-size: 14px;
-	margin-top: auto;
-}
-.custom-inp.textonly {
-	font-size: 20px;
-	font-weight: 500;
-	color: #666666;
-	padding: 0 0 16px 0;
 }
 /* 요금제, 부가서비스 상세 팝업 detailService */
 .serviceTitle {

@@ -36,28 +36,28 @@
 			<h2 class="section-tit-lg t-special">먼저 고객님의<br>대출 정보를 확인할게요</h2>
 		</div>
 
-		<!-- E-mail area -->
+		<!-- 정보 입력 영역 -->
 		<div class="content-section">
 			<div class="inputInfo">
-				<label for="secuEmail" class="info-label">
+				<label for="customer-type" class="info-label">
 					고객유형
 					<span class="required"><i class="hidden">필수항목</i></span>
 				</label>
 				<div class="r-radio-group">
 					<div class="r-radio-box">
 						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="use" checked>
-							<label for="use" class="radio-txt">
-								<span class="customer-type">개인</span>
+							<input type="radio" name="customer-type" id="personal">
+							<label for="personal" class="radio-txt">
+								<span class="">개인</span>
 								<i class="icon"></i>
 							</label>
 						</span>
 					</div>
 					<div class="r-radio-box">
 						<span class="r-radio">
-							<input type="radio" name="secuEmail" id="notUse" >
-							<label for="notUse" class="radio-txt">
-								<span class="customer-type">사업자</span>
+							<input type="radio" name="customer-type" id="business" >
+							<label for="business" class="radio-txt">
+								<span class="">사업자</span>
 								<i class="icon"></i>
 							</label>
 						</span>
@@ -66,43 +66,42 @@
 			</div>
 
 			<div class="inputInfo">
-				<label for="email" class="info-label">
+				<label for="accountNumber" class="info-label">
 					계좌번호
 					<span class="required"><i class="hidden">필수항목</i></span>
 				</label>
 				<div class="custom-info">
 					<input type="text" class="custom-inp">
 				</div>
-				<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+				<p class="error-txt">계좌번호를 확인해주세요</p>
 			</div>
 
 			<div class="inputInfo">
-				<label for="email" class="info-label">
+				<label for="accountPassword" class="info-label">
 					계좌 비밀번호
 					<span class="required"><i class="hidden">필수항목</i></span>
 				</label>
 				<div class="custom-info">
 					<input type="text" class="custom-inp">
 				</div>
-				<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+				<p class="error-txt">계좌 비밀번호를 확인해주세요</p>
 			</div>
 
 			<div class="inputInfo">
-				<label for="email" class="info-label">
+				<label for="birth" class="info-label">
 					생년월일
 					<span class="required"><i class="hidden">필수항목</i></span>
 				</label>
 				<div class="custom-info">
 					<input type="text" class="custom-inp">
 				</div>
-				<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+				<p class="error-txt">생년월일을 확인해주세요</p>
 			</div>
 		</div>
 
 		<div class="bottom-button">
-			<div class="btn-group">
-				<button type="button" class="btn">콜봇으로 돌아가기</button>					
-				<button type="button" class="btn">다음</button>
+			<div class="btn-group btn-group-solid">				
+				<button type="button" class="btn disabled">다음</button>
 			</div>
 		</div>
 	</div>

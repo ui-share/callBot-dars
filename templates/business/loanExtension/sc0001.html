@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper btFlexible">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">디지털ARS</h1>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section title-section">
+			<p class="info-txt bold"><span class="t-special">'대출 기간 연장'</span> 문의 주셨습니다.</p>
+			<h2 class="section-tit-lg t-special">먼저 고객님의<br>대출 정보를 확인할게요</h2>
+		</div>
+
+		<!-- E-mail area -->
+		<div class="content-section">
+			<div class="inputInfo">
+				<label for="secuEmail" class="info-label">
+					고객유형
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="r-radio-group">
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="secuEmail" id="use" checked>
+							<label for="use" class="radio-txt">
+								<span class="customer-type">개인</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="secuEmail" id="notUse" >
+							<label for="notUse" class="radio-txt">
+								<span class="customer-type">사업자</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="inputInfo">
+				<label for="email" class="info-label">
+					계좌번호
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="custom-info">
+					<input type="text" class="custom-inp">
+				</div>
+				<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+			</div>
+
+			<div class="inputInfo">
+				<label for="email" class="info-label">
+					계좌 비밀번호
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="custom-info">
+					<input type="text" class="custom-inp">
+				</div>
+				<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+			</div>
+
+			<div class="inputInfo">
+				<label for="email" class="info-label">
+					생년월일
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="custom-info">
+					<input type="text" class="custom-inp">
+				</div>
+				<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group">
+				<button type="button" class="btn">콜봇으로 돌아가기</button>					
+				<button type="button" class="btn">다음</button>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+
+</body>
+</html>

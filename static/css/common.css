@@ -1,164 +1,389 @@
-@charset "UTF-8";
-/*======================================
-	font-face
-	사용할 폰트 정리
-======================================*/
+@charset "utf-8";
+
 @font-face {
-	font-family: "Pretendard";
-	font-weight: 700;
-	font-display: swap;
-	src: local("Pretendard Bold"), url(../font/Pretendard-Bold.woff2) format("woff2"), url(../font/Pretendard-Bold.woff) format("woff"), url(../font/Pretendard-Bold.otf) format("opentype");
-}
-@font-face {
-	font-family: "Pretendard";
-	font-weight: 600;
-	font-display: swap;
-	src: local("Pretendard SemiBold"), url(../font/Pretendard-SemiBold.woff2) format("woff2"), url(../font/Pretendard-SemiBold.woff) format("woff"), url(../font/Pretendard-SemiBold.otf) format("opentype");
-}
-@font-face {
-	font-family: "Pretendard";
-	font-weight: 500;
-	font-display: swap;
-	src: local("Pretendard Medium"), url(../font/Pretendard-Medium.woff2) format("woff2"), url(../font/Pretendard-Medium.woff) format("woff"), url(../font/Pretendard-Medium.otf) format("opentype");
-}
-@font-face {
-	font-family: "Pretendard";
+	font-family: 'Noto Sans KR';
+	font-style: normal;
 	font-weight: 400;
-	font-display: swap;
-	src: local("Pretendard Regular"), url(../font/Pretendard-Regular.woff2) format("woff2"), url(../font/Pretendard-Regular.woff) format("woff"), url(../font/Pretendard-Regular.otf) format("opentype");
+	src: local("Noto Sans KR"), local("NotoSansKR-Regular"), url(../fonts/NotoSansKR-Regular.woff2) format("woff2"), url(../fonts/NotoSansKR-Regular.woff) format("woff"), url(../fonts/NotoSansKR-Regular.otf) format("opentype");
 }
-
-/*======================================
-	ROOT
-	사용할 변수 정리   
-======================================*/
-:root {
-	/* sight design - color */
-	/* color style - grayscale */
-	--dt-white: #FFFFFF;
-	--dt-gray01: #F9FAFB;
-	--dt-gray02: #F6F7FC;
-	--dt-gray03: #F3F5F6;
-	--dt-gray04: #F3F4F6;
-	--dt-gray05: #EEF1FD;
-	--dt-gray06: #E3E6F1;
-	--dt-gray07: #DCE6FF;
-	--dt-gray08: #DCE0E5;
-	--dt-gray09: #A8B3BD;
-	--dt-gray10: #7F8A94;
-	--dt-gray11: #66707A;
-	--dt-gray12: #525960;
-	--dt-gray13: #4B506A;
-	--dt-gray14: #3B4044;
-	--dt-gray15: #31354D;
-	--dt-gray16: #181A1B;
-	--dt-gray17: #E7EBEE;
-	--dt-gray18: #D0DBF8;
-	--dt-black: #000000;
-	/* color Style - system */
-	--dt-primary: #E30084;
-	--dt-success: #00AA02;
-	--dt-warning: #F86800;
-	--dt-error: #E22A21;
-	/* sight design - font */
-	/* font style - font size */
-	--dt-fz30: 30px;
-	--dt-fz24: 24px;
-	--dt-fz22: 22px;
-	--dt-fz18: 18px;
-	--dt-fz16: 16px;
-	--dt-fz14: 14px;
-	--dt-fz12: 12px;
-	/* font style - font weight */
-	--dt-fw700: 700;
-	--dt-fw600: 600;
-	--dt-fw500: 500;
-	--dt-fw400: 400;
-	/* font style - line height */
-	--dt-lh150: 150%;
-	--dt-lh140: 140%;
-	--dt-lh120: 120%;
-	/* sight design - shadow */
-	/* shadow style - card */
-	--dt-shadow01: 0 8px 13px 8px rgba(var(--dt-black), 0.04);
-	/* shadow style - bottom sheet */
-	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-black), 0.04);
-	/* iOS 웹뷰 safe area inset  */
-	--dt-safeTop: env(safe-area-inset-top);
-	--dt-safeBottom: env(safe-area-inset-bottom);
-	--dt-safeRight: env(safe-area-inset-right);
-	--dt-safeLeft: env(safe-area-inset-left);
-	--vh: 100%;
-	--max-devicewidth: 100vw;
-}
-
-/*======================================
-	Common UI - 샘플로 넣어둠
-======================================*/
-/* 1. 기본 폰트 세팅 */
-html {
-	font-size: 16px;
-	line-height: 1.5;
-	font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	color: #222;
-	background-color: #fff;
-}
-
-/* 2. 타이포그래피 */
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-	line-height: 1.25;
-	margin-bottom: 0.5em;
-}
-p {
-	margin-bottom: 1em;
-}
-a:hover {
-	text-decoration: underline;
-}
-
-/* 3. 버튼 */
-.btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.5em 1em;
-	font-size: 1rem;
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
 	font-weight: 500;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: background-color 0.2s ease;
+	src: local("Noto Sans KR"), local("NotoSansKR-Medium"), url(../fonts/NotoSansKR-Medium.woff2) format("woff2"), url(../fonts/NotoSansKR-Medium.woff) format("woff"), url(../fonts/NotoSansKR-Medium.otf) format("opentype");
 }
-.btn-primary {
-	background-color: #2684FF;
-	color: white;
-}
-.btn-primary:hover {
-	background-color: #1a5fd0;
-}
-.btn-secondary {
-	background-color: #f5f5f5;
-	color: #222;
-}
-.btn-secondary:hover {
-	background-color: #e0e0e0;
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: local("Noto Sans KR"), local("NotoSansKR-Bold"), url(../fonts/NotoSansKR-Bold.woff2) format("woff2"), url(../fonts/NotoSansKR-Bold.woff) format("woff"), url(../fonts/NotoSansKR-Bold.otf) format("opentype");
 }
 
-/* 4. 폼 요소 */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-select {
+
+/* Reset  Start ------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	font-weight: inherit;
+	background: transparent;
+	vertical-align: baseline;
+}
+
+/* html에 모든 터치 이벤트를 비활성화 */
+html {
+	-ms-touch-action: none;
+}
+
+/* body에 폰트 속성,배경 속성, 글자 행간 속성 설정 */
+body {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: none;
+	/* -webkit-tap-highlight-color: rgba(0,0,0,0); */
+	font-weight: normal;
+	line-height: 1;
+}
+/* 새로운 html5 태그 IE 구버전에서 정상적으로 작동하도록 설정 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menue, nav, section {
+	display: block;
+}
+* {
+	-webkit-box-sizing:  border-box;
+	-webkit-text-size-adjust: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* li 관련 속성 */
+ul,li {
+	list-style: none;
+}
+/* a요소 초기화 */
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	color: inherit;
+}
+/* img 태그간 간격을 없애기 위해 설정 */
+img {
+	vertical-align: top;
+	text-decoration: none;
+}
+/* hr 요소 */
+hr {
+	display: block;
+	padding: 0;
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #efefef;
+	margin: 12px 0;
+}
+/* input 요소 textarea */
+input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
 	width: 100%;
-	padding: 0.5em;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	background: white;
+	vertical-align: top;
+	border-radius: 0;
 }
-input:focus,
-textarea:focus,
-select:focus {
-	border-color: #2684FF;
-	outline: none;
+/* 플롯 해제 */
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
 }
+/* IE 8이하 버전 float해제*/
+.clear_both {
+	zoom:1;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	vertical-align: middle;
+}
+ol, ul, dl, menu, li { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+i, em, address { font-style: normal; font-weight: normal; }
+input, textarea, select, button { vertical-align: middle; }
+
+/* remember to define focus styles */
+:focus { outline-width: medium; }
+
+/* remember to highlight inserts somehow */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/* 접근성 요소 hidden */
+.blind, legend { display: block; overflow: hidden; position: absolute; top: 0; left: -1000em; }
+caption { width: 0; height: 0; overflow: hidden; }
+
+/* 모바일 대응 */
+body {-webkit-text-size-adjust: none;}/* 뷰포트 변환 시 폰트크기 자동 확대 방지 */
+
+a {text-decoration: none; }
+a[href^="tel"] {font-style: normal; }
+address, caption, em, var {font-style: normal;font-weight: normal; }
+input, textarea, select, br, p {letter-spacing: normal;}
+input[type="text"], input[type="password"],input[type="submit"], input[type="search"], input[type="number"] {appearance:none;-webkit-appearance:none;border-radius:0;}
+input[type="checkbox"] {appearance:none;-webkit-appearance:none;-webkit-border-radius:0; }
+input:checked[type="checkbox"] {appearance:checkbox;-webkit-appearance:checkbox; }
+input[type="radio"] {appearance:none;-webkit-appearance:none; border:none; }
+button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] { -webkit-appearance:button;border-radius:0;cursor: pointer;}
+input[type="search"]::-webkit-search-cancel-button {appearance:none;-webkit-appearance:none;}
+textarea {appearance:none;-webkit-appearance:none; }
+select {appearance:menulist-text;-webkit-appearance:menulist-text; }
+/* Reset  End ------------------------------------------------------- */
+
+
+
+
+
+/* Global Type Selector */
+/* a:focus, div:focus, button:focus {outline:0;} */
+html {
+	position: relative;
+	direction: ltr;
+	height: 100%;
+}
+body {
+	height: 100%;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Noto Sans', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif;
+	font-size: 16px;
+	letter-spacing: -0.025em;
+	line-height: 140%;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+body  * {
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: -0.04em;
+	line-height: 140%;
+}
+a {
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+ins {
+	text-decoration: none;
+}
+img, table, input, button, select, textarea {
+	vertical-align: middle;
+}
+pre, code, samp, kbd {
+	font-family: 'Consolas', 'Courier New', 'Lucida Console', 'Courier', monospace;
+}
+
+/* Local Type Selector */
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, ul, ol, dl, dd, form, input, button, select, textarea, fieldset {
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+pre {
+	-o-tab-size: 4;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+a {
+	border: none;
+	text-decoration: none;
+}
+	a:hover,
+	a:focus,
+	a:active {
+		text-decoration: none;
+		cursor: pointer;
+	}
+strong, b {
+	font-size: inherit;
+	font-weight: 700;
+}
+mark {
+	color: inherit;
+	background-color: transparent;
+}
+q:before,
+q:after {
+	content: "";
+}
+img {
+	border: 0;
+	vertical-align: middle;
+	/* image-rendering: auto; */
+	image-rendering: crisp-edges;
+	/* image-rendering: pixelated; */
+	image-rendering: -moz-crisp-edges;         /* Firefox */
+	image-rendering:   -o-crisp-edges;         /* Opera */
+	image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+iframe {
+	border: 0;
+	vertical-align: middle;
+}
+sub {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	bottom: -0.5em;
+	line-height: 0;
+}
+sup {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	top: -0.5em;
+	line-height: 0;
+}
+code {
+	background: rgba(55, 58, 64, 0.075);
+	border-radius: 0.25em;
+	font-family: "Courier New", monospace;
+	font-size: 0.8em;
+	margin: 0 0.25em;
+	padding: 0.25em 0.65em;
+}
+pre {
+	-webkit-overflow-scrolling: touch;
+	font-family: "Courier New", monospace;
+	font-size: 0.8em;
+	margin: 0 0 2em 0;
+}
+	pre code {
+		display: block;
+		padding: 1em 1.5em;
+		overflow-x: auto;
+	}
+
+::selection,
+::-moz-selection {
+	color: #ffffff;
+	background-color: #4868e1;
+	background-color: rgba(72,104,225, .9);
+	text-shadow: none;
+}
+
+/* Handheld-Only Type Selector */
+html {-ms-text-size-adjust: none; -moz-text-size-adjust: none; -webkit-text-size-adjust: none; /* -webkit-tap-highlight-color: rgba(0,0,0, 0); */ }
+
+/* img, iframe, embed, object, video, audio {max-width: 100%; height: auto; } */
+iframe, textarea {-webkit-overflow-scrolling: touch; }
+
+/* ::-ms-clear, ::-ms-reveal {display: none; } */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0; }
+
+/* Special-Class Selector */
+.longdesc {display: block; position: absolute; left: -10240px; width: 1px; height: 1px; overflow: hidden; }
+.transparent {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+
+/* Box Model */
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+ul:after, ol:after {
+	content: none;
+}
+html >/**/body .clear {display: block; }
+html >/**/body .clear:after {content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+
+
+
+/* common UI */
+.noresize {
+	resize: none;
+}
+.hidden {
+	display: none !important;
+}
+.blind {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	position: absolute;
+	left: -1000px;
+}
+.removeHighlight {
+	outline: none !important;
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+
+/*마진,패딩,보더 초기화 CSS*/
+.no_mt { margin-top: 0 !important;}
+.no_ml { margin-left: 0 !important;}
+.no_mr { margin-right: 0 !important;}
+.no_mb { margin-bottom: 0 !important; }
+.no_pt { padding-top: 0 !important; }
+.no_pl { padding-left: 0 !important; }
+.no_pr { padding-right: 0 !important; }
+.no_pb { padding-bottom: 0 !important;}
+.no_bt { border-top: 0 !important; }
+.no_bl { border-left: 0 !important; }
+.no_br { border-right: 0 !important; }
+.no_bb { border-bottom: 0 !important; }
+
+
+/* role=button 정의 */
+[role="button"] {
+	touch-action: manipulation;
+	cursor: pointer;
+	pointer-events: auto;
+}
+button[tabindex="-1"],
+button[tabindex="-1"]:focus,
+button[tabindex="-1"]:focus-visible,
+button[tabindex="-1"]:active {
+	touch-action: none!important;
+	outline: none !important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

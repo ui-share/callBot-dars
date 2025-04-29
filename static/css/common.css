@@ -208,7 +208,6 @@ body {
 body  * {
 	font-family: inherit;
 	font-size: inherit;
-	font-weight: 500;
 	letter-spacing: -0.04em;
 	line-height: 140%;
 }

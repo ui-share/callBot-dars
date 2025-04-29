@@ -146,11 +146,8 @@
 						 <div class="multi_lg_talk_wrap">
 							<p class="lg_talk_name">AI 상담사</p>
 							<div class="lg_talk_cont">
-								<!-- <div class="lg_text_box multi_progress">
+								<div class="lg_text_box multi_progress"><!-- 처리중일시 loding class 추가 -->
 									 <div class="txt_loding"></div>
-								</div> -->
-								<div class="talk_box lg_text_box multi_progress"><!-- 처리중일시 multi_progress class 추가 -->
-									<div class="txt_loding"></div>
 								</div>
 								<span class="timebox">11:24</span>
 							</div>
@@ -166,7 +163,7 @@
 				</div>
 			</div>
 
-			<footer id="footer" class="multi_footer keypad">
+			<footer id="footer" class="multi_footer multi_aui">
 				 <!-- 
 					multi_aui : mic open
 					keypad : 키패드 open 
@@ -223,15 +220,15 @@
 						wait : 듣는중
 						progress : 처리중
 					 -->
-					
+
 					<!-- 대기중 -->
-					<div class="aui_mic_cont blind"> <!-- blind 추가 시 display:none-->
+					<div class="aui_mic_cont "> <!-- blind 추가 시 display:none-->
 						<div class="aui_mic_all">
 							<div class="mic normal">
 								<span class="blind">대기 중</span>
 							</div>
 						</div>
-						<span class="txt">버튼을 누른 후 다시 말씀해주세요</span>
+						<span class="txt">마이크 버튼을 누른 후 다시 말씀해주세요</span>
 					</div>
 
 					<!-- 듣는중 -->
@@ -397,10 +394,10 @@
 			</div>
 		</div>
 		<!-- 시나리오 popup end -->
-		 <!-- 로딩 페이지 -->
-<div class="loadingPage hidden">
-    <div class="white-layer"></div>
-    <div class="loading"></div>
-</div>
+		<!-- 로딩 페이지 -->
+		<div class="loadingPage hidden">
+			<div class="white-layer"></div>
+			<div class="loading"></div>
+		</div>
 	</body>
 </html>

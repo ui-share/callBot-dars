@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <h1 class="page-title">상담 신청</h1>
+        <button type="button" class="c-btn">닫기</button>
+    </header>
+    <!-- 헤더 영역 END -->
+    
+    <!-- 콘텐츠 영역 -->
+    <div class="content">
+        <!-- 상담 신청 서비스 -->
+        <div class="content-section">
+            <div class="card bg-gray">
+                <div class="content-row no_pt">
+                    <p class="tit">상담 신청 서비스</p>
+                    <p class="bold">상담 신청</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <!-- 연락 받을 분 -->
+            <div class="inputInfo">
+                <label class="info-label">
+                    연락 받을 분
+                    <span class="required"><i class="hidden">필수항목</i></span>
+                </label>
+                <div class="inputBox">
+                    <div class="custom-info">
+                        <input placeholder="이름 입력" type="text" class="custom-inp">
+                    </div>
+                    <p class="error-txt hidden">연락 받을 분을 입력해주세요.</p>
+                </div>
+            </div>
+
+            <!-- 연락처 -->
+            <div class="inputInfo">
+                <label class="info-label">
+                    연락처
+                    <span class="required"><i class="hidden">필수항목</i></span>
+                </label>
+
+                <div class="inputBox">
+                    <div class="custom-info">
+                        <input placeholder="'-'없이 숫자만 입력" type="tel" class="custom-inp" value="010-12**56**">
+                    </div>
+                    <p class="error-txt hidden">연락처를 입력해주세요.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="standard">신청</button>
+        </div>
+    </div>
+    <!-- 콘텐츠 영역 END -->
+</div>
+
+<!-- <div class="loadingPage">
+    <div class="white-layer"></div>
+    <div class="loading"></div>
+</div> -->
+
+</body>
+</html>

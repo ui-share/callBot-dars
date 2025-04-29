@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+
+<body>
+<div class="page-wrapper no-header endPage btFlexible complete">
+<!-- <div class="page-wrapper no-header complete endSuccess homeAsPage schedulChangeEnd"> -->
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+			<!-- 납부확인서 신청 완료 -->
+		<div class="content-section hidden">
+			<div class="caution-box confirm-wrap"> 
+				<div class="img-box comp">
+					<img src="../../../../static/images/img_data_release.png" alt="납부확인서 신청이 완료되었습니다">
+				</div>
+				<strong class="tit">
+					납부확인서 신청이<br>완료되었습니다.
+				</strong>
+			</div>
+
+			<div class="card-box card-line">
+				<div class="card-body">
+					<ul class="list-box">
+						<li>
+							<label class="list-label">납부확인서 발행 방법</label>
+							<span class="list-data">이메일</span>
+						</li>
+						<li>
+							<label class="list-label">납부확인서 방행 정보</label>
+							<span class="list-data">why***@lguplus.co.kr</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-round btn-line-primary">나의 납부내역</button>
+				<button type="button" class="btn btn-round ">종료</button>
+			</div> 
+		</div>
+
+	</div>
+	
+	<!-- 콘텐츠 영역 END -->
+</div>
+<!--모달 팝업 영역-->
+<!-- 청구서조회 full-popup-->
+<div class="modal-wrap popup-wrapper" id="bd01_p">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<button type="button" class="prev-btn hidden">이전</button>
+				<h1 class="pop-tit">나의 납부내역</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+		<!-- 납부내역 -->
+		<!-- 결과가 없는 경우 -->
+		<div class="content-section">
+			<div class="caution-wrap">
+				<div class="caution-box caution"> 
+					<p class="tit">납부내역이 없습니다.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- 결과 조회 -->
+		<div class="content-section pd0">
+			<p class="info-txt">
+				<span class="y-index t-special">0000년</span>&nbsp;<span class="m-index t-special">00월</span> ~ <span class="y-index t-special">0000년</span>&nbsp;<span class="m-index t-special">00월</span>까지<br/>발행한 납부내역입니다.
+			</p>
+			<ul class="line-list">
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2024-04-29<br>
+							입금확인일 : 2024-05-02
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>145,950원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="TOSS포인트결제" type="button" class="">TOSS포인트결제</button>
+						<span class="txt">
+							납부일 : 2024-04-03<br>
+							입금확인일 : 2024-04-03
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>142,770원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="TOSS포인트결제(포인트)" type="button" class="">TOSS포인트결제(포인트)</button>
+						<span class="txt">
+							납부일 : 2024-04-03<br>
+							입금확인일 : 2024-04-03
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>450원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2024-02-19<br>
+							입금확인일 : 2024-02-21
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>143,220</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2024-01-15<br>
+							입금확인일 : 2024-01-17
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>140,000</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-12-18<br>
+							입금확인일 : 2023-12-18
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-12-18<br>
+							입금확인일 : 2023-12-18
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="TOSS포인트결제" type="button" class="">TOSS포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-12-18<br>
+							입금확인일 : 2023-12-18
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-12-18<br>
+							입금확인일 : 2023-12-18
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-12-15<br>
+							입금확인일 : 2023-12-19
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>154,690원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-11-15<br>
+							입금확인일 : 2023-11-17
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>151,970원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="PAYCO포인트결제" type="button" class="">PAYCO포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-11-14<br>
+							입금확인일 : 2023-11-14
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="KAKAO포인트결제" type="button" class="">KAKAO포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-11-14<br>
+							입금확인일 : 2023-11-14
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="TOSS포인트결제" type="button" class="">TOSS포인트결제</button>
+						<span class="txt">
+							납부일 : 2023-11-14<br>
+							입금확인일 : 2023-11-14
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item hidden">
+					<span class="l-item">
+						<button title="인터넷 수납" type="button" class="">인터넷 수납</button>
+						<span class="txt">
+							납부일 : 2023-11-10<br>
+							입금확인일 : 2023-11-10
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>1,000원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-10-17<br>
+							입금확인일 : 2023-10-19
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>156,130원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-09-15<br>
+							입금확인일 : 2023-09-19
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>156,130원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-08-14<br>
+							입금확인일 : 2023-08-17
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>156,020원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-07-10<br>
+							입금확인일 : 2023-07-12
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>155,910원</strong>
+					</span>
+				</li>
+				<li class="item">
+					<span class="l-item">
+						<button title="자동이체(카드)" type="button" class="">자동이체(카드)</button>
+						<span class="txt">
+							납부일 : 2023-06-12<br>
+							입금확인일 : 2023-06-14
+						</span>
+					</span>
+					<span class="r-item">
+						<strong>155,910원</strong>
+					</span>
+				</li>
+			</ul>
+			<div class="btn-group">
+				<button class="moreBtn"><span class="more-arrow">더보기</span></button>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<!--모달 팝업 영역 END-->
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body> <!-- 팝업 오픈시 openModal 클래스 추가 : 바디스크롤 제어 -->
+
+<div class="page-wrapper homeServiceInfo">
+<!-- 헤더 영역 -->
+<header class="header">
+	<h1 class="page-title">홈서비스 문의</h1>
+	<button type="button" class="c-btn">닫기</button>
+</header>
+<!-- 헤더 영역 END -->
+
+<!-- 콘텐츠 영역 -->
+<div class="content">
+	<div class="service-section">
+		<div class="service-box" role="button">
+			<div class="text-area">
+				<span class="svCategory">U+ 인터넷 /...</span>
+				<span class="svInfo">부산광역시 강서구 녹산산단382로 ***</span>
+			</div>
+			<div class="btn-area">
+				<button type="button" class="btn chgBtn">선택 변경</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-section">
+		<div class="section-wrap">
+			<div class="section-title">
+				<h2 class="h2">홈서비스</h2>
+			</div>
+			<div class="section-body">
+				<!-- 반복 : 홈상품 -->
+				<div class="card-box">
+					<div class="card-header bg-gray">
+						<p class="h2">인터넷</p>
+					</div>
+					<div class="card-body">
+						<ul class="list-box">
+							<li class="">
+								<span class="list-label">요금제</span>
+								<span class="list-data">와이파이기본_기가안심_1G</span>
+							</li>
+							<li class="">
+								<span class="list-label">설치장소</span>
+								<span class="list-data">서울시 중랑구 ***</span>
+							</li>
+							<li class="">
+								<span class="list-label">가입일</span>
+								<span class="list-data">2019-12-06</span>
+							</li>
+							<li class="">
+								<span class="list-label">약정기간</span>
+								<span class="list-data">2022.10.17 ~ 2025.10.16</span>
+							</li>
+						</ul>
+					</div>														
+				</div>
+				<!-- 반복 : 홈상품 -->
+				<div class="card-box">
+					<div class="card-header bg-gray">
+						<p class="h2">IPTV</p>
+					</div>
+					<div class="card-body">
+						<ul class="list-box">
+							<li class="">
+								<span class="list-label">요금제</span>
+								<span class="list-data">와이파이기본_기가안심_1G</span>
+							</li>
+							<li class="">
+								<span class="list-label">설치장소</span>
+								<span class="list-data">서울시 중랑구 ***</span>
+							</li>
+							<li class="">
+								<span class="list-label">가입일</span>
+								<span class="list-data">2019-12-06</span>
+							</li>
+							<li class="">
+								<span class="list-label">약정기간</span>
+								<span class="list-data">2022.10.17 ~ 2025.10.16</span>
+							</li>
+							<li class="">
+								<span class="list-label">
+									약정요금
+									<span class="tooltip-wrap">
+										<button type="button" aria-describedby="tooltip" class="button tooltip-btn">툴팁버튼</button>
+										<span class="p-tooltip" role="tooltip">
+											<span class="tooltip-inner">
+												<span>약정요금이란?<br/>TV 기본료에서 '약정할인 + 인터넷 결합 할인'을 제외한 금액입니다.</span>
+												<button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+											</span>
+											<span id="arrow" data-popper-arrow></span>
+										</span>
+									</span>
+									
+								</span>
+								<span class="list-data">10,000원</span>
+							</li>
+						</ul>
+					</div>
+					<div class="card-footer inner-button">
+						<button type="button" class="btn">요금제 변경</button>
+					</div>
+				</div>
+			</div>					
+		</div>
+	</div>
+
+	<!-- 연관 시나리오 -->
+	<div class="content-section">
+		<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code="">
+			<div class="card-header">
+				<h2 class="info-title">관련 메뉴 바로가기</h2>
+			</div>
+			<div class="card-body chips-group">
+				<button type="button" class="btn chip">시나리오1</button>
+				<button type="button" class="btn chip">시나리오2</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 관련 메뉴 바로가기 data-end-trace-code="트레이스코드" / data-title-use-yn="N" : 타이틀 필요없을 경우 -->
+	<!-- <div class="content-section hidden">
+		<div class="card-box menu-shortcuts" data-rel-scenario data-end-trace-code=""></div>
+	</div> -->
+</div>
+<!-- 콘텐츠 영역 END --> 
+</div>
+
+
+<script>
+	const tooltipBtn = document.querySelector('.tooltip-btn');
+	const tooltip = document.querySelector('.p-tooltip');
+
+	const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+		placement: 'bottom',
+		modifiers: [
+			{
+				name: 'offset',
+				options: {
+					offset: [0, 8],
+				},
+			},
+			{
+				name: 'flip',
+				options: {
+					fallbackPlacements: ['top', 'bottom','left', 'right'],
+				},
+			},
+		],
+	});
+
+	function show() {
+		// Make the tooltip visible
+		tooltip.setAttribute('data-show', '');
+
+		// Enable the event listeners
+		popperInstance.setOptions((options) => ({
+			...options,
+			modifiers: [
+				...options.modifiers,
+				{ name: 'eventListeners', enabled: true },
+			],
+		}));
+
+		// Update its position
+		popperInstance.update();
+	}
+
+	function hide() {
+		// Hide the tooltip
+		tooltip.removeAttribute('data-show');
+
+		// Disable the event listeners
+		popperInstance.setOptions((options) => ({
+			...options,
+			modifiers: [
+				...options.modifiers,
+				{ name: 'eventListeners', enabled: false },
+			],
+		}));
+	}
+
+	const showEvents = ['click', 'focus'];
+	const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+	showEvents.forEach((event) => {
+		tooltipBtn.addEventListener(event, show);
+	});
+
+	hideEvents.forEach((event) => {
+		tooltipBtn.addEventListener(event, hide);
+	});  
+</script>	
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".accordion-box > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+	
+</body>
+</html>

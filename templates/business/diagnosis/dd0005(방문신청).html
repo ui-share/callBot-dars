@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body class="" ><!-- openModal -->
+
+<div class="page-wrapper homeAsPage visitRequest bt-accopag"> <!-- bt-accopage -->
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">홈서비스 셀프해결/방문신청</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 : 방문신청 접수 -->
+	<div class="content subscription hidden">
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg">홈매니저 방문 신청을 위한<br>정보를 확인해 주세요</h2>
+		</div>
+		<div class="content-section the application-form">
+			<div class="column-group">
+				<div class="column-item section-wrap address">
+					<div class="section-title">
+						<p class="h2">서비스 이용 주소</p>
+						<button type="button" class="unlockBtn"><span>가려진 주소 보기</span></button>
+					</div>
+					<div class="section-body">
+						<div class="card-box bg-gray">
+							<div class="info-box">
+								<h2 class="info-title">서울시 용산구 한강대로 ***</h2>
+								<p class="info-text">U+인터넷/U+tv 이용 중</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-item section-wrap symptom">
+					<div class="section-title">
+						<p class="h2">장애 증상 선택</p>
+					</div>
+					<div class="section-body">
+						<div class="card-box symptom-box">
+							<div class="card-body">
+								<span class="symptom-flag">인터넷</span>
+								<div class="text-area">
+									<p class="symptom-txt">어떤 상황인지 선택해 주세요</p>
+									<button type="button" class="btn btn-sm btn-primary">선택</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-item section-wrap symptom">
+					<div class="section-title">
+						<p class="h2">요청사항</p>
+					</div>
+					<div class="section-body">
+						<div class="card-box addition-box">
+							<div class="card-body">
+								<textarea class="noresize"></textarea>
+								<div class="limit">
+									<span>0</span><span>/200자</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- accordion-area -->
+		<div class="accordion-group">
+			<div class="accordion-box notice d-accoBox" role="button">
+				<div class="accordion-header d-accoBtn">
+					<div class="text">
+						<p>꼭 확인하세요</p>
+					</div>
+					<div class="accordion-btn">
+						<i class="toggleIcon"></i>
+					</div>
+				</div>
+				<div class="accordion-body"> 
+					<ul class="acco-list">
+						<li>U+ 서비스/기기에 문제가 있다면 출장비가 발생하지 않아요. 단, 그 외 경우에는 출장비 15,400원이 청구될 수 있어요.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary" disabled>다음</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 콘텐츠 영역 : 휴대폰 번호 입력 / bt-accopage class 삭제 필요 -->
+	<div class="content btFlexible chgNumber hidden">
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg">
+				<span>연락받을 번호를<br>확인해 주세요</span>
+			</h2>
+		</div>
+
+		<div class="content-section">
+			<div class="inputInfo inputInfo-lg chgNumInput">
+				<div class="custom-info">
+					<input type="tel" class="custom-inp" value="010-12**-56**" readonly>
+					<button type="button" class="btn btn-sm btn-gray">변경하기</button>
+				</div>			
+				<label class="info-label"> 휴대폰 번호</label>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group">
+				<button type="button" class="btn">다음</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 콘텐츠 영역 : 방문신청 접수 시간 선택 / bt-accopage class 삭제 필요 -->
+	<div class="content timeSelect hiddn">
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg">방문 희망 날짜와 시간을<br>선택해 주세요</h2>
+		</div>
+
+		<div class="content-section timetable">
+			<div class="item-list">
+				<!-- item 반복 -->
+				<div class="item schedule">
+					<p class="date">4월 15일(월)</p>
+					<div class="chips-group">
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="item schedule">
+					<p class="date">4월 16일(화)</p>
+					<div class="chips-group">
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+						<div class="card-radio">
+							<input type="radio" name="dateTime" id="1">
+							<label for="1" class="btn chip">
+								<span class="txt">10:00</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary" disabled>확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 콘텐츠 영역 : 방문신청 접수 최종 확인 / bt-accopage class 삭제 필요 -->
+	<div class="content finalConfirm hidden">
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg">방문 신청 정보를<br>확인해 주세요</h2>
+		</div>
+
+		<div class="content-section confirmDetail">
+			<div class="card-list">
+				<div class="card-box">
+					<ul class="list-box">
+						<li>
+							<label class="list-label">주소</label>
+							<p class="list-data">
+								<span>서울시 용산구 한강대로 ***</span>
+							</p>
+						</li>
+					</ul>
+				</div>
+	
+				<div class="card-box">
+					<div class="card-body">
+						<ul class="list-box">
+							<li>
+								<label class="list-label">연락받을 번호</label>
+								<p class="list-data">
+									<span>010-1234-5678</span>
+								</p>
+							</li>
+							<li>
+								<label class="list-label">방문 희망일</label>
+								<p class="list-data">
+									<span>2024년 4월 17일 (수)<br>오후 4시</span>
+								</p>
+							</li>
+							<li>
+								<label class="list-label">요청사항</label>
+								<p class="list-data">
+									<span>제발 빨리 와주세요ㅠㅠ</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="card-footer">
+						<div class="inner-button">
+							<button type="button" class="btn btn-gray">수정하기</button>						
+						</div>
+					</div>
+				</div>
+				<ul class="bullet">
+					<li>홈매니저 방문 시 U+에서 받은 기기 문제가 아닌 경우에는 15,400원의 출장비가 청구될 수 있어요.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-section confirmCheck">
+			<!-- 동의 -->
+			<div class="inputInfo">
+				<div class="check-box">
+					<input type="checkbox" name="privateAgree" id="smsAgreeChk">
+					<label for="smsAgreeChk" class="t-checkbox">
+						<i class="icon"></i>
+						<span class="text">네, 확인했어요</span>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary" disabled>방문 신청하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 팝업 : 방문신청 증상선택 bottom-popup -->
+<div class="modal-wrap popup-wrapper bottom-popup symptomPop hidde">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section ">
+				<h1 class="pop-tit"><span>어떤 상황인지 선택해 주세요</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+				<div class="card-list">
+					<!-- card-radio 반복 -->
+					<div class="card-radio">
+						<input id="11" name="symptom" type="radio" value="">
+						<label for="11" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">인터넷 접속이 안돼요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="22" name="symptom" type="radio" value="">
+						<label for="22" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">인터넷이 자주 끊기고 멈춰요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="33" name="symptom" type="radio" value="">
+						<label for="33" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">인터넷 속도가 느려졌어요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="44" name="symptom" type="radio" value="">
+						<label for="44" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">와이파이 연결이 안돼요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="55" name="symptom" type="radio" value="">
+						<label for="55" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">와이파이 연결이 자주 끊기고 속도가 느려요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="66" name="symptom" type="radio" value="">
+						<label for="66" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">요금을 내지 안았다는 메시지가 나와요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="77" name="symptom" type="radio" value="">
+						<label for="77" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">인터넷 접속이 안돼요</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/easy-pie-chart/easypiechart.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper bt-accopage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">납부방법 관리</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section">
+			<h2 class="section-tit"><span>변경정보 입력</span></h2>
+			<!-- 결제일 변경 시 -->
+			<div class="chpayemtDay">
+				<!-- 은행명, 카드사 -->
+				<div class="inputInfo">
+					<label class="info-label">
+						은행명
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="inputBox">
+						<div class="custom-info">
+							<input id="" placeholder="우리은행" type="text" class="custom-inp" readonly>
+						</div>
+					</div>
+				</div>
+
+				<!-- 계좌번호 -->
+				<div class="inputInfo">
+					<label class="info-label">
+						계좌번호
+					</label>
+					<div class="inputBox">
+						<div class="custom-info">
+							<input id="" name="" placeholder="123******4567" type="tel" class="custom-inp" disabled>
+						</div>
+					</div>
+				</div>
+
+				<!-- 출금일 -->
+				<div class="inputInfo">
+					<label class="info-label">
+						출금일
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="select-box">
+						<select id="" class="select-form">
+							<option value="">출금일 선택</option>
+							<option value="">1차 (9일)</option>
+							<option value="">2차 (1차 결제일+평일4일)</option>
+						</select>
+						<p class="error-txt hidden">출금일을 선택해주세요.</p>
+					</div>
+				</div>
+			</div>
+			<!-- 결제일 변경 시 END-->
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="standard g-line">이전</button>
+			<button type="button" class="standard">다음</button>
+		</div>
+		
+		<div class="accordion-group">
+			<div class="accordion-box notice d-accoBox">
+				<div class="accordion-header">
+					<div class="text">
+						<p>꼭 확인하세요.</p>
+					</div>
+					<button class="accordion-btn" tabindex="-1">
+						<i class="toggleIcon"></i>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<ul class="list dot-list">
+						<li>현재 납부방법이 은행자동이체 또는 신용카드 자동이체인 경우에만 결제일을 변경할 수 있습니다.</li>
+						<li>이번 달 결제일 이전에 오늘 이후 날짜로 변경하면 이번 달부터 적용됩니다.</li>
+						<li>이번 달 결제일이 지났거나, 오늘 이전 날짜로 변경하면 다음 달부터 적용됩니다.</li>
+						<li>결제일이 주말 및 공휴일인 경우 다음 평일에 결제됩니다.</li>
+						<li class="subdot-list">: (예시) 카드 1차 결제일인 9일이 토요일이면 다음 평일인 월요일(11일)에 결제되며, 2차 결제일은 15일이 됨</li>
+						<li>같은 달에 결제일을 여러 번 변경하는 경우 실제 적용되는 달이 안내와 다를 수 있습니다.</li>
+						<li>결제일에 계좌 잔고가 부족하면 일부만 결제하고 나머지는 추가 결제일에 다시 결제합니다.</li>
+						<li>결제일을 변경하려면, SMS 2차 인증이 필요합니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END -->
+</div>
+
+<!--모달 팝업 영역-->
+<div class="modal-wrap">
+	
+</div>   
+<!--모달 팝업 영역 END-->
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body class="openModal"><!-- openModal -->
+
+<div class="page-wrapper homeAsPage"> <!-- bt-accopage -->
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">홈서비스 셀프해결/방문신청</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 : 메인 -->
+	<div class="content asMain hidden">
+		<div class="service-section">
+			<div class="service-box" role="button">
+				<div class="text-area">
+					<span class="svCategory">U+ 인터넷 /...</span>
+					<span class="svInfo">부산광역시 강서구 녹산산단382로 ***</span>
+				</div>
+				<div class="btn-area">
+					<button type="button" class="btn chgBtn">선택 변경</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="tapnav-wrap">
+			<ul class="tabnav">
+				<li class=""><a href="javascript:void(0)" role="button" class="active">셀프 해결 및 방문 신청</a></li>
+				<li class=""><a href="javascript:void(0)" role="button" class="">방문 신청 내역</a></li>
+			</ul>
+		</div>
+
+		<div class="tabcontent">
+			<!-- Tab 셀프 해결 및 방문 신청 -->
+			<div class="tab asSelf hidde">
+				<div class="content-section title-section">
+					<h2 class="section-tit-lg">
+						장*민님 안녕하세요.<br>
+						LG U<sup>+</sup>가 도와드릴게요!
+					</h2>
+				</div>
+
+				<div class="content-section">
+					<div class="img-box homeAsMain">
+						<img src="../../../../static/images/m_img_homeAS_main.png" alt="">
+						<!-- <lottie-player src="../../../../static/lottie/m_img_homeAS_main.json" background="transparent" speed="1" style="width: 100%" direction="1" mode="normal" loop autoplay></lottie-player> -->
+					</div>
+				</div>
+				
+				<div class="content-section asInfo">
+					<div class="item-list">
+						<div class="item">
+							<span class="item-img"><img src="../../../../static/images/m_img_homeAS_solution.png" alt=""></span>
+							<span class="item-text">고객님의 상황에 맞는 문제 해결 방법을 안내해 드릴게요.</span>
+						</div>
+						<div class="item">
+							<span class="item-img"><img src="../../../../static/images/m_img_homeAS_reservation.png" alt=""></span>
+							<span class="item-text">홈매니저의 도움이 필요하면 A/S 방문을 예약해 보세요.</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- accordion-area CVT 삭제요청 : 24.10.25 -->
+				<!-- <div class="accordion-group">
+					<div class="accordion-box notice d-accoBox" role="button">
+						<div class="accordion-header d-accoBtn">
+							<div class="text">
+								<p>꼭 확인하세요</p>
+							</div>
+							<div class="accordion-btn">
+								<i class="toggleIcon"></i>
+							</div>
+						</div>
+						<div class="accordion-body"> 
+							<ul class="acco-list">
+								<li>인터넷과 IPTV만 진단할 수 있어요. 다른 홈 서비스에 문제가 있다면 고객센터 101(무료)로 연락해 주세요.</li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="bottom-button">
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary">문제 해결하기</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tab 방문 신청 내역 -->
+			<div class="tab rqHistory hidden">
+				<div class="content-section title-section">
+					<h2 class="section-tit-lg">
+						신청 내역을 확인하고 일정을<br>
+						바꾸거나 취소할 수 있어요
+					</h2>
+				</div>
+
+				<div class="content-section history">
+					<div class="list-none hidden">
+						<div class="img">
+							<img src="../../../../static/images/img_no_list.png" alt="홈서비스 A/S방문 신청 내역이 없어요">
+						</div>
+						<p>홈서비스 A/S 방문 신청 내역이 없어요.</p>
+					</div>
+
+					<div class="card-list">
+						<!-- card-box 반복 -->
+						<!-- 신청완료 -->
+						<div class="card-box">
+							<div class="card-header">
+								<button type="button" class="btn-arrow">
+									<span class="flag-box able">신청완료</span>
+									<strong>2024-08-20</strong>
+								</button>
+							</div>
+							<div class="card-body">
+								<ul class="list-box">
+									<li>
+										<label class="list-label">연락받을 번호</label>
+										<span class="list-data">010-12**-56**</span>
+									</li>
+									<li>
+										<label class="list-label">주소</label>
+										<span class="list-data">서울시 용산구 한강대로 ***</span>
+									</li>
+									<li>
+										<label class="list-label">서비스명</label>
+										<span class="list-data">U+인터넷</span>
+									</li>
+									<li>
+										<label class="list-label">방문 희망일</label>
+										<span class="list-data"><span>2023년 11월 6일 (목)</span><br><span>오전 10시</span></span>
+									</li>
+									<li>
+										<label class="list-label">담당센터</label>
+										<span class="list-data">배정 중입니다.</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 홈매니저 배정 -->
+						<div class="card-box">
+							<div class="card-header">
+								<button type="button" class="btn-arrow">
+									<span class="flag-box able">홈매니저 배정</span>
+									<strong>2024-08-15</strong>
+								</button>
+							</div>
+							<div class="card-body">
+								<ul class="list-box">
+									<li>
+										<label class="list-label">연락받을 번호</label>
+										<span class="list-data">010-12**-56**</span>
+									</li>
+									<li>
+										<label class="list-label">주소</label>
+										<span class="list-data">서울시 용산구 한강대로 ***</span>
+									</li>
+									<li>
+										<label class="list-label">서비스명</label>
+										<span class="list-data">U+인터넷</span>
+									</li>
+									<li>
+										<label class="list-label">방문 예정일</label>
+										<span class="list-data">2024년 10월 20일 (금)<br>오전 11시</span>
+									</li>
+									<li>
+										<label class="list-label">담당센터</label>
+										<span class="list-data">서울_홈개통AS센터_큐엘씨</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 처리중 -->
+						<div class="card-box">
+							<div class="card-header">
+								<button type="button" class="btn-arrow">
+									<span class="flag-box">처리중</span>
+									<strong>2024-08-10</strong>
+								</button>
+							</div>
+							<div class="card-body">
+								<ul class="list-box">
+									<li>
+										<label class="list-label">연락받을 번호</label>
+										<span class="list-data">010-12**-56**</span>
+									</li>
+									<li>
+										<label class="list-label">주소</label>
+										<span class="list-data">서울시 용산구 한강대로 ***</span>
+									</li>
+									<li>
+										<label class="list-label">서비스명</label>
+										<span class="list-data">U+인터넷</span>
+									</li>
+									<li>
+										<label class="list-label">방문 예정일</label>
+										<span class="list-data">2024년 10월 20일 (금)<br>오전 11시</span>
+									</li>
+									<li>
+										<label class="list-label">담당센터</label>
+										<span class="list-data">서울_홈개통AS센터_큐엘씨</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 완료 : completeAs -->
+						<div class="card-box completeAs">
+							<div class="card-header">
+								<button type="button" class="btn-arrow">
+									<span class="flag-box">완료</span>
+									<strong>2023-10-20</strong>
+								</button>
+							</div>
+							<div class="card-body">
+								<ul class="list-box">
+									<li>
+										<label class="list-label">연락받을 번호</label>
+										<span class="list-data">010-12**-56**</span>
+									</li>
+									<li>
+										<label class="list-label">주소</label>
+										<span class="list-data">서울시 용산구 한강대로 ***</span>
+									</li>
+									<li>
+										<label class="list-label">서비스명</label>
+										<span class="list-data">U+인터넷</span>
+									</li>
+									<li>
+										<label class="list-label">완료일</label>
+										<span class="list-data">2023년 10월 20일 (금)<br>오전 11시</span>
+									</li>
+									<li>
+										<label class="list-label">담당센터</label>
+										<span class="list-data">서울_홈개통AS센터_큐엘씨</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 신청취소 : cancelAs -->
+						<div class="card-box cancelAs hidde">
+							<div class="card-header">
+								<button type="button" class="btn-arrow">
+									<span class="flag-box">신청 취소</span>
+									<strong>2023-10-15</strong>
+								</button>
+							</div>
+							<div class="card-body">
+								<ul class="list-box">
+									<li>
+										<label class="list-label">연락받을 번호</label>
+										<span class="list-data">010-12**-56**</span>
+									</li>
+									<li>
+										<label class="list-label">주소</label>
+										<span class="list-data">서울시 용산구 한강대로 ***</span>
+									</li>
+									<li>
+										<label class="list-label">서비스명</label>
+										<span class="list-data">U+인터넷</span>
+									</li>
+									<!-- <li>
+										<label class="list-label">방문 희망일</label>
+										<span class="list-data">2023년 10월 20일 (금)<br>오전 11시</span>
+									</li> 신청 취소의 경우 방문 희망일 삭제 -->
+									<li>
+										<label class="list-label">담당센터</label>
+										<span class="list-data">서울_홈개통AS센터_큐엘씨</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- accordion-area -->
+				<div class="accordion-group">
+					<div class="accordion-box notice d-accoBox" role="button">
+						<div class="accordion-header d-accoBtn">
+							<div class="text">
+								<p>꼭 확인하세요</p>
+							</div>
+							<div class="accordion-btn">
+								<i class="toggleIcon"></i>
+							</div>
+						</div>
+						<div class="accordion-body"> 
+							<ul class="acco-list">
+								<li>최근 3개월 동안 신청한 내역만 확인할 수 있어요.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 콘텐츠 영역 : 문제서비스유형_선택 / bt-accopage class 삭제 필요 -->
+	<div class="content asSelect hidden"> 
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg">문제가 발생한 서비스를<br>선택해 주세요</h2>
+		</div>
+		<div class="content-section asSymptom">
+			<div class="radio-wrap">
+				<ul class="card-list">
+					<li>
+						<div class="card-radio-wrap">
+							<div class="card-radio">
+								<input id="11" name="addr" type="radio"> <!-- name 수정가능 / id, for 값 맞춰야 함 -->
+								<label for="11" class="text-radio">
+									<div class="radio-contents">
+										<div class="text-wrap">
+											<p class="contents-title">인터넷</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="card-radio-wrap">
+							<div class="card-radio">
+								<input id="11" name="addr" type="radio"> <!-- name 수정가능 / id, for 값 맞춰야 함 -->
+								<label for="11" class="text-radio">
+									<div class="radio-contents">
+										<div class="text-wrap">
+											<p class="contents-title">U+tv</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="card-radio-wrap">
+							<div class="card-radio">
+								<input id="11" name="addr" type="radio"> <!-- name 수정가능 / id, for 값 맞춰야 함 -->
+								<label for="11" class="text-radio">
+									<div class="radio-contents">
+										<div class="text-wrap">
+											<p class="contents-title">U+tv 리모컨</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="card-radio-wrap">
+							<div class="card-radio">
+								<input id="11" name="addr" type="radio"> <!-- name 수정가능 / id, for 값 맞춰야 함 -->
+								<label for="11" class="text-radio">
+									<div class="radio-contents">
+										<div class="text-wrap">
+											<p class="contents-title">인터넷전화/스마트홈(IoT)</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 콘텐츠 영역 : 기기 reset / bt-accopage class 삭제, c-btn hidden 필요 -->
+	<div class="content asReset align_middle hidde">
+		<div class="content-section">
+			<div class="caution-box confirm-wrap">
+				<strong class="tit">
+					서비스를 자동으로<br>다시 시작하고 있어요
+				</strong>
+				<p class="txt">약 3분 정도 시간이 소요될 수 있어요</p>
+				<div class="img-box resetIng">
+					<img src="../../../../static/images/m_img_homeAS_reset.png" alt="서비스를 자동으로 다시 시작하고 있어요">
+					<!-- <lottie-player src="../../../../static/lottie/m_img_homeAS_reset.json" background="transparent" speed="1" style="width: 100%" direction="1" mode="normal" loop autoplay></lottie-player> -->
+				</div>
+				
+				<div class="progress-wrap">
+					<span class="progress-text">리셋이 <sapn>30%</sapn> 진행되고 있습니다</span>
+					<div class="progress progress-striped active">
+						<div role="progressbar " style="width: 30%;" class="progressBar">
+							<span class="progress-text"><sapn>30%</sapn></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 홈서비스 셀프해결/방문신청 문제해결 bottom-popup -->
+<div class="modal-wrap popup-wrapper bottom-popup homeAsPop selfAS hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<!-- <h1 class="pop-tit"><span></span></h1> -->
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section resetTxt">
+				<div class="pop-tit">
+					서비스 자동 재시작으로<br>문제를 해결할게요
+					<div class="img-box resetIng">
+						<img src="../../../../static/images/m_img_homeAS_reset.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="content-section resetInfo">
+				<ul class="bullet">
+					<li>[문제 해결하기] 버튼을 누르면 자동으로 <span class="t-special">모든 기기의 전원이 꺼졌다 켜져요.</span></li>
+					<li>기기 전원이 모두 켜져 있는지 확인하고 인터넷과 연결된 기기의 작업 중인 파일이 있으면 꼭 저장 후 시작해 주세요.</li>
+					<li>기기 전원이 다시 켜지기 전 약 2분 동안 서비스를 이용할 수 없으니 양해해 주세요.</li>
+				</ul>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="btn">문제 해결하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 방문신청내역 상세 full-popup-->
+<div class="modal-wrap popup-wrapper homeAsPop detailAs hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>홈서비스 셀프해결/방문신청</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body bt-accopage">
+			<div class="content-section">
+				<h2 class="section-tit">
+					<span>신청 내역 상세 보기</span>
+				</h2>
+				<div class="step-wrap">
+					<ol class="step-list">
+						<li class="as_step1 step-complete"> <!-- 완료 step-complete -->
+							<p role="text" tabindex="-1" class="info-title">
+								<span class="blind">1단계</span>
+								<span class="stepSummary">신청 완료</span>
+							</p>
+						</li>
+						<li class="as_step2 step-focus"> <!-- 현재 상태 step-focus -->
+							<p role="text" tabindex="-1" class="info-title">
+								<span class="blind">2단계</span>
+								<span class="stepSummary">홈매니저 배정</span>
+							</p>
+						</li>
+						<li class="as_step3 ">
+							<p role="text" tabindex="-1" class="info-title">
+								<span class="blind Summary">3단계</span>
+								<span class="stepSummary">처리 중</span>
+							</p>
+						</li>
+						<li class="as_step4">
+							<p role="text" tabindex="-1" class="info-title">
+								<span class="blind">4단계</span>
+								<span class="stepSummary">작업 완료</span>
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+			<div class="content-section detailAs">
+				<div class="column-group">
+					<div class="column-item section-wrap applicationInfo">
+						<div class="section-title">
+							<p class="h2">신청내용</p>
+						</div>
+						<div class="section-body">
+							<div class="card-box">
+								<div class="card-body">
+									<ul class="list-box">
+										<li>
+											<label class="list-label">서비스명</label>
+											<span class="list-data">U+인터넷</span>
+										</li>
+										<li>
+											<label class="list-label">상태</label>
+											<span class="list-data">모든 웹사이트 페이지 에러</span>
+										</li>
+										<li>
+											<label class="list-label">
+												<sapn>방문 예정일</sapn><!-- 단계에 따른 문구 변경 - 신청:방문 희망일, 배정:방문 예정일, 처리중:방문 예정일, 완료: 방문일(변경 버튼X) -->
+												<button type="button" class="btn btn-sm btn-gray">변경</button>
+											</label>
+											<span class="list-data">2023년 11월 16일 (목)<br>오전 10시</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-item section-wrap myInfo">
+						<div class="section-title">
+							<p class="h2">내 정보</p>
+						</div>
+						<div class="section-body">
+							<div class="card-box">
+								<div class="card-body">
+									<ul class="list-box">
+										<li>
+											<label class="list-label">이름</label>
+											<span class="list-data">김*플</span>
+										</li>
+										<li>
+											<label class="list-label">
+												연락받을 번호
+												<button type="button" class="btn btn-sm btn-gray">변경</button>
+											</label>
+											<span class="list-data">010-12**-56**</span>
+										</li>
+										<li>
+											<label class="list-label">주소</label>
+											<span class="list-data">서울시 용산구 한강대로 ***</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 배정 전 -->
+					<div class="column-item section-wrap homeManager ready">
+						<div class="section-title">
+							<p class="h2">센터 정보</p>
+						</div>
+						<div class="section-body">
+							<div class="card-box">
+								<div class="card-body">
+									<p class="info-txt">홈매니저를 <strong>배정 중</strong> 입니다.</p>
+									<div class="row-group">
+										<ul class="list-box">
+											<li>
+												<label class="list-label">담당센터</label>
+												<span class="list-data">용산_개통AS센터_(홈)</span>
+											</li>
+											<li>
+												<label class="list-label">전화번호</label>
+												<span class="list-data">1111-2222</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 배정 후 -->
+					<div class="column-item section-wrap homeManager">
+						<div class="section-title">
+							<p class="h2">방문 직원</p>
+						</div>
+						<div class="section-body">
+							<div class="card-box">
+								<div class="card-body">
+									<div class="row-group">
+										<div class="managerImg">
+											<img src="../../../../static/images/default_managerImg.png" alt="홈매니저 이미지 준비중">
+										</div>
+										<ul class="list-box">
+											<li>
+												<label class="list-label">이름</label>
+												<span class="list-data">김유플 홈매니저</span>
+											</li>
+											<li>
+												<label class="list-label">담당센터</label>
+												<span class="list-data">용산_개통AS센터_(홈)</span>
+											</li>
+											<li>
+												<label class="list-label">전화번호</label>
+												<span class="list-data">1111-2222</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-item section-wrap progressAs">
+						<div class="section-title">
+							<p class="h2">진행 상황</p>
+						</div>
+						<div class="section-body">
+							<div class="card-box">
+								<div class="card-body">
+									<ul class="list-box">
+										<li>
+											<label class="list-label">11월 15일 오후 6시 01분</label>
+											<span class="list-data">장애 작업자 지정</span>
+										</li>
+										<li>
+											<label class="list-label">11월 15일 오후 5시 55분</label>
+											<span class="list-data">장애접수</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-section">
+				<div class="btn-group">
+					<button type="button" class="btn btn-sm btn-gray">방문 신청 취소하기</button>
+				</div>
+			</div>
+
+
+			<!-- accordion-area -->
+			<div class="accordion-group">
+				<div class="accordion-box notice d-accoBox" role="button">
+					<div class="accordion-header d-accoBtn">
+						<div class="text">
+							<p>꼭 확인하세요</p>
+						</div>
+						<div class="accordion-btn">
+							<i class="toggleIcon"></i>
+						</div>
+					</div>
+					<div class="accordion-body"> 
+						<ul class="acco-list">
+							<li>홈매니저 방문 전에 카카오톡 알림톡을 보내드려요. 카카오톡 앱이 없다면 알림을 위해 설치해 주세요.</li>
+							<li>희망하는 날짜와 시간에 홈매니저 방문이 어렵다면 상담사가 전화를 드려요.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 방문신청내역 방문희망일 날짜 변경 팝업-->
+<div class="modal-wrap popup-wrapper bottom-popup homeAsPop chgDate hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<!-- <h1 class="pop-tit"><span></span></h1> -->
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<!-- datepicker 영역 -->
+		</div>
+	</div>
+</div>
+
+<!-- 방문신청내역 방문희망 시간 변경 bottom 팝업-->
+<div class="modal-wrap popup-wrapper bottom-popup homeAsPop chgTime hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section ">
+				<h1 class="pop-tit"><span>시간을 선택해 주세요</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+				<div class="card-list">
+					<!-- card-radio 반복 -->
+					<div class="card-radio">
+						<input id="11" name="time" type="radio" value="" disabled>
+						<label for="11" class="text-radio">
+							<span class="radio-contents">
+								<span class="text-wrap">
+									<span class="contents-title">오전 10시</span>
+								</span>
+							</span>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="22" name="time" type="radio" value="">
+						<label for="22" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">오전 11시</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="44" name="time" type="radio" value="">
+						<label for="44" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">오후 1시</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="55" name="time" type="radio" value="">
+						<label for="55" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">오후 2시</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="66" name="time" type="radio" value="">
+						<label for="66" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">오후 3시</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="77" name="time" type="radio" value="">
+						<label for="77" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">오후 4시</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+					<div class="card-radio">
+						<input id="11" name="time" type="radio" value="">
+						<label for="11" class="text-radio">
+							<div class="radio-contents">
+								<div class="text-wrap">
+									<p class="contents-title">오후 5시</p>
+								</div>
+							</div>
+							<i class="icon"></i>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 방문신청내역 번호 변경 full-popup-->
+<div class="modal-wrap popup-wrapper btFlexible homeAsPop chgNumber hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>홈서비스 셀프해결/방문신청</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section title-section">
+				<h2 class="section-tit-lg">
+					<span>방문 시 연락받을 번호를<br>변경하시겠어요?</span>
+				</h2>
+			</div>
+
+			<div class="content-section">
+				<div class="inputInfo inputInfo-lg chgNumInput">
+					<div class="custom-info">
+						<input type="tel" class="custom-inp" value="010-12**-56**" >
+						<!-- <button type="button" class="btn btn-sm btn-gray">변경하기</button> -->
+					</div>
+					<label class="info-label">휴대폰 번호</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<!-- <button type="button" class="btn">취소</button> -->
+				<button type="button" class="btn">변경하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 방문신청내역 휴대폰인증 full-popup-->
+<div class="modal-wrap popup-wrapper homeAsPop AS_smsAuth hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>홈서비스 셀프해결/방문신청</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+				<!-- 고객명 -->
+				<div class="inputInfo">
+					<label for="custNm" class="info-label">
+						고객명
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="custNm" name="customerName" placeholder="고객명" type="text" maxlength="20" class="custom-inp d-ownInputCk" onkeyup="validate.inputTextCheck(this)">
+					</div>
+					<p class="error-txt hidden">고객명을 입력해주세요.</p>
+				</div>
+
+				<!-- 생년월일 -->
+				<div class="inputInfo" id="myBirth">
+					<label for="birth" class="info-label">
+						생년월일
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info">
+						<input id="birth" name="birth" placeholder="생년월일 8자리" maxlength="8" type="tel" class="custom-inp d-ownInputCk" onkeyup="validate.inputNumCheck(this)">
+					</div>
+					<p class="error-txt hidden">생년월일을 입력해주세요.</p>
+				</div>
+
+				<!-- 성별 -->
+				<div class="inputInfo">
+					<label for="gender" class="info-label">
+						성별
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="r-radio-group">
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="male" name="gender" type="radio" value="male" checked>
+								<label for="male" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">남</span>
+								</label>
+							</span>
+						</div>
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="female" name="gender" type="radio" value="female">
+								<label for="female" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">여</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 구분 -->
+				<div class="inputInfo">
+					<label for="holder" class="info-label">
+						내/외국인
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="r-radio-group">
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="local" name="holder" type="radio" value="local" checked>
+								<label for="local" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">내국인</span>
+								</label>
+							</span>
+						</div>
+						<div class="r-radio-box">
+							<span class="r-radio">
+								<input id="foreigner" name="holder" type="radio" value="foreigner">
+								<label for="foreigner" class="radio-txt">
+									<i class="icon"></i>
+									<span class="customer-type">외국인</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 휴대폰번호 -->
+				<div class="inputInfo">
+					<label for="phoneNum" class="info-label">
+						휴대폰번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="select-box">
+						<select id="carrier" class="select-form">
+							<option value="LG">LG U+ / LG U+(알뜰폰)</option>
+							<option value="SKT">SKT</option>
+							<option value="KT">KT</option>
+							<option value="SKT">SKT(알뜰폰)</option>
+							<option value="KT">KT(알뜰폰)</option>
+						</select>
+					</div>
+					<div class="custom-info inBtn">
+						<input id="phoneNo" name="phoneNum" placeholder="'-'없이 숫자만 입력" minlength="10" maxlength="11" type="tel" class="custom-inp"  autocomplete="off">
+						<div class="btn-group exTime">
+							<button title="인증번호 발송" class="request-btn" disabled><span class="">인증번호 발송</span></button>
+						</div>
+					</div>
+					<p class="error-txt hidden">유효한 휴대폰 번호를 입력해주세요.</p>
+				</div>
+				
+				<div class="inputInfo hidden"> <!-- 인증번호 발송 후 hidden 삭제 -->
+					<label for="certNum" class="info-label">
+						SMS 인증번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info inBtn">
+						<input id="authNo" name="certNum" placeholder="인증번호 6자리 입력" maxlength="6" type="tel" class="custom-inp" autocomplete="off">
+						<div class="btn-group exTime">
+							<button title="인증하기" class="request-btn standard" disabled><span class="">인증하기</span></button>
+						</div>
+					</div>
+					<div class="time-box hidde">
+						<span class="time-txt"><span class="t-special">03:00</span></span>
+						<button title="시간연장하기" class="request-btn"><span class="">시간연장하기</span></button>
+					</div>
+				</div>
+
+				<div class="inputInfo">
+					<div class="check-box">
+						<input type="checkbox" name="certification" id="idid"> <!-- id 사용하실 경우 input id / label for 맞춰야 함 -->
+						<label for="idid" class="t-checkbox">
+							<i class="icon"></i>
+							<span class="text">휴대폰 인증시 수집된 개인정보(성명, 생년월일, 성별, 휴대폰번호)는 개인정보 수집 이용정책과 같이 활용됨을 동의함</span>
+						</label>
+						<div class="content-row">
+							<div class="info-btn agree-open"><a href="javascript:void(0)" class="btn-arrow">개인정보 수집 이용 안내</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn" disabled>변경하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- SMS 본인인증 확인 팝업-->
+<div class="modal-wrap popup-wrapper center-popup smsAuthSuccess hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>확인</span></h1>
+				<!-- <button type="button" class="c-btn">닫기</button> -->
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p class="pop-txt">
+					본인인증에 성공했습니다.<br>
+					계속 진행하시려면 확인을 눌러주세요.	
+				</p>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 고객센터 연결 alert 팝업 (4시간 전) -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				
+				<strong class="tit">지금은 담당센터를 통해서만<br>방문 일정을 바꿀 수 있어요.</strong>
+				
+				<div class="card-box bg-gray">
+					<p class="">담당센터 번호 : <span>02-1234-5678</span></p>
+				</div>
+			</div>			
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 방문 취소 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">홈매니저 방문 신청을<br>취소할까요?</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="btn">아니요</button>
+				<button type="button" class="btn">네</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 방문 취소 완료 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">홈매니저 방문 신청을<br>취소했습니다</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 24시간 이내 리셋 재시도 불가 alert (홈매니저 방문 신청하기)-->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">최근 원격리셋을 진행하셨네요.<br>다른 방법으로 도와드릴게요.</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">홈매니저 방문 신청하기</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 24시간 이내 리셋 재시도 불가 alert (상담사 연결) -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">최근 원격리셋을 진행하셨네요.<br>다른 방법으로 도와드릴게요.</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">상담사 연결</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 인터넷전화/스마트홈 상담사 연결 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">
+					상담사를 통해 도와드릴게요.<br>연결 할까요?
+				</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">상담사 연결</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 리모컨 장애 셀프해결/방문신청 full-popup-->
+<div class="modal-wrap popup-wrapper btFlexible homeAsPop remote hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>리모컨 장애 셀프해결/방문신청</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section title-section">
+				<h2 class="section-tit-lg">
+					<span>리모컨이 파손<br>(혹은 침수, 분실) 되었나요?</span>
+				</h2>
+			</div>
+
+			<div class="content-section asSymptom">
+				<div class="radio-wrap">
+					<ul class="card-list">
+						<li class="card-radio-wrap">
+							<div class="card-radio">
+								<input id="" name="" type="radio"> <!-- name 수정 / id, for 값 맞춰야 함 -->
+								<label for="" class="text-radio">
+									<div class="radio-contents">
+										<div class="text-wrap">
+											<p class="contents-title">예, 리모컨이 파손(침수, 분실) 되었어요.</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</li>
+						<li class="card-radio-wrap">
+							<div class="card-radio">
+								<input id="" name="" type="radio"> <!-- name 수정 / id, for 값 맞춰야 함 -->
+								<label for="" class="text-radio">
+									<div class="radio-contents">
+										<div class="text-wrap">
+											<p class="contents-title">아니요, 그냥 작동되지 않아요.</p>
+										</div>
+									</div>
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 리모컨 장애 셀프해결/방문신청 : 리모컨 파손 full-popup-->
+<div class="modal-wrap popup-wrapper btFlexible homeAsPop remote hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>리모컨 파손</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section title-section">
+				<h2 class="section-tit-lg">
+					<span>어떤 방법으로 도움을<br>드릴까요?</span>
+				</h2>
+			</div>
+
+			<div class="content-section asSymptom">
+				<div class="radio-wrap">
+					<ul class="card-list">
+						<li>
+							<div class="card-radio-wrap">
+								<div class="card-radio">
+									<input id="" name="" type="radio"> <!-- name 수정 / id, for 값 맞춰야 함 -->
+									<label for="" class="text-radio">
+										<div class="radio-contents">
+											<div class="text-wrap">
+												<p class="contents-title">리모컨 구매<br>(택배발송)</p>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="card-radio-wrap">
+								<div class="card-radio">
+									<input id="" name="" type="radio"> <!-- name 수정 / id, for 값 맞춰야 함 -->
+									<label for="" class="text-radio">
+										<div class="radio-contents">
+											<div class="text-wrap">
+												<p class="contents-title">홈매니저 방문접수<br>(방문 점검)</p>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="bullet mt16">
+					<li>택배 구매 시 단말 비용 결제가 필요하며 택배비는 발생하지 않습니다.</li>
+					<li>방문 조치 시 일정 조율하여 방문하며 비용 발생 가능성이 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 리모컨 장애 셀프해결/방문신청 : 셀프해결 step full-popup-->
+<div class="modal-wrap popup-wrapper btFlexible homeAsPop remoteSelfAs hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>리모컨 장애 셀프해결</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body c-devider">
+			<div class="content-section title-section">
+				<h2 class="section-tit-lg">문제 해결을 위한<br>방법을 확인해 보세요</h2>
+				<p class="info-txt">따라 했는데도 해결되지 않으면<br>홈매니저 방문을 신청해 주세요</p>
+			</div>
+
+			<div class="content-section">
+				<div class="step-wrap">
+					<span class="step-txt">STEP 1</span>
+					<p class="step-title">배터리 상태 확인 및 교체하기</p>
+				</div>
+
+				<div class="column-group stepInfo">
+					<div class="column-item section-wrap">
+						<p class="section-title">배터리 상태 확인하기</p>
+						<div class="section-body">
+							<div class="text-box">
+								<p class=""><span>리모컨의 아무 버튼이나 눌러가며 배터리 표시등을 확인하세요.</span></p>
+								<ul class="bullet">
+									<li>초록색 불빛 들어옴: 정상</li>
+									<li>빨간색 불빛 들어옴: 배터리 부족 알림(새 건전지로 교체 필요)</li>
+									<li>표시 없음: 배터리 없음 또는 방전(배터리 삽입 방향 재확인 및 교체 필요)</li>
+								</ul>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-1-1.png" alt="리모컨의 아무 버튼이나 눌러가며 배터리 표시등을 확인하세요">
+							</div>
+						</div>
+					</div>
+
+					<div class="column-item section-wrap">
+						<p class="section-title">배터리 교체방법</p>
+						<div class="section-body number-list self-step">
+							<div class="text-box">
+								<p class="num"><span>새 건전지(AAA 혹은 AA) 2개를 준비하세요.<br>※건전지의 크기는 건전지 옆면에 표기되어 있습니다.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-1-2.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>리모컨 뒷면의 배터리 커버를 누르면서 아래로 밀어 여세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-1-3.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>건전지를  +, -극 방향에 맞춰 갈아 끼운 다음 커버를 닫으세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-1-4.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>리모컨 버튼을 누를 때마다 배터리 표시등에 초록색 불빛이 들어오는지 확인하세요. 초록색 불이 들어오는데 리모컨이 제대로 작동하지 않는다면 리모컨을 셋톱박스 또는 TV와 다시 연결하세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-1-5.png" alt="">
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box bg-gray">
+						<div class="card-body">
+							<div class="row-group videoLink">
+								<img src="../../../../static/images/ic_excl_36.png" alt="느낌표이미지">
+								<p class="vertical"><span>조금 어렵나요?</span><span>동영상을 보면 더 쉽게 따라할 수 있어요.</span></p>
+							</div>
+							<button type="button" class="btn btn-round image-btn">
+								<span>동영상 보며 따라 하기</span>
+								<img src="../../../../static/images/img-remoteControl-youtube.png" alt="플레이버튼이미지">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-section">
+				<div class="step-wrap">
+					<span class="step-txt">STEP 2</span>
+					<p class="step-title">TV와 U+tv 리모컨 다시 연결하기</p>
+				</div>
+
+				<div class="column-group stepInfo">
+					<div class="column-item section-wrap">
+						<!-- <p class="section-title"></p> -->
+						<div class="section-body number-list self-step">
+							<div class="text-box">
+								<p class="num"><span>셋톱박스와 TV에서 각각 전원 버튼을 눌러 두 기기의 전원을 모두 켜세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-1.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>셋톱박스 전원 램프에 초록색 불빛이 들어오고 TV의 전원이 켜지는지 확인하세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-2.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>U+tv 리모컨 뒷면의 배터리 커버를 열어 <span class="ft-black">리모컨 연결</span> 버튼을 확인 하세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-3.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>리모컨의 적외선 램프가 셋톱박스를 향하도록 한 상태에서 <span class="ft-black">리모컨 연결</span> 버튼을 길게 누르세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-4.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>TV 화면에 ‘리모컨 및 이어폰듣기 기능 연결 중입니다’ 라는 메시지가 나오면 버튼에서 손을 떼세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-5.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>약 10초 후 화면에 ‘리모컨 연결 완료 100%’ 라는 메시지가 나타날 때까지 기다리세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-6.png" alt="">
+							</div>
+
+							<div class="text-box">
+								<p class="num"><span>리모컨의 클로바 검색 버튼을 눌러 ‘아이들나라 틀어줘’ 라고 말하세요. TV에 아무런 반응이 없다면 3번 단계로 돌아가 다시 한번 연결하세요.</span></p>
+							</div>
+							<div class="img-box">
+								<img src="../../../../static/images/img-remoteControl-2-7.png" alt="">
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box bg-gray">
+						<div class="card-body">
+							<div class="row-group videoLink">
+								<img src="../../../../static/images/ic_excl_36.png" alt="느낌표이미지">
+								<p class="vertical"><span>조금 어렵나요?</span><span>동영상을 보면 더 쉽게 따라할 수 있어요.</span></p>
+							</div>
+							<button type="button" class="btn btn-round image-btn">
+								<span>동영상 보며 따라 하기</span>
+								<img src="../../../../static/images/img-remoteControl-youtube.png" alt="플레이버튼이미지">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">홈매니저 방문 신청하기</button>
+				<button type="button" class="btn">문제가 해결됐어요</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 리모컨 장애 셀프해결/방문신청 : 셀프해결 동영상 full-popup-->
+<div class="modal-wrap popup-wrapper btFlexible homeAsPop remoteAsVideo hidden">
+	<div class="popup-content full-popup slideUp">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>리모컨 장애 셀프해결</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+				<div class="videoPlay">
+					<iframe frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="리모컨이 작동하지 않아요" width="640" height="360" src="https://www.youtube.com/embed/Pp68LQbOIJ8?si=vmG2QRGxp-PV90Kz" id="widget2" data-gtm-yt-inspected-103384474_525="true" data-gtm-yt-inspected-103384474_641="true"></iframe>
+					<!-- <iframe frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="새로 구매한 리모컨이 제대로 작동하지 않아요" width="640" height="360" src="https://www.youtube.com/embed/wP5S5sdUyRs?si=HkS9t5c8JwVx3-kU" id="widget2" data-gtm-yt-inspected-103384474_525="true" data-gtm-yt-inspected-103384474_641="true"></iframe> -->
+				</div>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- AS 접수 중 불가 alert (방문신청내역 확인하기) -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">이미 홈매니저 방문이 예정되어<br>있어 추가 A/S 신청이 어려워요.</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">방문신청내역 확인하기</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 일시정지 중 불가 alert (일시정지 해제하기) -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">일시정지된 상품이<br>포함돼 있습니다.<br>정지 해제 후 재시도 해주세요.</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">일시정지 해제하기</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 미납정지 중 불가 alert (요금납부하기) -->
+<div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">미납정지된 상품이<br>포함돼 있습니다.<br>정지 해제 후 재시도 해주세요.</strong>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">요금납부하기</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 2개 이상 IPTV상품 (상담사연결) alert 팝업 -->
+<!-- <div class="modal-wrap popup-wrapper center-popup homeAsPop hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup non-header appear">
+		
+		<div class="popup-body">
+			<div class="content-section center">
+				<strong class="tit">
+					고객님 앞으로 2개 이상의<br>IPTV상품이 있어<br>상담사를 통해 접수가 가능해요.
+				</strong>
+			</div>
+		</div>
+		
+		<div class="popup-footer">
+			<div class="btn-group vertical">
+				<button type="button" class="btn">상담사 연결</button>
+				<button type="button" class="btn">취소</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<script>
+	const accordionItems = document.querySelectorAll(".accordion-box");
+
+	accordionItems.forEach((item) => {
+		const header = item.querySelector(".d-accoBox > .accordion-header");
+		header.addEventListener("click", () => {
+			item.classList.toggle("acco-active");
+	}   );
+	});
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>U+ 눈으로 보는 콜봇 Wisepotal</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css" />
+	<!-- Scripts -->
+	<script src="../../../../static/js/jquery-3.6.0.min.js"></script>  
+	<script src="../../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+	<script src="../../../../static/js/tooltip/popper.js"></script>		
+	<script src="../../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper billReissue bt-accopage">
+	<!-- 헤더 영역 -->
+	<header class="header">
+		<h1 class="page-title">청구서 재발행</h1>
+		<button type="button" class="c-btn">닫기</button>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content c-devider">
+		<div class="service-section">
+			<div class="service-box" role="button">
+				<div class="text-area">
+					<span class="svCategory">U+ 인터넷 /...</span>
+					<span class="svInfo">부산광역시 강서구 녹산산단382로 ***</span>
+				</div>
+				<div class="btn-area">
+					<button type="button" class="btn chgBtn">선택 변경</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-section issueInfo">          
+			<div class="section-tit vertical">
+				<span>나의 청구서</span>
+				<span class="info-txt">현재 <span class="t-special">이메일 청구서</span>로 청구서를 받고 있습니다.</span> <!-- 휴대폰/이메일/문자(MMS)/우편 -->
+			</div>
+
+			<div class="card-box card-line total-data">
+				<ul class="list-box">
+					<li>
+						<label class="list-label">청구서발행 정보</label>
+						<p class="list-data">
+							<span>abc*****@naver.com</span>
+						</p>
+					</li>
+				</ul>
+				<ul class="list-box">
+					<li>
+						<label class="list-label">발행 방법 변경일</label>
+						<p class="list-data">
+							<span>2024-04-08</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-section issueMethod">
+			<div class="inputInfo">
+				<label class="info-label">청구서 재발행 정보</label>
+				<div class="select-box">
+					<select class="select-form" title="청구서 재발행 신청 월 선택">
+						<option value="">청구서 재발행 신청 월 선택</option>
+						<option value="">2024년 06월</option>
+						<option value="">2024년 05월</option>
+						<option value="">2024년 04월</option>
+						<option value="">2024년 03월</option>
+						<option value="">2024년 02월</option>
+						<option value="">2024년 01월</option>
+					</select>
+				</div>
+				<div class="select-box">
+					<select class="select-form" title="청구서 재발행 신청 사유 선택">
+						<option value="">청구서 재발행 신청 사유 선택</option>
+						<option value="">청구서 미도착</option>
+						<option value="">청구서 분실</option>
+						<option value="">단순요청</option>
+						<option value="">기타</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="inputInfo">
+				<label class="info-label">청구서발행 방법</label>
+				<div class="radio-group">
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input type="radio" name="reissue" id="mms">
+							<label for="mms" class="text-radio">
+								<!-- <span class="radio-icon mms"></span> -->
+								<span class="txt">문자(MMS)</span>
+							</label>
+						</span>
+					</div>
+					<div class="radio-box">
+						<span class="radio-btn">
+							<input type="radio" name="reissue" id="email" checked>
+							<label for="email" class="text-radio">
+								<!-- <span class="radio-icon pass"></span> -->
+								<span class="txt">이메일</span>
+							</label>
+						</span>
+					</div>
+					<div class="radio-box hidden">
+						<span class="radio-btn">
+							<input type="radio" name="reissue" id="post">
+							<label for="post" class="text-radio">
+								<!-- <span class="radio-icon post"></span> -->
+								<span class="txt">우편</span>
+							</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- MMS area -->
+			<div class="content-box">
+				<div class="inputInfo">
+					<label for="phoneNum" class="info-label">
+						휴대폰번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="select-box">
+						<select id="carrier" class="select-form">
+							<option value="LG">LG U+ / LG U+(알뜰폰)</option>
+							<option value="SKT">SKT</option>
+							<option value="KT">KT</option>
+							<option value="SKT">SKT(알뜰폰)</option>
+							<option value="KT">KT(알뜰폰)</option>
+						</select>
+					</div>
+					<div class="custom-info inBtn error">
+						<input id="phoneNo" name="phoneNum" placeholder="'-'없이 숫자만 입력" minlength="10" maxlength="11" type="tel" class="custom-inp"  autocomplete="off">
+						<div class="btn-group exTime">
+							<button title="인증번호 발송" class="request-btn" disabled><span class="">인증번호 발송</span></button>
+						</div>
+					</div>
+					<p class="error-txt hidde">유효한 휴대폰 번호를 입력해주세요.</p>
+					<p class="info-txt t-special fz12 mt8">※고객 본인 명의의 휴대폰으로만 발송 가능합니다.</p>
+				</div>
+
+				<div class="creditCard mt26 hidde" id="creditCard">
+					<!-- 고객명 -->
+					<div class="inputInfo d-cardSelf">
+						<label for="custNm" class="info-label">
+							고객명
+							<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+						</label>
+						<div class="custom-info">
+							<input id="custNm" name="customerName" placeholder="고객명" type="text" maxlength="20" class="custom-inp d-ownInputCk" onkeyup="validate.inputTextCheck(this)">
+						</div>
+						<p class="error-txt hidden">고객명을 입력해주세요.</p>
+					</div>
+	
+					<!-- 생년월일 -->
+					<div class="inputInfo d-cardSelf" id="myBirth">
+						<label for="birth" class="info-label">
+							생년월일
+							<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+						</label>
+						<div class="custom-info">
+							<input id="birth" name="birth" placeholder="생년월일 8자리" maxlength="8" type="tel" class="custom-inp d-ownInputCk" onkeyup="validate.inputNumCheck(this)">
+						</div>
+						<p class="error-txt hidden">생년월일을 입력해주세요.</p>
+					</div>
+
+					<!-- 성별 -->
+					<div class="inputInfo">
+						<label for="gender" class="info-label">
+							성별
+							<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+						</label>
+						<div class="r-radio-group">
+							<div class="r-radio-box">
+								<span class="r-radio">
+									<input id="male" name="gender" type="radio" value="male" checked>
+									<label for="male" class="radio-txt">
+										<i class="icon"></i>
+										<span class="customer-type">남</span>
+									</label>
+								</span>
+							</div>
+							<div class="r-radio-box">
+								<span class="r-radio">
+									<input id="female" name="gender" type="radio" value="female">
+									<label for="female" class="radio-txt">
+										<i class="icon"></i>
+										<span class="customer-type">여</span>
+									</label>
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 내/외국인 -->
+					<div class="inputInfo">
+						<label for="cardholder" class="info-label">
+							내/외국인
+							<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+						</label>
+						<div class="r-radio-group">
+							<div class="r-radio-box">
+								<span class="r-radio">
+									<input id="local" name="cardholder" type="radio" value="local" checked>
+									<label for="local" class="radio-txt">
+										<i class="icon"></i>
+										<span class="customer-type">내국인</span>
+									</label>
+								</span>
+							</div>
+							<div class="r-radio-box">
+								<span class="r-radio">
+									<input id="foreigner" name="cardholder" type="radio" value="foreigner">
+									<label for="foreigner" class="radio-txt">
+										<i class="icon"></i>
+										<span class="customer-type">외국인</span>
+									</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="inputInfo hidde">
+					<label for="certNum" class="info-label">
+						SMS 인증번호
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info inBtn">
+						<input id="authNo" name="certNum" placeholder="인증번호 6자리 입력" maxlength="6" type="tel" class="custom-inp" autocomplete="off">
+						<div class="btn-group exTime">
+							<button title="인증하기" class="request-btn standard" disabled><span class="">인증하기</span></button>
+						</div>
+					</div>
+					<div class="time-box hidde">
+						<span class="time-txt"><span class="t-special">03:00</span></span>
+						<button title="시간연장하기" class="request-btn"><span class="">시간연장하기</span></button>
+					</div>
+				</div>
+
+				<div class="inputInfo">
+					<div class="check-box">
+						<input type="checkbox" name="certification" id="idid"> <!-- id 사용하실 경우 input id / label for 맞춰야 함 -->
+						<label for="idid" class="t-checkbox">
+							<i class="icon"></i>
+							<span class="text">휴대폰 인증시 수집된 개인정보(성명, 생년월일, 성별, 휴대폰번호)는 개인정보 수집 이용정책과 같이 활용됨을 동의함</span>
+						</label>
+						<div class="content-row">
+							<div class="info-btn agree-open"><a href="javascript:void(0)" class="btn-arrow">개인정보 수집 이용 안내</a></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-group btn-group-sm">
+					<button class="btn btn-round btn-primary">다음</button>
+				</div>
+			</div>
+
+			<!-- E-mail area -->
+			<div class="content-box hidden">
+				<div class="inputInfo">
+					<label for="email" class="info-label">
+						이메일
+						<!--<span class="required"><i class="hidden">필수항목</i></span>-->
+					</label>
+					<div class="custom-info emailInfo">
+						<ul class="input-flex">
+							<li>
+								<div class="custom-info hasClear">
+									<input placeholder="" type="text" class="custom-inp" value="abc12345">
+									<button type="button" class="clear-btn" title="입력한 문자 삭제">
+										<span class="hidden">입력한 문자 삭제</span>
+									</button>
+								</div>
+							</li>
+							<li class="unit">@</li>
+							<li class="input-flex">
+								<div class="select-box">
+									<select class="select-form">
+										<option>naver.com</option>
+										<option>선택</option>
+										<option>직접입력</option>
+										<option>daum.net</option>
+										<option>gmail.com</option>
+									</select>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="custom-info hasClear">
+									<input placeholder="" type="text" class="custom-inp">
+									<button type="button" class="clear-btn hidden" title="입력한 문자 삭제"><span class="hidden">입력한 문자 삭제</span></button>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<p class="error-txt hidden">이메일 형식이 잘못되었습니다.</p>
+				</div>
+
+				<div class="btn-group btn-group-sm">
+					<button class="btn btn-round btn-primary">다음</button>
+				</div>
+			</div>
+
+			<!-- Post area -->
+			<div class="content-box hidde">
+				<div class="inputInfo">
+					<label class="info-label">
+						우편물 수령 주소
+						<!-- <span class="required"><i class="hidden">필수항목</i></span> -->
+					</label>
+					<div class="custom-info">
+						<input placeholder="" type="text" class="custom-inp" value="02058" readonly>
+					</div>
+					<div class="custom-info">
+						<input placeholder=""  type="text" class="custom-inp" value="서울시 중랑구 신내로 19길 42, (신내동6단지신내아파트)" readonly>
+					</div>
+					<div class="custom-info">
+						<input placeholder="" type="text" class="custom-inp" value="607동 702호" readonly>
+					</div>
+				</div>
+
+				<ul class="bullet mt8">
+					<li>우편 청구서 재발행은 현재 등록된 주소로만 가능합니다.</li>
+					<li>우편 청구서 재발행은 한 달에 두 번까지 가능합니다.</li>
+				</ul>
+
+				<div class="btn-group btn-group-sm">
+					<button class="btn btn-round btn-primary">다음</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- accordion-area -->
+		<div class="accordion-group">
+			<div class="accordion-box notice" role="button">
+				<div class="accordion-header">
+					<div class="text">
+						<p>꼭 확인하세요.</p>
+					</div>
+					<div class="accordion-btn">
+						<i class="toggleIcon"></i>
+					</div>
+				</div>
+				<div class="accordion-body">
+					<ul class="acco-list">
+						<li>선택하신 재발행 방법은 1회성으로, 고객정보의 청구서 수령방법 설정은 변경되지 않습니다.</li>
+						<li>이메일은 보통 10분~15분 소요되나, 발송량에 따라 지연이 될 경우 1시간 내 발송됩니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+
+
+<!--모달 팝업 영역-->
+<!-- 청구서 재발행 신청월 선택 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup monthChoice hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">확인</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p>
+					청구서 재발행 신청 월을 선택해 주세요.
+				</p>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-round btn-primary">확인</button>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer"></div>
+	</div>
+</div>
+
+<!-- 이메일 유효성 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup monthChoice hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">확인</h1>
+				<!-- <button type="button" class="c-btn">닫기</button> -->
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p class="tit">등록하신 이메일 주소는 등록이 제한된 이메일 주소 입니다.<br>이메일 주소를 확인하시어 다른 이메일 주소를 등록 해주십시오.<br>(이메일 주소 이용자가 발송 차단 요청, 타인 이메일 청구서 다량 수신 건으로 등록 차단 요청)</p>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-round btn-primary">확인</button>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer"></div>
+	</div>
+</div>
+
+<!-- 상담사 연결 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup counselConnect hidde">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">확인</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p class="tit"><span>홍길동</span>님은 이미 1개월동안<br>청구서 재발송을 2회 받으셨습니다.<br>추가 재발송을 원하시면<br>상담사 연결이 필요합니다.<br>상담사를 연결해드릴까요?</p>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="btn">취소</button>
+				<button type="button" class="btn">상담사 연결</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 청구서 재발행 신청사유 선택 alert 팝업 -->
+<div class="modal-wrap popup-wrapper center-popup reosonChoice hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content alert-popup appear">
+		<!-- popup-header -->
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit">확인</h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section center">
+				<p>
+					청구서 재발행 신청 사유를 선택해 주세요.
+				</p>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-round btn-primary">확인</button>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer"></div>
+	</div>
+</div>
+
+<!--개인정보 수집 이용 안내 팝업-->
+<!-- <div class="modal-wrap popup-wrapper agree hidden">
+	<div class="popup-content full-popup slideUp">
+		
+		<div class="popup-header">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>개인정보 수집 이용안내</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		
+		<div class="popup-body">
+			<div class="content-section">
+				<ul class="pop-list">
+					<li class="list-tit">개인정보활용동의서</li>
+					<li>회사는 이용 고객에게 휴대폰 본인확인서비스 제공을 위해 다음과 같이 개인정보를 활용합니다.</li>
+				</ul>
+			</div>
+			<div class="content-section">
+				<ul class="pop-list">
+					<li class="list-tit">1. 개인정보 수집 및 이용 동의</li>
+					<li>1) 수집항목 : 성명, 생년월일, 성별, 휴대폰번호, 운영체제(OS), 모델명, U+앱 버전 등 기기정보, sqUID(이용자가 사용하는 브라우저에서 임의로 생성한 암호화된 유저의 고유 식별값), 이용자의 방문페이지 정보, 활동 로그 및 검색 이력 등 행태정보, 고객번호, 가입번호</li>
+					<li>2) 수집·이용목적 : 서비스 이용에 따른 본인확인 및 가입자 식별, 홈페이지 회원서비스 제공을 위한 회원인증 및 확인, 이용자의 온라인 행동 및 관심에 기반한 맞춤형 컨텐츠 제공</li>
+					<li>3) 보유·이용기간 : <span>이용자의 마지막 접속일로부터 12개월까지 보유 및 이용합니다. 회원일 경우 회원 가입 및 탈퇴한 날로부터 6개월동안 보유 및 이용</span> 후 폐기합니다. 단, 소송이나 분쟁 등의 특정한 이유가 있을 때에는 이의 해결시점까지 보유하며, 해당 법령 규정에 의거하여 보존 필요성이 있는 경우에는 보관합니다.</li>
+				</ul>
+			</div>
+			<div class="content-section">
+				<ul class="pop-list">
+					<li class="list-tit">2. 동의 거부권 및 미 동의에 대한 불이익 안내</li>
+					<li>고객님께서 정부 주체로서 개인정보 동의 거부권이 있으시며, 미동의 시 서비스 가입·이용에 제약이 있을 수 있고 미동의 하신 경우 정보가 제공되지 않습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="popup-footer">
+			<div class="btn-group">
+				<button type="button" class="standard">확인</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+</body>
+</html>

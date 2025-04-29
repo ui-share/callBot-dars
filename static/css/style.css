@@ -1274,7 +1274,7 @@ textarea:read-only:focus {
 	align-items: center;
 }
 .loanExtension .content-row .info-txt {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.5;
 	color: #000;
 }
@@ -1282,13 +1282,14 @@ textarea:read-only:focus {
 	color: #015AAD;
 }
 .loanExtension .content-row .tit {
-	font-size: 10px;
+	font-size: 12px;
 	line-height: 16px;
 	color: #555555;
 }
 .loanExtension .content-row .txt {
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 16px;
+	font-weight: 500;
 	color: #000;
 }
 .loanExtension .flag-box {

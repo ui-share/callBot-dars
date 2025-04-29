@@ -1,22 +1,22 @@
 @charset "utf-8";
 
 @font-face {
-	font-family: 'Noto Sans KR';
+	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 400;
-	src: local("Noto Sans KR"), local("NotoSansKR-Regular"), url(../fonts/NotoSansKR-Regular.woff2) format("woff2"), url(../fonts/NotoSansKR-Regular.woff) format("woff"), url(../fonts/NotoSansKR-Regular.otf) format("opentype");
+	src: local("Pretendard"), local("Pretendard-Medium"), url(../fonts/Pretendard-Medium.woff) format("woff"), url(../fonts/Pretendard-Medium.otf) format("opentype");
 }
 @font-face {
-	font-family: 'Noto Sans KR';
+	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 500;
-	src: local("Noto Sans KR"), local("NotoSansKR-Medium"), url(../fonts/NotoSansKR-Medium.woff2) format("woff2"), url(../fonts/NotoSansKR-Medium.woff) format("woff"), url(../fonts/NotoSansKR-Medium.otf) format("opentype");
+	src: local("Pretendard"), local("Pretendard-SemiBold"), url(../fonts/Pretendard-SemiBold.woff) format("woff"), url(../fonts/Pretendard-SemiBold.otf) format("opentype");
 }
 @font-face {
-	font-family: 'Noto Sans KR';
+	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 700;
-	src: local("Noto Sans KR"), local("NotoSansKR-Bold"), url(../fonts/NotoSansKR-Bold.woff2) format("woff2"), url(../fonts/NotoSansKR-Bold.woff) format("woff"), url(../fonts/NotoSansKR-Bold.otf) format("opentype");
+	src: local("Pretendard"), local("Pretendard-Bold"), url(../fonts/Pretendard-Bold.woff) format("woff"), url(../fonts/Pretendard-Bold.otf) format("opentype");
 }
 
 
@@ -197,7 +197,7 @@ html {
 }
 body {
 	height: 100%;
-	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Noto Sans', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif;
+	font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Noto Sans', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif;
 	font-size: 16px;
 	letter-spacing: -0.025em;
 	line-height: 140%;
@@ -208,6 +208,7 @@ body {
 body  * {
 	font-family: inherit;
 	font-size: inherit;
+	font-weight: 500;
 	letter-spacing: -0.04em;
 	line-height: 140%;
 }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no"/>
+	<meta name="theme-color" content="#ffffff">
+	<title>NH농협은행 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../static/css/style.css"/>
+	<!-- Scripts --> 
+	<script src="../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper loanExtension btFlexible">
+	<!--
+		defalt : button-section open 상태
+		arrowBtn 클릭하여 닫기 : close 클래스를 header 에 추가
+		- <header class="header vertical close">
+	-->
+	<header class="header vertical">
+		<div class="button-section">
+			<div class="util-box">
+				<button class="btn callbot">콜봇으로 돌아가기</button>
+				<button class="btn callEnd">콜봇 통화 종료</button>
+			</div>
+			<button type="button" class="arrowBtn"></button>
+		</div>
+		<h1 class="page-title">대출 기간 연장</h1>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg t-special">중소기업 전세자금대출 실행 후<br>변경된 사항이 있나요?</h2>
+			<p class="info-txt">변경 사항에 따라 대출 연장 여부와<br>필요 서류가 달라질 수 있어요</p>
+		</div>
+
+		<!-- 정보 입력 영역 -->
+		<div class="content-section">
+			<div class="inputInfo">
+				<label for="customer-info" class="info-label">
+					현재 중소기업에 재직 중이십니까?
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="r-radio-group">
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="employmentStatus" id="yes">
+							<label for="yes" class="radio-txt">
+								<span class="">예</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="employmentStatus" id="no" >
+							<label for="no" class="radio-txt">
+								<span class="">아니요</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="inputInfo">
+				<label for="customer-info" class="info-label">
+					주택을 보유하거나 구매하신 적이 있습니까?
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="r-radio-group">
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="houseStatus" id="yes">
+							<label for="yes" class="radio-txt">
+								<span class="">예</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="houseStatus" id="no" >
+							<label for="no" class="radio-txt">
+								<span class="">아니요</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="inputInfo">
+				<label for="customer-info" class="info-label">
+					현재 해당 주택에 직접 거주 중이십니까?
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="r-radio-group">
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="residenceStatus" id="yes">
+							<label for="yes" class="radio-txt">
+								<span class="">예</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="residenceStatus" id="no" >
+							<label for="no" class="radio-txt">
+								<span class="">아니요</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group btn-group-solid">					
+				<button type="button" class="btn disabled">다음</button>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+
+</body>
+</html>

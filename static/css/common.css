@@ -158,7 +158,44 @@ html {
 body {
 	height: 100%;
 	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Noto Sans', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif;
+	position: relative;
+	direction: ltr;
+	height: 100%;
+}
+body {
+	height: 100%;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Noto Sans', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif;
 	font-size: 16px;
+	letter-spacing: -0.025em;
+	line-height: 140%;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+body  * {
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: -0.04em;
+	line-height: 140%;
+}
+a {
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+ins {
+	text-decoration: none;
+}
+img, table, input, button, select, textarea {
+	vertical-align: middle;
+}
+pre, code, samp, kbd {
+	font-family: 'Consolas', 'Courier New', 'Lucida Console', 'Courier', monospace;
+}
+
+/* Local Type Selector */
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, ul, ol, dl, dd, form, input, button, select, textarea, fieldset {
+	margin: 0;
 	letter-spacing: -0.025em;
 	line-height: 140%;
 	color: #000;
@@ -211,6 +248,26 @@ a {
 	}
 strong, b {
 	font-size: inherit;
+	font-weight: 400;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+pre {
+	-o-tab-size: 4;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+a {
+	border: none;
+	text-decoration: none;
+}
+	a:hover,
+	a:focus,
+	a:active {
+		text-decoration: none;
+		cursor: pointer;
+	}
+strong, b {
+	font-size: inherit;
 	font-weight: 700;
 }
 mark {
@@ -221,6 +278,70 @@ q:before,
 q:after {
 	content: "";
 }
+mark {
+	color: inherit;
+	background-color: transparent;
+}
+q:before,
+q:after {
+	content: "";
+}
+img {
+	border: 0;
+	vertical-align: middle;
+	/* image-rendering: auto; */
+	image-rendering: crisp-edges;
+	/* image-rendering: pixelated; */
+	image-rendering: -moz-crisp-edges;         /* Firefox */
+	image-rendering:   -o-crisp-edges;         /* Opera */
+	image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+iframe {
+	border: 0;
+	vertical-align: middle;
+}
+sub {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	bottom: -0.5em;
+	line-height: 0;
+}
+sup {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	top: -0.5em;
+	line-height: 0;
+}
+code {
+	background: rgba(55, 58, 64, 0.075);
+	border-radius: 0.25em;
+	font-family: "Courier New", monospace;
+	font-size: 0.8em;
+	margin: 0 0.25em;
+	padding: 0.25em 0.65em;
+}
+pre {
+	-webkit-overflow-scrolling: touch;
+	font-family: "Courier New", monospace;
+	font-size: 0.8em;
+	margin: 0 0 2em 0;
+}
+	pre code {
+		display: block;
+		padding: 1em 1.5em;
+		overflow-x: auto;
+	}
+
+::selection,
+::-moz-selection {
+	color: #ffffff;
+	background-color: #4868e1;
+	background-color: rgba(72,104,225, .9);
+	text-shadow: none;
 img {
 	border: 0;
 	vertical-align: middle;
@@ -300,7 +421,40 @@ input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; margi
 	box-sizing: border-box;
 	word-break: break-all;
 	word-wrap: break-word;
+
+/* Handheld-Only Type Selector */
+html {-ms-text-size-adjust: none; -moz-text-size-adjust: none; -webkit-text-size-adjust: none; /* -webkit-tap-highlight-color: rgba(0,0,0, 0); */ }
+
+/* img, iframe, embed, object, video, audio {max-width: 100%; height: auto; } */
+iframe, textarea {-webkit-overflow-scrolling: touch; }
+
+/* ::-ms-clear, ::-ms-reveal {display: none; } */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0; }
+
+/* Special-Class Selector */
+.longdesc {display: block; position: absolute; left: -10240px; width: 1px; height: 1px; overflow: hidden; }
+.transparent {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+
+/* Box Model */
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	word-break: break-all;
+	word-wrap: break-word;
 }
+ul:after, ol:after {
+	content: none;
+}
+html >/**/body .clear {display: block; }
+html >/**/body .clear:after {content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+
+
+
+/* common UI */
+.noresize {
+	resize: none;
 ul:after, ol:after {
 	content: none;
 }
@@ -352,6 +506,45 @@ html >/**/body .clear:after {content: ""; display: block; clear: both; height: 0
 	touch-action: manipulation;
 	cursor: pointer;
 	pointer-events: auto;
+.hidden {
+	display: none !important;
+}
+.blind {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	position: absolute;
+	left: -1000px;
+}
+.removeHighlight {
+	outline: none !important;
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+
+/*마진,패딩,보더 초기화 CSS*/
+.no_mt { margin-top: 0 !important;}
+.no_ml { margin-left: 0 !important;}
+.no_mr { margin-right: 0 !important;}
+.no_mb { margin-bottom: 0 !important; }
+.no_pt { padding-top: 0 !important; }
+.no_pl { padding-left: 0 !important; }
+.no_pr { padding-right: 0 !important; }
+.no_pb { padding-bottom: 0 !important;}
+.no_bt { border-top: 0 !important; }
+.no_bl { border-left: 0 !important; }
+.no_br { border-right: 0 !important; }
+.no_bb { border-bottom: 0 !important; }
+
+
+/* role=button 정의 */
+[role="button"] {
+	touch-action: manipulation;
+	cursor: pointer;
+	pointer-events: auto;
 }
 button[tabindex="-1"],
 button[tabindex="-1"]:focus,
@@ -361,7 +554,41 @@ button[tabindex="-1"]:active {
 	outline: none !important;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 	-webkit-tap-highlight-color: transparent !important;
+button[tabindex="-1"],
+button[tabindex="-1"]:focus,
+button[tabindex="-1"]:focus-visible,
+button[tabindex="-1"]:active {
+	touch-action: none!important;
+	outline: none !important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	-webkit-tap-highlight-color: transparent !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

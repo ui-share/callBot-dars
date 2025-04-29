@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no"/>
+	<meta name="theme-color" content="#ffffff">
+	<title>NH농협은행 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../static/css/style.css"/>
+	<!-- Scripts --> 
+	<script src="../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper loanExtension btFlexible">
+	<!--
+		defalt : button-section open 상태
+		arrowBtn 클릭하여 닫기 : close 클래스를 header 에 추가
+		- <header class="header vertical close">
+	-->
+	<header class="header vertical">
+		<div class="button-section">
+			<div class="util-box">
+				<button class="btn callbot">콜봇으로 돌아가기</button>
+				<button class="btn callEnd">콜봇 통화 종료</button>
+			</div>
+			<button type="button" class="arrowBtn"></button>
+		</div>
+		<h1 class="page-title">대출 기간 연장</h1>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section title-section">
+			<p class="info-txt"><span class="t-special">'대출 기간 연장'</span> 문의 주셨습니다</p>
+			<h2 class="section-tit-lg t-special">먼저 고객님의<br>대출 정보를 확인할게요</h2>
+		</div>
+
+		<!-- 정보 입력 영역 -->
+		<div class="content-section">
+			<div class="inputInfo">
+				<label for="customer-type" class="info-label">
+					고객유형
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="r-radio-group">
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="customer-type" id="personal">
+							<label for="personal" class="radio-txt">
+								<span class="">개인</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+					<div class="r-radio-box">
+						<span class="r-radio">
+							<input type="radio" name="customer-type" id="business" >
+							<label for="business" class="radio-txt">
+								<span class="">사업자</span>
+								<i class="icon"></i>
+							</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="inputInfo">
+				<label for="accountNumber" class="info-label">
+					계좌번호
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="custom-info">
+					<input type="tel" class="custom-inp">
+				</div>
+				<p class="error-txt">계좌번호를 확인해주세요</p>
+			</div>
+
+			<div class="inputInfo">
+				<label for="accountPassword" class="info-label">
+					계좌 비밀번호
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="custom-info">
+					<input type="tel" class="custom-inp">
+				</div>
+				<p class="error-txt">계좌 비밀번호를 확인해주세요</p>
+			</div>
+
+			<div class="inputInfo">
+				<label for="birth" class="info-label">
+					생년월일
+					<span class="required"><i class="hidden">필수항목</i></span>
+				</label>
+				<div class="custom-info">
+					<input type="tel" class="custom-inp">
+				</div>
+				<p class="error-txt">생년월일을 확인해주세요</p>
+			</div>
+		</div>
+
+		<div class="bottom-button">
+			<div class="btn-group btn-group-solid">				
+				<button type="button" class="btn disabled">다음</button>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+
+</body>
+</html>

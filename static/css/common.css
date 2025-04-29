@@ -145,7 +145,37 @@ select {appearance:menulist-text;-webkit-appearance:menulist-text; }
 /* Reset  End ------------------------------------------------------- */
 
 
+:root {
+	--site--primary: #009929;
+	--site--secondary: #005cb9;
+	--site--primary-rgb: 0, 153, 41;
+	--site--primary-rgb: 0, 92, 185;
 
+	--site--gray-900: #121212;
+	--site--gray-800: #505050;
+	--site--gray-600: #888888;
+	
+	--site--gray-300: #D3D3D3;
+	--site--gray-200: #E1E1E1;
+	--site--gray-100: #F6F6F6;
+
+
+	--common--white: #fff;
+	--common--black: #000;
+	--common--gray: #666;
+	--common--white-rgb: 255, 255, 255;
+	--common--black-rgb: 0, 0, 0;
+	--common--gray-rgb: 102, 102, 102;
+
+	--common--primary: var(--site--primary);
+	--common--secondary: var(--site--secondary);
+	--common--primary-rgb: var(--site--primary-rgb);
+	--common--secondary-rgb: var(--site--primary-rgb);
+
+	--common--font: var(--site--gray-900);
+	--common--line: var(--site--gray-200);
+	--common-bg-gray: var(--site--gray-100);
+}
 
 
 /* Global Type Selector */

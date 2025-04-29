@@ -3598,6 +3598,7 @@ textarea:read-only ~ .textarea-info{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	border-radius: 3rem;
 	background-color: var(--common--white);
 	background-image: url(../images/openBtn.svg);
 	background-repeat: no-repeat;

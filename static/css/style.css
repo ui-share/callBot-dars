@@ -4,7 +4,7 @@
 /* Element										 */
 /* ============================================= */
 .vertical {display: flex !important; flex-direction: column !important;}
-.t-special { color: #015AAD !important;}
+.t-special { color: var(--common--secondary) !important;}
 
 /* 필수 표시 */
 .required {
@@ -42,7 +42,7 @@
 	top: 0;
 	left:0;
 	border-bottom: 1px solid #efefef;
-	background-color: #ffffff;
+	background-color: var(--common--white);
 	padding: 0 8px;
 	z-index: 1;
 	align-items: center;
@@ -197,7 +197,7 @@
 	border-radius: 8px;
 	border: 1px solid #C4C4C4;
 	position: relative;
-	background-color: #fff;
+	background-color: var(--common--white);
 }
 .card p {
 	font-size: 10px;
@@ -291,22 +291,22 @@ button {
 	padding: 0.25rem 1rem;
 }
 .btn-primary {
-	background-color: #015AAD !important;
-	border: 1px solid #015AAD !important;
-	color: #ffffff !important;
+	background-color: var(--common--secondary) !important;
+	border: 1px solid var(--common--secondary) !important;
+	color: var(--common--white) !important;
 }
 .btn-secondary {    
-	background-color: #ffffff !important;
+	background-color: var(--common--white) !important;
 	border: 1px solid #bbb !important;
 	color: #000 !important;
 }
 .btn-line-primary {
-	background-color: #fff !important;
-	border: 1px solid #015AAD !important;
-	color: #015AAD !important;
+	background-color: var(--common--white) !important;
+	border: 1px solid var(--common--secondary) !important;
+	color: var(--common--secondary) !important;
 }
 .btn-line-secondary {
-	background-color: #fff !important;
+	background-color: var(--common--white) !important;
 	border: 1px solid #bbb !important;
 	color: #000 !important;
 }
@@ -387,7 +387,7 @@ button.disabled,
 	left: 0;
 	width: 100%;    
 	margin-top: auto;
-	background-color: #fff;
+	background-color: var(--common--white);
 	padding: 0 !important;
 }
 .bottom-button .btn-group .standard {  
@@ -405,7 +405,7 @@ button.disabled,
 	top: -10px;
 	width: 100%;
 	height: 10px;
-	background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0));
+	background: linear-gradient(0deg,var(--common--white),hsla(0,0%,100%,0));
 }
 /* fit button : 서비스 상세 화면 - 서비스 가입, 해지 등 */
 .btn-group-solid {
@@ -417,15 +417,15 @@ button.disabled,
 	border-radius: 0 !important;
 }
 .btn-solid-primary {
-	background-color: #015AAD !important;
-	border: 1px solid #015AAD !important;
-	color: #ffffff !important;
+	background-color: var(--common--secondary) !important;
+	border: 1px solid var(--common--secondary) !important;
+	color: var(--common--white) !important;
 	border-radius: 0 !important;
 }
 .btn-solid-secondary {
 	background-color: #000 !important;
 	border: 1px solid #000 !important;
-	color: #ffffff !important;
+	color: var(--common--white) !important;
 	border-radius: 0 !important;
 }
 
@@ -433,21 +433,21 @@ button.disabled,
 /* 일반 : btn-group-sm */
 .btFlexible .btn-group-sm .btn,
 .popup-wrapper .btn-group-sm .btn {
-	background-color: #fff;
+	background-color: var(--common--white);
 	border: 1px solid #bbb;
 	color: #000;
 }
 .btFlexible .btn-group-sm .btn:last-child,
 .popup-wrapper .btn-group-sm .btn:last-child {	
-	background-color: #015AAD;
-	border: 1px solid #015AAD;
-	color: #fff;
+	background-color: var(--common--secondary);
+	border: 1px solid var(--common--secondary);
+	color: var(--common--white);
 }
 /* Full : bottom-button > btn-group */
 /* 기본버튼 :라인 */
 .btFlexible .bottom-button .btn-group .btn,
 .popup-wrapper .popup-footer .btn-group .btn {
-	background-color: #fff;
+	background-color: var(--common--white);
 	border: 1px solid #bbb;
 	color: #000;
 }
@@ -456,7 +456,7 @@ button.disabled,
 .popup-wrapper .popup-footer .btn-group.btn-group-solid .btn {
 	background-color: #000;
 	border: 1px solid #000;
-	color: #ffffff;
+	color: var(--common--white);
 }
 /* 가로 정렬 버튼 : bottom-button > btn-group */
 /* 마지막:primary */
@@ -464,9 +464,9 @@ button.disabled,
 .btFlexible .bottom-button .btn-group:not(.vertical) .btn:last-child:not(.btn-withghost):not(.btn-line-secondary),
 .popup-wrapper .popup-footer .btn-group:not(.vertical) .btn:last-child:not(.btn-withghost):not(.btn-line-secondary),
 .popup-wrapper .btn-group:not(.vertical) .btn:last-child:not(.btn-withghost):not(.btn-line-secondary) {
-	background-color: #015AAD;
-	border: 1px solid #015AAD;
-	color: #fff;
+	background-color: var(--common--secondary);
+	border: 1px solid var(--common--secondary);
+	color: var(--common--white);
 }
 .page-wrapper .content .btn-group.btn-group-sm .btn,
 .center-popup .popup-body .btn-group:not(.vertical):not(.btn-group-solid) .btn {
@@ -486,9 +486,9 @@ button.disabled,
 /* 메인버튼: primary */
 .btFlexible .bottom-button .btn-group.vertical .btn:first-child:not(.btn-line-secondary):not(.btn-withghost),
 .popup-wrapper .popup-footer .btn-group.vertical .btn:first-child:not(.btn-line-secondary) {
-	background-color: #18973C;
-	border: 1px solid #18973C;
-	color: #fff;
+	background-color: var(--common--primary);
+	border: 1px solid var(--common--primary);
+	color: var(--common--white);
 }
 
 .btFlexible .content-section .bottom-button .btn-group {
@@ -540,12 +540,12 @@ select {
 	width: 100%;
 	/*height: 40px;*/
 	padding: 9px 0 10px;
-	background-color: #fff;
+	background-color: var(--common--white);
 	font-size: 14px;
 	font-weight: 400;
 	color: #000;
 	border-bottom: 1px solid #bbb;	
-	caret-color: #015AAD;
+	caret-color: var(--common--secondary);
 	outline: none !important;
 }
 /* input : 입력 disabled, readonly, focus*/
@@ -721,7 +721,7 @@ textarea:read-only:focus {
 	overflow: hidden;
 	position: relative;
 	display: inline-flex;
-	background-color: #fff;
+	background-color: var(--common--white);
 	flex: 1 100%;
 }
 .radio-group .radio-box .radio-btn {
@@ -749,7 +749,7 @@ textarea:read-only:focus {
 	align-items: center;
 	width: 100%;
 	min-height: 40px;
-	background-color: #fff;
+	background-color: var(--common--white);
 	border: 1px solid #bbb;
 	border-radius: 4px;
 	word-break: break-word;
@@ -845,7 +845,7 @@ textarea:read-only:focus {
 	gap: 8px;
 }
 .card-choice.choice {
-	border: 2px solid #015AAD;
+	border: 2px solid var(--common--secondary);
 }
 .card-choice .text-wrap {
 	display: flex;
@@ -885,7 +885,7 @@ textarea:read-only:focus {
 	/* height: 18px; */
 	line-height: auto;
 	border-radius: 6px;
-	background-color: #fff;
+	background-color: var(--common--white);
 	color: #000;
 	font-size: 10px;
 	font-weight: 500;
@@ -976,7 +976,7 @@ textarea:read-only:focus {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	background-color: #fff;
+	background-color: var(--common--white);
 	overflow: auto;
 	z-index: 1;
 }
@@ -1008,11 +1008,11 @@ textarea:read-only:focus {
 	line-height: 1.4;
 	color: #000;
 	overflow-y: auto;
-	background-color: #fff;
+	background-color: var(--common--white);
 }
 .popup-footer {
 	width: 100%;
-	background-color: #fff;
+	background-color: var(--common--white);
 	position: relative;
 }
 .popup-footer .btn-group::before {
@@ -1023,7 +1023,7 @@ textarea:read-only:focus {
 	top: -10px;
 	width: 100%;
 	height: 10px;
-	background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0));
+	background: linear-gradient(0deg,var(--common--white),hsla(0,0%,100%,0));
 }
 .appear {
 	animation: fade-in .3s forwards;
@@ -1188,7 +1188,7 @@ textarea:read-only:focus {
 	flex: 1 1 auto;
 	font-size: 13px;
 	text-align: center;
-	color: #fff;
+	color: var(--common--white);
 	display: flex;
 	justify-content: center;
     align-items: center;
@@ -1258,7 +1258,7 @@ textarea:read-only:focus {
 	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 .loanExtension .card.is-select {
-	border: 1px solid #015AAD;
+	border: 1px solid var(--common--secondary);
 	box-shadow: 0 2px 4px rgba(1,90,173,0.46);
 }
 .loanExtension .card-info {
@@ -1279,7 +1279,7 @@ textarea:read-only:focus {
 	color: #000;
 }
 .loanExtension .card.is-select .content-row .info-txt{
-	color: #015AAD;
+	color: var(--common--secondary);
 }
 .loanExtension .content-row .tit {
 	font-size: 12px;

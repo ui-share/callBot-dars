@@ -313,7 +313,7 @@ pre {
 
 ::selection,
 ::-moz-selection {
-	color: #ffffff;
+	color: var(--common--white);
 	background-color: #4868e1;
 	background-color: rgba(72,104,225, .9);
 	text-shadow: none;

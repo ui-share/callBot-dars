@@ -1247,6 +1247,22 @@ textarea:read-only:focus {
 .header.vertical.close ~ .content {
 	padding-top: 74px;
 }
+/* header 내 로고 필요할 경우 */
+.page-title.logo {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 4px;
+}
+.page-title.logo::before {
+	content: "";
+	display: inline-block;
+	width: 65px;
+	min-width: 65px;
+	height: 15px;
+	background: url(../images/logo.png) no-repeat center;
+	background-size: cover;
+}
 /* sc0002.html card 작업 */
 .loanExtension .card~.card {
 	margin-top: 15px;

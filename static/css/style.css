@@ -53,7 +53,6 @@
 	min-height: 48px;
 	display: inline-block;
 } */
- 
 .c-btn,
 .prev-btn {
 	position: relative;
@@ -99,6 +98,17 @@
 }
 .content > *:last-child {
 	padding-bottom: 2.5em;
+}
+
+/* 종료 화면 */
+/* endPage > content-section */
+.endPage .content-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
+	padding: 25px;
+	margin: auto 0;
 }
 
 
@@ -922,6 +932,37 @@ textarea:read-only:focus {
 	justify-content: space-between;
 	padding: 16px 20px;
 	border-bottom: 1px solid #eee;
+}
+
+
+
+
+/* 성공, 주의, 안내 - 기본 */
+.caution-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1em;
+	line-height: 1.4;
+	color: #000;	
+	margin: auto 0;
+	text-align: center;
+}
+.caution-section .tit {
+	font-size: 1.1250rem;
+	font-weight: 700;
+	margin-top: 0.25em;
+}
+.caution-section .txt {
+	font-size: 13px;
+	color: #666666;
+}
+/* 성공, 주의, 안내 - content-section > caution-section */ 
+.content-section .caution-section {
+	padding: 32px 0;
+}
+.content-section .caution-section .tit {
+	font-size: 1rem;
 }
 
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>NH농협은행 보이는 ARS</title>
+
+	<!-- Css -->
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../static/css/style.css"/>
+	<!-- Scripts --> 
+	<script src="../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper loanExtension btFlexible">
+	<!--
+		defalt : button-section open 상태
+		arrowBtn 클릭하여 닫기 : close 클래스를 header 에 추가
+		- <header class="header vertical close">
+	-->
+	<header class="header vertical">
+		<div class="button-section">
+			<div class="util-box">
+				<button class="btn callbot">콜봇으로 돌아가기</button>
+				<!-- <button class="btn callEnd">콜봇 통화 종료</button> -->
+			</div>
+			<button type="button" class="arrowBtn"></button>
+		</div>
+		<h1 class="page-title">계좌선택</h1>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<div class="content-section title-section">
+			<h2 class="section-tit-lg t-special"><span>김농협</span> 고객님<br>어떤 계좌를 조회할까요?</h2>
+		</div>
+
+		<!-- card area -->
+		<div class="content-section">
+			<!-- 해당 카드 선택 됐을 경우 is-selected 클래스 붙음 
+				선택 전 :<div class="card" role="button">	
+				선택 후:<div class="card is-select" role="button">
+			-->
+			<div class="card is-select" role="button">
+				<div class="card-info">
+					<div class="content-row">
+						<div class="info-txt">NH All100플랜통장</div>
+					</div>
+				</div>
+				<div class="card-info accountNum">
+					<div class="content-row">
+						<p class="tit">NH농협은행</p>
+						<p class="txt">302-1234-5678-90</p>
+					</div>
+				</div>
+			</div>
+			<div class="card" role="button">
+				<div class="card-info">
+					<div class="content-row">
+						<div class="info-txt">NH 직장인월복리적금</div>
+					</div>
+				</div>
+				<div class="card-info accountNum">
+					<div class="content-row">
+						<p class="tit">NH농협은행</p>
+						<p class="txt">302-0123-4567-89</p>
+					</div>
+				</div>
+			</div>
+			<div class="card" role="button">
+				<div class="card-info">
+					<div class="content-row">
+						<div class="info-txt">NH 주거래우대적금</div>
+					</div>
+				</div>
+				<div class="card-info accountNum">
+					<div class="content-row">
+						<p class="tit">NH농협은행</p>
+						<p class="txt">302-9012-3456-78</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+</body>
+</html>

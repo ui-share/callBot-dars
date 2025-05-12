@@ -222,6 +222,16 @@
 	flex-direction: column;
 	gap: 16px;
 }
+.content-section.devider::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 8px;
+	background-color: #eee;
+}
 .title-section .section-tit-lg {
 	font-size: 20px;
 	line-height: 1.5;
@@ -1481,15 +1491,14 @@ textarea:read-only:focus {
 	display: flex;
 	flex-direction: column;
 	border-radius: 0;
-	height: 100%
+	height: 100%;
+	overflow-y: scroll;
 }
 .transactionInfo .content-section.devider {
 	padding-left: 0;
 	padding-right: 0;
 	padding-bottom: 0;
 	height: calc(100% - 120px);
-	overflow-y: scroll;
-
 }
 .transactionInfo .content-section.devider::before {
 	content: "";

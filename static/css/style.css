@@ -1463,10 +1463,7 @@ textarea:read-only:focus {
 	font-size: 14px;
 }
 /* sc0006.html 거래내역조회 리스트 */
-.transactionInfo {
-	overflow-y: hidden;
-	height: 100%;
-}
+
 .transactionInfo .account .card-info {
 	padding-bottom: 4px;
 }
@@ -1484,13 +1481,15 @@ textarea:read-only:focus {
 	display: flex;
 	flex-direction: column;
 	border-radius: 0;
-	overflow-y: scroll;
-	height: calc(100% - 350px);
+	height: 100%
 }
 .transactionInfo .content-section.devider {
 	padding-left: 0;
 	padding-right: 0;
 	padding-bottom: 0;
+	height: calc(100% - 120px);
+	overflow-y: scroll;
+
 }
 .transactionInfo .content-section.devider::before {
 	content: "";

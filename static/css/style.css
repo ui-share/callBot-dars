@@ -194,7 +194,7 @@
 	padding: 12px 10px 12px 14px;
 	overflow: unset;
 	border-radius: 8px;
-	border: 1px solid #C4C4C4;
+	border: 1px solid var(--site--gray-400);
 	position: relative;
 	background-color: var(--common--white);
 }
@@ -1477,11 +1477,11 @@ textarea:read-only:focus {
 .transactionInfo .account .card-info {
 	padding-bottom: 4px;
 }
-.transactionInfo .account .content-row .txt {
-	font-size: 14px;
+.transactionInfo .account .content-row .tit {
+	font-size: 12px;
 }
 .transactionInfo .content-row .info-txt {
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.5;
 	color: #000;
 }
@@ -1511,13 +1511,14 @@ textarea:read-only:focus {
 	background-color: #eee;
 }
 .transactionInfo .card-info.list-term {
-	padding: 0 20px 20px;
+	padding: 0 20px 10px;
 }
 .transactionInfo .card-info.list-term .content-row {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	column-gap: 10px;
+	flex-wrap: wrap;
+	gap: 2px;
 }
 .transactionInfo .content-row p {
 	font-size: 13px;
@@ -1528,7 +1529,7 @@ textarea:read-only:focus {
 	color: #2EBA6A;
 }
 .transactionInfo .card-info.list-box {
-	border-top: 1px solid #C4C4C4;
+	border-top: 1px solid var(--site--gray-400);
 	padding: 20px;
 }
 .transactionInfo .card-info.list-box .content-row {

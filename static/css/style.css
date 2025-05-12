@@ -1459,7 +1459,13 @@ textarea:read-only:focus {
 .loanExtension .account .card-info:last-child {
 	padding-bottom: 0;
 }
-
+.loanExtension .account .content-row {
+	gap: 2px;
+	flex-wrap: wrap;
+}
+.loanExtension .account .content-row .txt {
+	font-size: 14px;
+}
 
 @media only screen and ( min-width: 920px ), only screen and ( min-width: 748px ) and (orientation:portrait) {
 	

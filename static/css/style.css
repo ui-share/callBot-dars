@@ -1463,12 +1463,29 @@ textarea:read-only:focus {
 	font-size: 14px;
 }
 /* sc0006.html 거래내역조회 리스트 */
-.transactionInfo .card {
+.transactionInfo {
+	overflow-y: hidden;
+	height: 100%;
+}
+.transactionInfo .account .card-info {
+	padding-bottom: 4px;
+}
+.transactionInfo .account .content-row .txt {
+	font-size: 14px;
+}
+.transactionInfo .content-row .info-txt {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000;
+}
+.transactionInfo .card.bankList {
 	border: unset;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
 	border-radius: 0;
+	overflow-y: scroll;
+	height: calc(100% - 350px);
 }
 .transactionInfo .content-section.devider {
 	padding-left: 0;
@@ -1485,18 +1502,15 @@ textarea:read-only:focus {
 	height: 8px;
 	background-color: #eee;
 }
-.transactionInfo .card.list-term {
-	padding: 10px 20px 20px;
+.transactionInfo .card-info.list-term {
+	padding: 0 20px 20px;
 }
-.transactionInfo .card.list-term .content-row {
+.transactionInfo .card-info.list-term .content-row {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	column-gap: 10px;
 }
-/* .transactionInfo .card.list-box .content-row ~ .transactionInfo .card.ist-box .content-row {
-	padding: 0;
-} */
 .transactionInfo .content-row p {
 	font-size: 13px;
 	line-height: 1.5;
@@ -1505,16 +1519,16 @@ textarea:read-only:focus {
 .transactionInfo .content-row .color-point {
 	color: #2EBA6A;
 }
-.transactionInfo .card.list-box {
+.transactionInfo .card-info.list-box {
 	border-top: 1px solid #C4C4C4;
-	padding: 20px 20px 0;
+	padding: 20px;
 }
-.transactionInfo .card.list-box .content-row {
+.transactionInfo .card-info.list-box .content-row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.transactionInfo .card.list-box .content-row.total {
+.transactionInfo .card-info.list-box .content-row.total {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;

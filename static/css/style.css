@@ -1462,7 +1462,102 @@ textarea:read-only:focus {
 .loanExtension .account .content-row .txt {
 	font-size: 14px;
 }
-
+/* sc0006.html 거래내역조회 리스트 */
+.transactionInfo .card {
+	border: unset;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0;
+}
+.transactionInfo .content-section.devider {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+.transactionInfo .content-section.devider::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 8px;
+	background-color: #eee;
+}
+.transactionInfo .card.list-term {
+	padding: 10px 20px 20px;
+}
+.transactionInfo .card.list-term .content-row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 10px;
+}
+/* .transactionInfo .card.list-box .content-row ~ .transactionInfo .card.ist-box .content-row {
+	padding: 0;
+} */
+.transactionInfo .content-row p {
+	font-size: 13px;
+	line-height: 1.5;
+	color: #66707a;
+}
+.transactionInfo .content-row .color-point {
+	color: #2EBA6A;
+}
+.transactionInfo .card.list-box {
+	border-top: 1px solid #C4C4C4;
+	padding: 20px 20px 0;
+}
+.transactionInfo .card.list-box .content-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.transactionInfo .card.list-box .content-row.total {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 0;
+}
+.transactionInfo .term-info {
+	font-size: 13px;
+	line-height: 1.5;
+	color: #66707a;
+}
+.transactionInfo .type-txt {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.transactionInfo .type-txt.input {
+	color: #3F7AD8;
+}
+.transactionInfo .type-txt.output {
+	color: #EC0D0D;
+}
+.transactionInfo .tit-txt {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #000;
+}
+.transactionInfo .amount-txt {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+.transactionInfo .amount-txt.input {
+	color: #3F7AD8;
+}
+.transactionInfo .amount-txt.output {
+	color: #EC0D0D;
+}
+.transactionInfo .total-txt {
+	font-size: 13px;
+	line-height: 1.5;
+	color: #909090;
+}
 
 
 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, scrollbar-width=thin" />
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>NH농협은행 보이는 ARS</title>
+
+	<!-- Css -->
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../static/css/style.css"/>
+	<!-- Scripts --> 
+	<script src="../../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../../static/js/common.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper transactionInfo btFlexible">
+	<!--
+		defalt : button-section open 상태
+		arrowBtn 클릭하여 닫기 : close 클래스를 header 에 추가
+		- <header class="header vertical close">
+	-->
+	<header class="header vertical">
+		<div class="button-section">
+			<div class="util-box">
+				<button class="btn callbot">콜봇으로 돌아가기</button>
+				<!-- <button class="btn callEnd">콜봇 통화 종료</button> -->
+			</div>
+			<button type="button" class="arrowBtn"></button>
+		</div>
+		<h1 class="page-title">거래내역조회</h1>
+	</header>
+	<!-- 헤더 영역 END -->
+	
+	<!-- 콘텐츠 영역 -->
+	<div class="content">
+		<!-- <div class="content-section title-section">
+			<h2 class="section-tit-lg t-special"><span>김농협</span>고객님<br>어떤 대출의 기간을 연장할까요?</h2>
+			<p class="info-txt">대출 유형에 따라 기간 연장 방법이 달라요</p>
+		</div> -->
+
+		<!-- card area -->
+		<div class="content-section">
+			<!-- 상단영역 : 현재 계좌 정보 -->
+			<!-- 해당 카드 선택 됐을 경우 is-selected 클래스 붙음 
+				선택 전 :<div class="card" role="button">	
+				선택 후:<div class="card is-select" role="button">
+			-->
+			<div class="card" role="button">
+				<div class="card-info">
+					<div class="content-row">
+						<div class="info-txt">중소기업 전세자금대출</div>
+						<p class="flag-box store">지점 방문 필요</p>
+					</div>
+				</div>
+				<div class="card-info">
+					<div class="content-row">
+						<p class="tit">대출 잔액</p>
+						<p class="bold txt">100,000,000</p>
+					</div>
+					<div class="content-row">
+						<p class="tit">최초 대출액</p>
+						<p class="bold txt">300,000,000</p>
+					</div>
+					<div class="content-row">
+						<p class="tit">대출 금리</p>
+						<p class="txt">3.5%</p>
+					</div>
+					<div class="content-row">
+						<p class="tit">대출 기간</p>
+						<p class="txt">2023.01.01~2025.06.01</p>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="content-section devider">
+			<div class="card-group">
+				<div class="card list-term">
+					<div class="content-row">
+						<p class="startDate">2025.05.08</p><p class="due">~</p> <p class="endDate">2025.05.12</p> <p class="total-txt">(총&nbsp;<span class="color-point">70</span>건)</p>
+					</div>
+	
+				</div>
+				<div class="card list-box">
+					<div class="content-row">
+						<span class="term-info">2025.05.08 09:50:00</span>
+						<span class="type-txt input">입금</span>
+					</div>
+					<div class="content-row">
+						<span class="tit-txt">김농협</span>
+						<span class="amount-txt input">100,000원</span>
+					</div>
+					<div class="content-row total">
+						<span class="total-txt">
+							잔액 6,900,000원
+						</span>
+					</div>
+				</div>
+				<div class="card list-box">
+					<div class="content-row">
+						<span class="term-info">2025.05.07 09:50:00</span>
+						<span class="type-txt input">입금</span>
+					</div>
+					<div class="content-row">
+						<span class="tit-txt">김농협</span>
+						<span class="amount-txt input">100,000원</span>
+					</div>
+					<div class="content-row total">
+						<span class="total-txt">
+							잔액 6,800,000원
+						</span>
+					</div>
+				</div>
+				<div class="card list-box">
+					<div class="content-row">
+						<span class="term-info">2025.05.06 09:50:00</span>
+						<span class="type-txt input">입금</span>
+					</div>
+					<div class="content-row">
+						<span class="tit-txt">김농협</span>
+						<span class="amount-txt input">100,000원</span>
+					</div>
+					<div class="content-row total">
+						<span class="total-txt">
+							잔액 6,700,000원
+						</span>
+					</div>
+				</div>
+				<div class="card list-box">
+					<div class="content-row">
+						<span class="term-info">2025.05.05 09:50:00</span>
+						<span class="type-txt input">입금</span>
+					</div>
+					<div class="content-row">
+						<span class="tit-txt">김농협</span>
+						<span class="amount-txt input">100,000원</span>
+					</div>
+					<div class="content-row total">
+						<span class="total-txt">
+							잔액 6,600,000원
+						</span>
+					</div>
+				</div>
+				<div class="card list-box">
+					<div class="content-row">
+						<span class="term-info">2025.05.04 09:50:00</span>
+						<span class="type-txt input">입금</span>
+					</div>
+					<div class="content-row">
+						<span class="tit-txt">김농협</span>
+						<span class="amount-txt input">100,000원</span>
+					</div>
+					<div class="content-row total">
+						<span class="total-txt">
+							잔액 6,500,000원
+						</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- 콘텐츠 영역 END --> 
+</div>
+
+<!-- 비대면 대출 기간 연장 팝업 -->
+<div class="modal-wrap popup-wrapper nonfaceLoan bottom-popup hidden">
+	<div class="blacklayer appear"></div>
+	<div class="popup-content slideUp">
+		<!-- popup-header -->
+		<div class="popup-header c-btn-x">
+			<div class="header-section">
+				<h1 class="pop-tit"><span>비대면 대출 기간 연장</span></h1>
+				<button type="button" class="c-btn">닫기</button>
+			</div>
+		</div>
+		<!-- popup-body -->
+		<div class="popup-body">
+			<div class="content-section">
+				<p class="info-txt">
+					신용대출은 NH은행 앱에서 직접 대출 기간 연장이 가능합니다.<br/><br/>이동하실 앱을 선택해주세요. 
+				</p>
+				<div class="img-group">
+					<div class="imgBox">
+						<img src="../../../static/images/img-app-nh01.png" alt="all one 앱" class="app-img">
+					</div>
+					<div class="imgBox">
+						<img src="../../../static/images/img-app-nh02.png" alt="NH Bank 앱" class="app-img">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- popup-footer -->
+		<div class="popup-footer">
+			<div class="btn-group">
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

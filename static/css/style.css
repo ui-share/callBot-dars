@@ -1453,15 +1453,11 @@ textarea:read-only:focus {
 	color: #000;
 }
 /* sc0005.html card 작업 */
-.loanExtension .card-info {
+.loanExtension .account .card-info {
 	padding-bottom: 4px;
 }
-.loanExtension .accountNum .content-row {
-	justify-content: flex-start;
-	gap: 4px;
-}
-.loanExtension .accountNum .content-row .txt {
-	color: #555555;
+.loanExtension .account .card-info:last-child {
+	padding-bottom: 0;
 }
 
 

@@ -1452,6 +1452,18 @@ textarea:read-only:focus {
 	font-weight: 400;
 	color: #000;
 }
+/* sc0005.html card 작업 */
+.loanExtension .account .card-info {
+	padding-bottom: 4px;
+}
+.loanExtension .account .card-info:last-child {
+	padding-bottom: 0;
+}
+.loanExtension .account .content-row .txt {
+	font-size: 14px;
+}
+
+
 
 
 @media only screen and ( min-width: 920px ), only screen and ( min-width: 748px ) and (orientation:portrait) {
@@ -1467,10 +1479,6 @@ textarea:read-only:focus {
 @media only screen and ( max-width: 280px ) {
 	
 }
-
-
-
-
 
 
 
